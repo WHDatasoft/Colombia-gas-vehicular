@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import MainLayout from '../layout/MainLayout'
-import Lottie from "react-lottie";
+/* import Lottie from "react-lottie"; */
 import animation from './pelota.json'
 import FormEmail from '../components/Forms/FormEmail';
 import { useState } from 'react';
