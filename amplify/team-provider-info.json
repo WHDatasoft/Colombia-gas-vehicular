@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-colombiagas-dev-163356-authRole",
+            "UnauthRoleArn": "arn:aws:iam::515167779910:role/amplify-colombiagas-dev-163356-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::515167779910:role/amplify-colombiagas-dev-163356-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-colombiagas-dev-163356-deployment",
+            "UnauthRoleName": "amplify-colombiagas-dev-163356-unauthRole",
+            "StackName": "amplify-colombiagas-dev-163356",
+            "StackId": "arn:aws:cloudformation:us-east-1:515167779910:stack/amplify-colombiagas-dev-163356/e6ec7560-4bdb-11ec-b471-12ce1cb56bd3",
+            "AmplifyAppId": "d1j31m65gdm2jj"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1j31m65gdm2jj",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}
