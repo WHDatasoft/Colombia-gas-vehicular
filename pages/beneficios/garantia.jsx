@@ -11,7 +11,7 @@ const Index = () => {
 		</Head>
 
 		<BenefitBanner
-			background="garantia.png"
+			background="garantia.jpg"
 			icon="car-hand.svg"
 			title="GARANTÍA"
 			subtitle="3 años o 100.000km"

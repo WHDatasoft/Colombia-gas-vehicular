@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Banner = ({ children, imgPerson, fondo, icon, text }) => {
+const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 	return <main>
 
 		<div className="back">
@@ -67,13 +67,6 @@ const Banner = ({ children, imgPerson, fondo, icon, text }) => {
 				transform: rotate(-17.5deg);
 			}
 
-			img {
-				width: 5rem;
-				display: block;
-				margin: auto;
-				padding: .5rem 0;
-			}
-
 			p {
 				width: 5rem;
 				text-align: center;
@@ -88,8 +81,8 @@ const Banner = ({ children, imgPerson, fondo, icon, text }) => {
 			}
 
 			.person {
-				width: 11rem;
 				margin-top: 2rem;
+				width: ${11 * (personSize ? personSize : 1)}rem;
 				align-self: flex-end;
 			}
 

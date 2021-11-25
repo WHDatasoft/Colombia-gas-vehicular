@@ -8,7 +8,7 @@ const Index = () => {
 		<Head>
 			<title>Colombia Gas Vehicular</title>
 		</Head>
-		<Banner imgPerson="person-4.png" fondo="banner-fondo-oscuro.png" icon="servicio4.svg" text="Revisión anual">
+		<Banner imgPerson="person-4.png" fondo="banner-fondo-oscuro.png" icon="servicio4.svg" text="Revisión anual" personSize={1.2}>
 			<br />
 			<p className="texto-1">
 				<span>Colombiagas vehicular te ofrece respaldo y los equipos</span>

@@ -63,10 +63,10 @@ const SliderMain = () => {
 
             <ul>
                 <li>
-                    <img src="/img/colombiagas/primera.png" alt="" />
+                    <img src="/img/colombiagas/primera.jpg" alt="" />
                 </li>
                 <li>
-                    <img src="/img/colombiagas/segunda.png" alt="" />
+                    <img src="/img/colombiagas/segunda.jpg" alt="" />
                     <div className="fondo">
                         <p>Somos un centro especializado en instalación de gas
                             natural vehicular, con más de 15 años de trayectoria,
@@ -78,7 +78,7 @@ const SliderMain = () => {
                     </div>
                 </li>
                 <li>
-                    <img src="/img/colombiagas/tercera.png" alt="" />
+                    <img src="/img/colombiagas/tercera.jpg" alt="" />
                     <div className="fondo">
                         <h2>OBJETIVOS CLAVES</h2>
                         <div className="icons">
@@ -98,7 +98,7 @@ const SliderMain = () => {
                     </div>
                 </li>
                 <li>
-                    <img src="/img/colombiagas/cuarta.png" alt="" />
+                    <img src="/img/colombiagas/cuarta.jpg" alt="" />
                     <div className="fondo">
                         <h2>OBJETIVOS CLAVES</h2>
                         <div className="icons">

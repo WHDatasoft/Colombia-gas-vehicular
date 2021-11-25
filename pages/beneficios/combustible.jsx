@@ -11,7 +11,7 @@ const Index = () => {
 		</Head>
 
 		<BenefitBanner
-			background="combustible.png"
+			background="combustible.jpg"
 			icon="car-fuel.svg"
 			title="COMBUSTIBLE"
 			subtitle="Ahorra hasta el 50%"

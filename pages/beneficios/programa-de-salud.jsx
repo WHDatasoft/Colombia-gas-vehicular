@@ -11,7 +11,7 @@ const Index = () => {
 		</Head>
 
 		<BenefitBanner
-			background="salud.png"
+			background="salud.jpg"
 			icon="car-hand.svg"
 			title="SALUD"
 			subtitle="GRATIS PARA TI Y 4 BENEFICIARIOS MÁS"

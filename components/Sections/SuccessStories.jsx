@@ -3,7 +3,7 @@ import ArticleBussines from "./ArticleBussines"
 
 const contentSlider = [
 	<ArticleBussines
-		img="envia.png"
+		img="envia.jpg"
 		bussinesName="Envía"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -11,7 +11,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="servientrega.png"
+		img="servientrega.jpg"
 		bussinesName="Servientrega Sector"
 		characterList={[
 			'Carga liviana y paqueteo',
@@ -20,7 +20,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ramo.png"
+		img="ramo.jpg"
 		bussinesName="Productos Ramo"
 		characterList={[
 			'Sector: Distribución de',
@@ -29,7 +29,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="472.png"
+		img="472.jpg"
 		bussinesName="4-72"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -37,7 +37,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ultima.png"
+		img="ultima.jpg"
 		bussinesName="Silec"
 		characterList={[
 			'Sector: Telecomunicaciones',
@@ -46,7 +46,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="envia.png"
+		img="envia.jpg"
 		bussinesName="Envía"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -54,7 +54,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="servientrega.png"
+		img="servientrega.jpg"
 		bussinesName="Servientrega Sector"
 		characterList={[
 			'Carga liviana y paqueteo',
@@ -63,7 +63,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ramo.png"
+		img="ramo.jpg"
 		bussinesName="Productos Ramo"
 		characterList={[
 			'Sector: Distribución de',
@@ -72,7 +72,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="472.png"
+		img="472.jpg"
 		bussinesName="4-72"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -80,7 +80,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ultima.png"
+		img="ultima.jpg"
 		bussinesName="Silec"
 		characterList={[
 			'Sector: Telecomunicaciones',
@@ -89,7 +89,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="envia.png"
+		img="envia.jpg"
 		bussinesName="Envía"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -97,7 +97,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="servientrega.png"
+		img="servientrega.jpg"
 		bussinesName="Servientrega Sector"
 		characterList={[
 			'Carga liviana y paqueteo',
@@ -106,7 +106,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ramo.png"
+		img="ramo.jpg"
 		bussinesName="Productos Ramo"
 		characterList={[
 			'Sector: Distribución de',
@@ -115,7 +115,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="472.png"
+		img="472.jpg"
 		bussinesName="4-72"
 		characterList={[
 			'Sector: Carga liviana y paqueteo',
@@ -123,7 +123,7 @@ const contentSlider = [
 		]}
 	/>,
 	<ArticleBussines
-		img="ultima.png"
+		img="ultima.jpg"
 		bussinesName="Silec"
 		characterList={[
 			'Sector: Telecomunicaciones',
@@ -131,49 +131,7 @@ const contentSlider = [
 			'NP300'
 		]}
 	/>,
-	<ArticleBussines
-		img="envia.png"
-		bussinesName="Envía"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 400 Chevrolet N300',
-		]}
-	/>,
-	<ArticleBussines
-		img="servientrega.png"
-		bussinesName="Servientrega Sector"
-		characterList={[
-			'Carga liviana y paqueteo',
-			'Cantidad: 100 Fiat Ducato',
-			'(Dedicados), 15 RAM 1.000'
-		]}
-	/>,
-	<ArticleBussines
-		img="ramo.png"
-		bussinesName="Productos Ramo"
-		characterList={[
-			'Sector: Distribución de',
-			'Alimentos en paquete',
-			'Cantidad: 50 Nissan NP300 y 70 Changan'
-		]}
-	/>,
-	<ArticleBussines
-		img="472.png"
-		bussinesName="4-72"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 42 RAM 700'
-		]}
-	/>,
-	<ArticleBussines
-		img="ultima.png"
-		bussinesName="Silec"
-		characterList={[
-			'Sector: Telecomunicaciones',
-			'Cantidad: 130 Nissan',
-			'NP300'
-		]}
-	/>,
+
 ]
 
 const contentSlider2 = [

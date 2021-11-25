@@ -4,17 +4,17 @@ const NavSocial = () => {
 		<ul>
 			<li>
 				<a href="https://www.instagram.com/colombiagas_vehicular/?hl=es" target="_blank" rel="noopener noreferrer">
-					<img src="/icon/instagram.png" alt="" />
+					<img src="/icon/instagram.svg" alt="" />
 				</a>
 			</li>
 			<li>
 				<a href="https://www.facebook.com/colombiagasvehicular.parati" target="_blank" rel="noopener noreferrer">
-					<img src="/icon/facebook.png" alt="" />
+					<img src="/icon/facebook.svg" alt="" />
 				</a>
 			</li>
 			<li>
 				<a href="https://twitter.com/VehicularGas" target="_blank" rel="noopener noreferrer">
-					<img src="/icon/twitter.png" alt="" />
+					<img src="/icon/twitter.svg" alt="" />
 				</a>
 			</li>
 			<li>
@@ -24,7 +24,7 @@ const NavSocial = () => {
 			</li>
 			<li>
 				<a href="https://g.page/ColombiaGasVehicular?share" target="_blank" rel="noopener noreferrer">
-					<img src="/icon/location.png" alt="" />
+					<img src="/icon/location.svg" alt="" />
 				</a>
 			</li>
 		</ul>

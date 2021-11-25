@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import MainLayout from '../layout/MainLayout'
-/* import Lottie from "react-lottie"; */
-import animation from './pelota.json'
 import FormEmail from '../components/Forms/FormEmail';
 import { useEffect, useState } from 'react';
 
@@ -25,9 +23,6 @@ const Index = () => {
 		<Head>
 			<title>Colombia Gas Vehicular</title>
 		</Head>
-		{/* <div>
-			<Lottie options={defaultOptions} height={300} width={300} />
-		</div> */}
 
 		<div className="video">
 			<video src="/video/introduccion.mp4" preload="true" type="video/mp4" autoPlay muted onEnded={handleDelete}></video>
@@ -61,7 +56,7 @@ const Index = () => {
 		img {
 			display: block;
 			height: 2rem;
-			margin: 4rem auto;
+			margin: 2rem auto;
 			animation: move 1s infinite alternate-reverse;
 		}
 
