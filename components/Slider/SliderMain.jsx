@@ -135,12 +135,14 @@ const SliderMain = () => {
                 }
 
                 .select {
-                    bottom: 0;
+                    border-radius: 2rem;
+                    background-color: var(--blue-transparent);
+                    bottom: 1rem;
                     left: 50%;
                     transform: translateX(-50%);
                     position: absolute;
                     z-index: 30;
-                    padding: 35px;
+                    padding: 1rem;
                 }
 
                 .content > ul {

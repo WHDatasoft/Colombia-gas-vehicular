@@ -21,11 +21,15 @@ const Simulador = () => {
 		const galones = kmTotal / autonomia
 		const fuelPrice = 8671
 
-		const gasm3 = 1700
+		const litros = galones * 4.546092
+		const m3Gas = litros / 4
+
+		const gasm3Price = 1700
+		const gasm3Km = 15
 
 		setResult({
 			gasolina: galones * fuelPrice,
-			gnv: 0
+			gnv: m3Gas * gasm3Price
 		})
 		console.log()
 	}, [params])
@@ -66,8 +70,10 @@ const Simulador = () => {
 					</li>
 				</ul>
 				<div className="porcentaje">
-					<span>2%</span>
-					<p>Tarifa Preferencial (%Dcto sobre PVP)</p>
+					<div>
+						<span>2%</span>
+						<p>Tarifa Preferencial (%Dcto sobre PVP)</p>
+					</div>
 				</div>
 			</form>
 		</article>
@@ -82,7 +88,7 @@ const Simulador = () => {
 					</li>
 					<li>
 						<p>Costo mensual usando GNV</p>
-						<p>COP 536214</p>
+						<p>COP {Math.floor(result.gnv)}</p>
 					</li>
 				</ul>
 				<div className="porcentaje">
@@ -155,6 +161,7 @@ const Simulador = () => {
 				color: white;
 				background-color: var(--blue);
 				text-align: center;
+				align-items: center;
 			}
 
 			.porcentaje span {

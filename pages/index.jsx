@@ -3,18 +3,19 @@ import MainLayout from '../layout/MainLayout'
 /* import Lottie from "react-lottie"; */
 import animation from './pelota.json'
 import FormEmail from '../components/Forms/FormEmail';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const Index = () => {
 
 	const [deleteElement, setDeleteElement] = useState(false)
 
-	const defaultOptions = {
-		loop: true,
-		autoplay: true,
-		animationData: animation,
-	};
+	useEffect(() => {
+		/* const video = document.getElementsByTagName('video')[0]
+
+		video.play() */
+
+	}, [])
 
 	const handleDelete = () => {
 		setDeleteElement(true)
@@ -29,7 +30,7 @@ const Index = () => {
 		</div> */}
 
 		<div className="video">
-			<video src="/video/introduccion.mp4" type="video/mp4" autoPlay onEnded={handleDelete}></video>
+			<video src="/video/introduccion.mp4" preload="true" type="video/mp4" autoPlay muted onEnded={handleDelete}></video>
 		</div>
 
 		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
