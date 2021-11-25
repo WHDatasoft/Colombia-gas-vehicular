@@ -63,7 +63,7 @@ const SliderMain = () => {
 
             <ul>
                 <li>
-                    <img src="/img/colombiagas/primera.jpg" alt="" />
+                    <img src="/img/colombiagas/primera.jpg" alt="" loading="eager" />
                 </li>
                 <li>
                     <img src="/img/colombiagas/segunda.jpg" alt="" />
@@ -78,7 +78,7 @@ const SliderMain = () => {
                     </div>
                 </li>
                 <li>
-                    <img src="/img/colombiagas/tercera.jpg" alt="" />
+                    <img src="/img/colombiagas/tercera.jpg" alt="" loading="lazy" />
                     <div className="fondo">
                         <h2>OBJETIVOS CLAVES</h2>
                         <div className="icons">
@@ -98,7 +98,7 @@ const SliderMain = () => {
                     </div>
                 </li>
                 <li>
-                    <img src="/img/colombiagas/cuarta.jpg" alt="" />
+                    <img src="/img/colombiagas/cuarta.jpg" alt="" loading="lazy" />
                     <div className="fondo">
                         <h2>OBJETIVOS CLAVES</h2>
                         <div className="icons">

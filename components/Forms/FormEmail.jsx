@@ -6,7 +6,7 @@ const FormEmail = () => {
 
 	return <div className="form-wrapper">
 
-		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" />
+		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		<form onSubmit={onSubmit}>
 			<h1>COMUNÍCATE CON NOSOTROS</h1>
 			<input type="text" placeholder="Nombre" />
