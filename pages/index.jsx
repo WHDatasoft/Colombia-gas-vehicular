@@ -24,6 +24,8 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 
+		<audio src="/audio/introduccion.mp3" autoPlay></audio>
+
 		<div className="video">
 			<video src="/video/introduccion.mp4" preload="true" type="video/mp4" autoPlay muted onEnded={handleDelete}></video>
 		</div>

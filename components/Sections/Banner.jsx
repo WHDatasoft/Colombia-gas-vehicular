@@ -14,8 +14,8 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 			</Link>
 		</div>
 
-		<img className="gnv" src="/img/banner/gnv.png" alt="" />
-		<img className="person" src={`/img/banner/${imgPerson}`} alt="" />
+		<img className="gnv" src="/img/banner/gnv.png" alt="" loading="eager" />
+		<img className="person" src={`/img/banner/${imgPerson}`} alt="" loading="eager" />
 		<div className="text">
 			{children}
 		</div>

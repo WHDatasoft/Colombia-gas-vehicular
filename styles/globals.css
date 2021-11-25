@@ -1,6 +1,12 @@
 
+@font-face {
+	font-family: franklin;
+	src: url('../public/tipografia/franklin-gothic-book.ttf'),
+		url('../public/tipografia/franklin-gothic-heavy.ttf');
+}
+
 :root {
-	font-family: 'Roboto', sans-serif;
+	font-family: franklin, 'Roboto', sans-serif;
 	--dark-green: #068437;
 	--light-green: #4AAC35;
 	--smoth-green: #A5D3B1;

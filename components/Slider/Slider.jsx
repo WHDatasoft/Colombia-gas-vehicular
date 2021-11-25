@@ -96,11 +96,11 @@ const Slider = ({ contentSlider, id, infinite }) => {
 			}
 
 			.right {
-				right: 3rem;
+				right: 5rem;
 			}
 
 			.left {
-				left: 3rem;
+				left: 5rem;
 				transform: translateY(-50%) rotate(180deg);
 			}
 

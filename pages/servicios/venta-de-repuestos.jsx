@@ -10,7 +10,7 @@ const Index = () => {
 	const contentSlider = [
 		<ArticleBussines
 			type
-			img="filtro-de-gas.png"
+			img="filtro-de-gas.jpg"
 			bussinesName="Filtro de gas"
 			characterList={[
 				'Precio: $80.000'
@@ -18,7 +18,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="computadora.png"
+			img="computadora.jpg"
 			bussinesName="Computadora a gas 4 cilindros"
 			characterList={[
 				'Precio: $800.000'
@@ -26,7 +26,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="manometro.png"
+			img="manometro.jpg"
 			bussinesName="Manometro"
 			characterList={[
 				'Precio: $150.000'
@@ -34,7 +34,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="capuchon-pico-de-carga-1.png"
+			img="capuchon-pico-de-carga-1.jpg"
 			bussinesName="Capuchon pico de carga"
 			characterList={[
 				'Precio: $25.000'
@@ -42,7 +42,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="cableado.png"
+			img="cableado.jpg"
 			bussinesName="Cableado electrico 5ta generación"
 			characterList={[
 				'Precio: $300.000'
@@ -50,7 +50,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="emulador-inyextores-4-cilindros.png"
+			img="emulador-inyextores-4-cilindros.jpg"
 			bussinesName="Emulador inyectores 4 cilindros"
 			characterList={[
 				'Precio: $160.000'
@@ -58,7 +58,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="tubería.png"
+			img="tubería.jpg"
 			bussinesName="Tubería"
 			characterList={[
 				'Precio: $150.000'
@@ -66,7 +66,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="regulador.png"
+			img="regulador.jpg"
 			bussinesName="Regulador de 3ra generación"
 			characterList={[
 				'Precio: $60.000'
@@ -74,7 +74,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="riel-de-inyectores.png"
+			img="riel-de-inyectores.jpg"
 			bussinesName="Riel de inyectores 4 cilindros."
 			characterList={[
 				'Precio: $480.000'
@@ -82,7 +82,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="sensor-y-emulador-de-nivel-de-asolina.png"
+			img="sensor-y-emulador-de-nivel-de-asolina.jpg"
 			bussinesName="Sensor y emulador de gasolina"
 			characterList={[
 				'Precio: $180.000'
@@ -90,7 +90,7 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="llave.png"
+			img="llave.jpg"
 			bussinesName="Llave conmutadora"
 			characterList={[
 				'Precio: $150.000'
@@ -98,7 +98,103 @@ const Index = () => {
 		/>,
 		<ArticleBussines
 			type
-			img="hace-parte-del-kit.png"
+			img="hace-parte-del-kit.jpg"
+			bussinesName="Cableado electrico de llave conmutadora"
+			characterList={[
+				'Precio: $60.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="filtro-de-gas.jpg"
+			bussinesName="Filtro de gas"
+			characterList={[
+				'Precio: $80.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="computadora.jpg"
+			bussinesName="Computadora a gas 4 cilindros"
+			characterList={[
+				'Precio: $800.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="manometro.jpg"
+			bussinesName="Manometro"
+			characterList={[
+				'Precio: $150.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="capuchon-pico-de-carga-1.jpg"
+			bussinesName="Capuchon pico de carga"
+			characterList={[
+				'Precio: $25.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="cableado.jpg"
+			bussinesName="Cableado electrico 5ta generación"
+			characterList={[
+				'Precio: $300.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="emulador-inyextores-4-cilindros.jpg"
+			bussinesName="Emulador inyectores 4 cilindros"
+			characterList={[
+				'Precio: $160.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="tubería.jpg"
+			bussinesName="Tubería"
+			characterList={[
+				'Precio: $150.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="regulador.jpg"
+			bussinesName="Regulador de 3ra generación"
+			characterList={[
+				'Precio: $60.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="riel-de-inyectores.jpg"
+			bussinesName="Riel de inyectores 4 cilindros."
+			characterList={[
+				'Precio: $480.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="sensor-y-emulador-de-nivel-de-asolina.jpg"
+			bussinesName="Sensor y emulador de gasolina"
+			characterList={[
+				'Precio: $180.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="llave.jpg"
+			bussinesName="Llave conmutadora"
+			characterList={[
+				'Precio: $150.000'
+			]}
+		/>,
+		<ArticleBussines
+			type
+			img="hace-parte-del-kit.jpg"
 			bussinesName="Cableado electrico de llave conmutadora"
 			characterList={[
 				'Precio: $60.000'
