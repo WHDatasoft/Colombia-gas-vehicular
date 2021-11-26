@@ -52,6 +52,14 @@ const NavSocial = () => {
 				grid-row-gap: .3rem;
 			}
 
+			li {
+				transition: transform .5s;
+			}
+
+			li:hover {
+				transform: scale(1.1);
+			}
+
 		`}</style>
 	</nav>
 }

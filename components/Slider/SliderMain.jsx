@@ -26,7 +26,7 @@ const SliderMain = () => {
     //Para evitar que se desfase el slider
     useEffect(() => {
         if (img < 0) setImg(0)
-        if (img > 3) setImg(3)
+        if (img > 2) setImg(2)
     }, [img]);
 
     //Mover el slider
@@ -55,10 +55,6 @@ const SliderMain = () => {
                     onClick={() => move(2)}
                     style={filling(2)}
                 ></button>
-                <button
-                    onClick={() => move(3)}
-                    style={filling(3)}
-                ></button>
             </div>
 
             <ul>
@@ -79,26 +75,6 @@ const SliderMain = () => {
                 </li>
                 <li>
                     <img src="/img/colombiagas/tercera.jpg" alt="" loading="lazy" />
-                    <div className="fondo">
-                        <h2>OBJETIVOS CLAVES</h2>
-                        <div className="icons">
-                            <div>
-                                <img className="icon" src="/icon/car.svg" alt="" />
-                                <h4>Garantía</h4>
-                            </div>
-                            <div>
-                                <img className="icon" src="/icon/money.svg" alt="" />
-                                <h4>Ahorro</h4>
-                            </div>
-                            <div>
-                                <img className="icon" src="/icon/green.svg" alt="" />
-                                <h4>Cuidado</h4>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <img src="/img/colombiagas/cuarta.jpg" alt="" loading="lazy" />
                     <div className="fondo">
                         <h2>OBJETIVOS CLAVES</h2>
                         <div className="icons">
@@ -197,10 +173,11 @@ const SliderMain = () => {
 
                 h2 {
                     text-align: center;
+                    margin: 1rem 0;
                 }
 
                 .fondo {
-                    padding: 6rem 8rem;
+                    padding: 3rem 8rem;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -214,6 +191,11 @@ const SliderMain = () => {
 
                 p {
                     min-width: 60rem;
+                }
+
+                h4 {
+                    text-align: center;
+                    margin: 1rem 0;
                 }
 
             `}</style>

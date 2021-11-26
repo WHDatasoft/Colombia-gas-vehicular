@@ -1,6 +1,16 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 const Nav = () => {
+
+	const router = useRouter()
+
+	const [linkSelected, setLinkSelected] = useState('')
+
+	useEffect(() => {
+		setLinkSelected(router.asPath)
+	}, [])
 
 	const linkList = [
 		{ title: 'Inicio', url: '/' },
@@ -35,7 +45,10 @@ const Nav = () => {
 		<ul className="main-link-list">
 			{
 				linkList.map(mainLink => (
-					<li key={mainLink.title} className="main-link" >
+					<li key={mainLink.title} className="main-link" style={linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? {
+						background: 'var(--orange)',
+						color: 'white'
+					} : {}}>
 						<Link href={mainLink.url}>
 							<a>
 								<span>
@@ -50,7 +63,7 @@ const Nav = () => {
 								<ul className="second-link-list">
 									{
 										mainLink.list.map(secondLink => (
-											<li key={secondLink.title} className="second-link">
+											<li key={secondLink.title} className="second-link" style={router.asPath === secondLink.url ? { backgroundColor: 'var(--light-orange)' } : {}}>
 												<Link href={secondLink.url}>
 													<a>{secondLink.title}</a>
 												</Link>
