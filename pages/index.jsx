@@ -25,6 +25,7 @@ const Index = () => {
 
 	return <MainLayout>
 		<Head>
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 
