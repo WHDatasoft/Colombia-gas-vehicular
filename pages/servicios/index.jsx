@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../../components/Head/Head'
 import NavServices from '../../components/Navigation/NavServices'
 import MainLayout from "../../layout/MainLayout"
 

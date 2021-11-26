@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../components/Head/Head'
 import SuccessStories from '../components/Sections/SuccessStories'
 import MainLayout from "../layout/MainLayout"
 

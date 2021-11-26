@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../components/Head/Head'
 import MainLayout from '../layout/MainLayout'
 import FormEmail from '../components/Forms/FormEmail';
 import { useEffect, useState } from 'react';
@@ -25,7 +25,6 @@ const Index = () => {
 
 	return <MainLayout>
 		<Head>
-			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 

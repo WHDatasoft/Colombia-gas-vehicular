@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
 import MainLayout from "../../layout/MainLayout"

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import Simulador from '../../components/Sections/Simulador'
 import MainLayout from "../../layout/MainLayout"

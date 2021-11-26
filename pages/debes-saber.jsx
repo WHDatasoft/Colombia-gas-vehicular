@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../components/Head/Head'
 import Graphyc from '../components/Sections/Graphyc'
 import Law from '../components/Sections/Law'
 import MainLayout from "../layout/MainLayout"

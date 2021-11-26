@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../components/Head/Head'
 import Footer from '../components/Footer/Footer'
 import FormEmail from '../components/Forms/FormEmail'
 import Schedule from '../components/Sections/Schedule'

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from '../components/Head/Head'
 import SliderMain from '../components/Slider/SliderMain'
 import MainLayout from "../layout/MainLayout"
 
