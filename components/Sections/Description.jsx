@@ -29,12 +29,14 @@ const Description = ({ title, text, icon, left, right }) => {
 				transform: translate(-50%, -30%);
 				padding: 1rem 3rem;
 				border-radius: 1rem;
+				text-align: center;
 			}
 
 			p {
 				font-weight: 0;
 				line-height: 1.3rem;
 				color: #222;
+				text-align: justify;
 			}
 
 			
@@ -44,6 +46,14 @@ const Description = ({ title, text, icon, left, right }) => {
 				bottom: 0;	
 				${right ? 'right: 7rem' : ''}
 				${left ? 'left: 7rem' : ''}
+			}
+
+			@media screen and (max-width: 625px) {
+
+				section {
+					padding: 4rem 5rem;
+				}
+
 			}
 		
 

@@ -64,16 +64,14 @@ const Index = () => {
         .video {
 			position: relative;
 			overflow: hidden;
-			position: relative;
 			transition: height 3s;
 			height: ${deleteElement ? '0' : '80vh'};
-			z-index: 1;
         }
 
         video {
-          height: 100%;
-          display: block;
-          margin: auto;
+			height: 100%;
+			display: block;
+			margin: auto;
         }
 
 		img {
@@ -101,7 +99,17 @@ const Index = () => {
 			color: white;
 		}
 
+		@media screen and (max-width: 730px) {
 
+			.video {
+				height: auto;
+			}
+
+			video {
+				width: ${deleteElement ? '0%' : '100%'};
+				height: auto;
+			}
+		}
 
     
     `}</style>

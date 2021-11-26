@@ -28,6 +28,10 @@ const Index = () => {
 
 		<style jsx>{`
 
+			:global(:root) {
+				--size: 1
+			}
+
 			.texto-1, .texto-2, .texto-3 {
 				text-align: center;
 			}
@@ -35,12 +39,12 @@ const Index = () => {
 			.texto-1 {
 				color: var(--blue);
 				font-weight: 600;
-				font-size: 1rem;
+				font-size: calc(1rem * var(--size));
 			}
 
 			.texto-2 {
 				font-weight: 400;
-				font-size: 2.5rem;
+				font-size: calc(2.5rem * var(--size));
 				color: var(--blue);
 			}
 
@@ -48,7 +52,19 @@ const Index = () => {
 				margin: 2rem 0;
 				font-weight: 600;
 				color: var(--light-green);
-				font-size: 1.2rem;
+				font-size: calc(1.2rem * var(--size));
+			}
+
+			@media screen and (max-width: 625px) {
+
+				:global(:root) {
+					--size: 0.7
+				}
+
+				.texto-3 {
+					margin: 1rem 0;
+				}
+
 			}
 
 		

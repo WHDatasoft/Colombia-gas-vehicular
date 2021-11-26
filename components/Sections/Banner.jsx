@@ -28,6 +28,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				display: grid;
 				grid-template-columns: 4fr 1fr 4fr;
 				background: white url('/img/banner/${fondo}') no-repeat;
+				background-position: right;
 				background-size: cover;
 				padding: 0 10rem;
 				justify-items: center;
@@ -88,6 +89,81 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 			.text {
 				align-self: center;
+			}
+
+			.icon img {
+				display: block;
+				margin: auto;
+				width: 6rem;
+			}
+
+			@media screen and (max-width: 1200px) {
+
+				main {
+					grid-template-columns: 2fr 1fr 4fr;
+					padding-left: 7.5rem; 
+				}
+				.gnv {
+					width: 13rem;
+				}
+			}
+
+			@media screen and (max-width: 970px) {
+
+				main {
+					grid-template-columns: 2fr 4fr;
+					padding: 0 7.5rem; 
+				}
+
+				.gnv {
+					position: absolute;
+					z-index: 0;
+					opacity: .3;	
+					right: 5rem;
+				}
+
+				.text, .person {
+					z-index: 1;
+				}
+			}
+
+			@media screen and (max-width: 735px) {
+
+				main {
+					padding-right: 2rem; 
+					background-position: left;
+				}
+
+			}
+			
+
+			@media screen and (max-width: 625px) {
+
+				main {
+					grid-template-columns: auto 1fr;
+					padding-left: 5.5rem; 
+				}
+
+				.person {
+					width: ${8 * (personSize ? personSize : 1)}rem;
+				}
+
+				.icon img {
+					width: 4rem;
+				}
+
+				p {
+					width: 3rem;
+					font-size: .7rem;
+					padding: 0 1rem;
+				}
+
+				.back:after  {
+					bottom: -1.4rem;
+					transform-origin: top left;
+					transform: rotate(-17.5deg);
+				}
+
 			}
 
 		`}</style>

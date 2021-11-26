@@ -65,6 +65,19 @@ const Whatsapp = () => {
 				}
 			}
 
+			@media screen and (max-width: 730px) {
+
+				button {
+					right: .5rem;
+					bottom: .5rem;
+				}
+
+				img {
+					height: 7rem;
+				}
+
+			}
+
 		`}</style>
 	</button>
 }

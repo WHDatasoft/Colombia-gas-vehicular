@@ -2,11 +2,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-const Nav = () => {
+const Nav = ({ setEnableNav, enableNav }) => {
 
 	const router = useRouter()
 
 	const [linkSelected, setLinkSelected] = useState('')
+
 
 	useEffect(() => {
 		setLinkSelected(router.asPath)
@@ -41,6 +42,12 @@ const Nav = () => {
 	]
 
 	return <nav>
+
+		<button className="close" onClick={() => { setEnableNav(false) }}>
+			<svg viewBox="0 0 352 512">
+				<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+			</svg>
+		</button>
 
 		<ul className="main-link-list">
 			{
@@ -81,6 +88,10 @@ const Nav = () => {
 		</ul>
 
 		<style jsx>{`
+
+			.close {
+				display: none;
+			}
 
 			.main-link-list {
 				display: grid;
@@ -130,6 +141,60 @@ const Nav = () => {
 
 			.second-link:hover {
 				background-color: var(--light-orange);
+			}
+
+			@media screen and (max-width: 1080px) {
+
+				.close {
+					box-sizing: border-box;
+					padding: 1rem;
+					display: grid;
+					position: absolute;
+					top: 1rem;
+					right: 2rem;
+					height: 4rem;
+					width: 4rem;
+					place-items: center;
+					color: white;
+					background-color: unset;
+				}
+
+				nav {
+					position: fixed;
+					width: 100%;
+					min-height: 100vh;
+					background-color: var(--blue-transparent);
+					top: 0;
+					left: 0;
+					display: grid;
+					place-items: center;
+					transition: transform .5s, opacity .5s;
+					opacity: ${enableNav ? '1' : '0'};
+					transform: translateY(${enableNav ? '0' : '-100'}%);
+				}
+
+				.main-link-list {
+					display: grid;
+					grid-template-columns: none;
+					place-items: center;
+					height: auto;
+					border: none;
+					text-align: center;
+				}
+
+				.main-link {
+					color: white;
+					height: auto;
+					border: none;
+					margin: .5rem 0;
+					font-size: 1.3rem;
+					font-weight: 700;
+					padding: .2rem 0;
+				}
+
+				.main-link > a {
+					padding: 0;
+				}
 			}
 
 

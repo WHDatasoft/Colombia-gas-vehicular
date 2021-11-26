@@ -40,17 +40,23 @@ const Index = () => {
 
 		<style jsx>{`
 
+			:global(:root) {
+				--size: 1
+			}
+
 			.texto-1, .texto-2, .texto-3 {
 				text-align: center;
 			}
 		
 			.texto-1 {
 				color: var(--blue);
+				font-size: calc(1rem * var(--size));
+				font-weight: 600;
 			}
 
 			.texto-2 {
 				font-weight: 600;
-				font-size: 1.2rem;
+				font-size: calc(1.2rem * var(--size));
 				color: var(--dark-green);
 				margin: 2rem 0;
 			}
@@ -58,10 +64,23 @@ const Index = () => {
 			.texto-3 {
 				font-weight: 600;
 				color: var(--blue);
+				font-size: calc(1rem * var(--size));
 			}
 
 			.number {
-				font-size: 2.5rem;
+				font-size: calc(2.5rem * var(--size));
+			}
+
+			@media screen and (max-width: 625px) {
+
+				:global(:root) {
+					--size: 0.7
+				}
+
+				.texto-2 {
+					margin: 1rem 0;
+				}
+
 			}
 
 		`}</style>

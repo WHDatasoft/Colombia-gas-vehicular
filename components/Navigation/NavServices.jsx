@@ -100,6 +100,37 @@ const NavServices = () => {
 				}
 			}
 
+			@media screen and (max-width: 1230px) {
+				img {
+					width: 9rem;
+				}
+
+				span {
+					margin-top: 0rem;
+				}
+			}
+
+			@media screen and (max-width: 1000px) {
+				img {
+					width: 7rem;
+				}
+			}
+
+			@media screen and (max-width: 850px) {
+				img {
+					width: 10rem;
+				}
+
+				ul {
+					height: auto;
+					display: block;
+				}
+
+				li {
+					margin-bottom: 2.5rem;
+				}
+			}
+
 		`}</style>
 	</nav>
 }
