@@ -35,9 +35,9 @@ const MainLayout = ({ children }) => {
 		<Whatsapp />
 		<NavSocial />
 
-		{/* {
+		{
 			hojasList.map(hoja => hoja)
-		} */}
+		}
 
 
 		{children}

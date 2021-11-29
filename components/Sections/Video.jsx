@@ -48,13 +48,13 @@ const Video = ({ videoUrl, deleteFinish, handlePlayButton, control }) => {
 				</button>
 				:
 
-				handlePlayButton
+				/* handlePlayButton
 					?
 					<button className="pause" onClick={pause}>
 						pause
 					</button>
-					:
-					''
+					: */
+				''
 		}
 		<video
 			src={`/video/${videoUrl}.mp4`}

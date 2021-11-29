@@ -17,6 +17,7 @@ const FormEmail = () => {
 		<style jsx>{`
 
 			.form-wrapper {
+				font-size: 1rem;
 				position: relative;
 				z-index: 1;
 				display: grid;
@@ -25,8 +26,8 @@ const FormEmail = () => {
 			}
 
 			img {
-				padding: 3rem 0;
-				width: 9rem;
+				padding: 3em 0;
+				width: 9em;
 				display: block;
 				transform-origin: top center;
 				animation: rotate 2s infinite alternate-reverse ease-in-out;
@@ -34,21 +35,22 @@ const FormEmail = () => {
 
 			h1 {
 				color: white;
-				font-size: 1.5rem;
+				font-size: 1.5em;
+				text-align: center;
 			}
 
 			form {
 				display: inline-grid;
-				grid-row-gap: 1.5rem;
+				grid-row-gap: 1.5em;
 			}
 
 			button, input {
-				padding: .8rem;
+				padding: .8em;
 			}
 
 			button {
 				justify-self: center;
-				padding: .8rem 1.5rem; 
+				padding: .8em 1.5em; 
 			}
 
 			@keyframes rotate {
@@ -58,6 +60,12 @@ const FormEmail = () => {
 
 				to {
 					transform: rotate(10deg)
+				}
+			}
+
+			@media screen and (max-width: 360px) {
+				.form-wrapper {
+					font-size: .8rem;
 				}
 			}
 

@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import Services from '../../components/Sections/Services'
@@ -31,6 +32,8 @@ const Index = () => {
 			title="SERVICIO DE ASISTENCIA MÉDICA TELEFÓNICA"
 			text="Cuando la consecuencia de una enfermedad no preexistente o crónica, los beneficiarios requieran de una consulta médica de urgencia, la compañía pondrá a su disposición un médico para que los visite a domicilio."
 		/>
+
+		<MainFooter />
 
 		<style jsx>{`
 		

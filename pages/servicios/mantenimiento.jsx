@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
@@ -25,6 +26,8 @@ const Index = () => {
 			title="Mantenimiento"
 			text="El mantenimiento se basa en registros a ejecutarse a los 1,500 Km y en adelante periódicamente cada 20,000 kms. Eso para garantizar siempre un correcto funcionamiento de su vehículo y del equipo de Gas- GNV. Los talleres autorizados (*) para ejercer el mantenimiento preventivo del sistema GNV."
 		/>
+
+		<MainFooter />
 
 		<style jsx>{`
 

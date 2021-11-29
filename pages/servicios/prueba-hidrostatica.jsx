@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
@@ -27,6 +28,8 @@ const Index = () => {
 			text="La aplicación de una presión a un equipo o línea de tuberías fuera de operación, con el fin de verificar la hermeticidad de los accesorios bridados y la soldadura, utilizando como elemento principal el agua o en su defecto un fluido no corrosivo."
 
 		/>
+
+		<MainFooter />
 
 		<style jsx>{`
 

@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import Simulador from '../../components/Sections/Simulador'
@@ -20,6 +21,8 @@ const Index = () => {
 		<h2>FORMATO DE SIMULACIÓN OFERTA DE SUMINISTRO CON GNV VANTI</h2>
 
 		<Simulador />
+
+		<MainFooter />
 
 		<style jsx>{`
 		

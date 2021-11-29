@@ -117,6 +117,7 @@ const NavServices = () => {
 			}
 
 			@media screen and (max-width: 850px) {
+
 				img {
 					width: 10rem;
 				}

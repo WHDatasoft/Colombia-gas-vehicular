@@ -3,6 +3,7 @@ import MainLayout from '../layout/MainLayout'
 import FormEmail from '../components/Forms/FormEmail';
 import { useEffect, useState } from 'react';
 import Video from '../components/Sections/Video';
+import MainFooter from '../components/Footer/MainFooter';
 
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
 
 		<Video
 			videoUrl="introduccion"
+			handlePlayButton
 			deleteFinish
 		/>
 
@@ -26,7 +28,8 @@ const Index = () => {
 		<br />
 		<br />
 		<br />
-		<br />
+
+		<MainFooter />
 
 		<style jsx>{`
     

@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import Services from '../../components/Sections/Services'
@@ -28,6 +29,8 @@ const Index = () => {
 		<Services
 			text="Equipos Homologados por la marca."
 		/>
+
+		<MainFooter />
 
 	</MainLayout>
 }

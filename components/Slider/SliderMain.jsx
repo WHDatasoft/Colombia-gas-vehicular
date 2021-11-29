@@ -4,7 +4,7 @@ import Portada2 from './Portada2' */
 
 const SliderMain = () => {
 
-    const [img, setImg] = useState(1);
+    const [img, setImg] = useState(3);
     const [direccion, setDireccion] = useState(true);
 
     useEffect(() => {
@@ -42,7 +42,7 @@ const SliderMain = () => {
 
     return (
         <div className="content">
-            <div className="select">
+            {/* <div className="select">
                 <button
                     onClick={() => move(0)}
                     style={filling(0)}
@@ -55,7 +55,7 @@ const SliderMain = () => {
                     onClick={() => move(2)}
                     style={filling(2)}
                 ></button>
-            </div>
+            </div> */}
 
             <ul>
                 <li>

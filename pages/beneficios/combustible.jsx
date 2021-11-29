@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import ServiceImg from '../../components/Sections/ServiceImg'
@@ -38,6 +39,9 @@ const Index = () => {
 			title="El gas no es manipulable por los conductores"
 			img="cuarta.jpg"
 		/>
+
+		<MainFooter />
+
 		<style jsx>{`
 		
 			h2 {

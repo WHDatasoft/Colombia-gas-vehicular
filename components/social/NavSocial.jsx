@@ -1,4 +1,4 @@
-const NavSocial = () => {
+const NavSocial = ({ responsive }) => {
 	return <nav>
 
 		<ul>
@@ -63,7 +63,29 @@ const NavSocial = () => {
 
 			@media screen and (max-width: 730px) {
 				nav {
-					font-size: 14px;
+					font-size: 1.5rem;
+					display: ${responsive ? 'grid' : 'none'};
+					position: relative;
+					border-radius: 0;
+					background-color: unset;
+					margin-bottom: 2rem;
+				}
+
+				ul {
+					margin: auto;
+					display: block;
+				}
+
+				li {
+					display: inline-block;
+					margin: .5rem;
+				}
+
+			}
+
+			@media screen and (max-width: 730px) {
+				nav {
+					font-size: 1rem;
 				}
 			}
 

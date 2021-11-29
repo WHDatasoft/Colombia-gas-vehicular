@@ -1,3 +1,4 @@
+import MainFooter from '../components/Footer/MainFooter'
 import Head from '../components/Head/Head'
 import Graphyc from '../components/Sections/Graphyc'
 import Law from '../components/Sections/Law'
@@ -76,7 +77,9 @@ const Index = () => {
 			]}
 		/>
 		<Law />
-		<br /><br /><br /><br /><br />
+		<br /><br /><br />
+
+		<MainFooter />
 
 		<style jsx>{`
 		

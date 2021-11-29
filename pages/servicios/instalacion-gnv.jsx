@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
@@ -35,6 +36,8 @@ const Index = () => {
 			icon="car-orange.svg"
 			left
 		/>
+
+		<MainFooter />
 
 		<br /><br /><br />
 

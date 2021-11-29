@@ -1,3 +1,4 @@
+import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import ArticleBussines from '../../components/Sections/ArticleBussines'
 import Banner from '../../components/Sections/Banner'
@@ -227,7 +228,9 @@ const Index = () => {
 
 		<h1>Repuestos</h1>
 		<Slider contentSlider={contentSlider} id="empresas" />
-		<br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br />
+
+		<MainFooter />
 
 		<style jsx>{`
 
