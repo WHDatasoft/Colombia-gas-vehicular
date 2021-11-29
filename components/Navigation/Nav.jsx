@@ -7,6 +7,9 @@ const Nav = ({ setEnableNav, enableNav }) => {
 	const router = useRouter()
 
 	const [linkSelected, setLinkSelected] = useState('')
+	const [submenu, setSubmenu] = useState(false)
+	const [submenuActive, setSubmenuActive] = useState('');
+
 
 
 	useEffect(() => {
@@ -48,33 +51,66 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
 			</svg>
 		</button>
+		{
+			submenu
+				?
+				<button className="return" onClick={() => {
+					setSubmenu(false)
+					setSubmenuActive('')
+				}}>
+					<svg viewBox="0 0 448 512">
+						<path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+					</svg>
+				</button>
+				:
+				''
+		}
 
 		<ul className="main-link-list">
 			{
 				linkList.map(mainLink => (
-					<li key={mainLink.title} className="main-link" style={linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? {
-						background: 'var(--orange)',
-						color: 'white'
-					} : {}}>
-						<Link href={mainLink.url}>
-							<a>
-								<span>
-									{mainLink.title}
-								</span>
-							</a>
-						</Link>
+					<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+						<>
+							{
+								submenu
+									?
+									''
+									:
+									<>
+										{
+											mainLink.title === 'servicios' || mainLink.title === 'Beneficios'
+												?
+												<button className="handle-submenu" onClick={() => {
+													setSubmenu(true)
+													setSubmenuActive(mainLink.title)
+												}}>{mainLink.title}</button>
+												:
+												<Link href={mainLink.url}>
+													<a>
+														<span>
+															{mainLink.title}
+														</span>
+													</a>
+												</Link>
+
+										}
+									</>
+							}
+						</>
 						{
 							mainLink.list
 								?
 
-								<ul className="second-link-list">
+								<ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
 									{
 										mainLink.list.map(secondLink => (
-											<li key={secondLink.title} className="second-link" style={router.asPath === secondLink.url ? { backgroundColor: 'var(--light-orange)' } : {}}>
+
+											<li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
 												<Link href={secondLink.url}>
 													<a>{secondLink.title}</a>
 												</Link>
 											</li>
+
 										))
 									}
 								</ul>
@@ -139,13 +175,28 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				text-transform: capitalize;
 			}
 
+			.selected-first {
+				background: var(--orange);
+				color: white
+			}
+
+			.selected-second {
+				background-color: var(--light-orange)
+			}
+
 			.second-link:hover {
 				background-color: var(--light-orange);
 			}
 
+			.handle-submenu {
+				color: white;
+				background-color: unset;
+				display: none;
+			}
+
 			@media screen and (max-width: 1080px) {
 
-				.close {
+				.close, .return {
 					box-sizing: border-box;
 					padding: 1rem;
 					display: grid;
@@ -157,6 +208,10 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					place-items: center;
 					color: white;
 					background-color: unset;
+				}
+
+				.return {
+					left: 2rem;
 				}
 
 				nav {
@@ -195,6 +250,27 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				.main-link > a {
 					padding: 0;
 				}
+
+				.handle-submenu {
+					display: block;
+				}
+
+				.main-link:hover .second-link-list {
+					visibility: hidden;
+				}
+
+				.main-link:hover, .second-link:hover {
+					background-color: unset;
+				}
+
+				.selected-first {
+					background: unset
+				}
+
+				.selected-second {
+					background-color: unset
+				}
+
 			}
 
 
