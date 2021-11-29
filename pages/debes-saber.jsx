@@ -1,6 +1,7 @@
 import Head from '../components/Head/Head'
 import Graphyc from '../components/Sections/Graphyc'
 import Law from '../components/Sections/Law'
+import Video from '../components/Sections/Video'
 import MainLayout from "../layout/MainLayout"
 
 const Index = () => {
@@ -8,7 +9,11 @@ const Index = () => {
 		<Head>
 			<title>Colombia Gas Vehicular</title>
 		</Head>
-		<video src="/video/presentacion-colombiagas.mp4" autoPlay controls></video>
+
+		<Video
+			videoUrl="presentacion-colombiagas"
+			control
+		/>
 		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
 		<Graphyc
 			title="REDUCCIÓN DE CO2 GNV - GASOLINA"

@@ -1,4 +1,5 @@
 import Head from '../../components/Head/Head'
+import Video from '../../components/Sections/Video'
 import MainLayout from "../../layout/MainLayout"
 
 const Index = () => {
@@ -7,24 +8,10 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 
-		<video src="/video/beneficios.mp4" autoPlay controls></video>
-
-
-		<style jsx>{`
-		
-			video {
-				position: relative;
-				z-index: 1;
-				display: block;
-				margin: auto;
-				box-sizing: border-box;
-				padding: 0 3rem;
-				height: 75vh;
-			}
-
-			
-		
-		`}</style>
+		<Video
+			videoUrl="beneficios"
+			control
+		/>
 	</MainLayout>
 }
 

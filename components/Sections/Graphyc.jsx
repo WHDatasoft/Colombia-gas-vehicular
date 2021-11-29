@@ -84,7 +84,6 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 			}
 
 			section {
-
 				display: grid;
 				grid-template-columns: 1fr auto 2px auto;
 				grid-column-gap: 2rem;
@@ -92,6 +91,7 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 			}
 
 			video {
+				justify-self: center;
 				height: 14rem;
 			}
 
@@ -137,6 +137,70 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 				left: -2rem;
 				border-radius: 50%;
 				background-color: var(--light-green)
+
+			}
+
+			@media screen and (max-width: 1325px) {
+
+				video {
+					height: 11rem
+				}
+
+			}
+
+			@media screen and (max-width: 1130px) {
+
+				video {
+					grid-row: 1/4;
+				}
+
+				section {
+					grid-template-columns: 1fr auto;
+				}
+
+				.line {
+					margin: 1rem 0;
+					height: 2px;
+					width: 100%;
+					background-color: var(--blue);
+				}
+
+			}
+			
+			@media screen and (max-width: 860px) {
+
+				video {
+					grid-row: 1/2;
+					grid-column: 1/4;
+				}
+
+				section {
+					grid-template-columns: auto 2px auto;
+					grid-row-gap: 2rem;
+					padding: 2rem;
+				}
+
+				.line {
+					height: 100%;
+					width: 100%;
+					background-color: var(--blue);
+				}
+
+			}
+
+			@media screen and (max-width: 625px) {
+
+				.main-list, .second-list {
+					font-size: .8rem;
+				}
+
+			}
+
+			@media screen and (max-width: 530px) {
+
+				video {
+					width: 100%;
+				}
 
 			}
 
