@@ -31,7 +31,7 @@ const Index = () => {
 		<style jsx>{`
 
 			:global(:root) {
-				--size: 1
+				--size: 1;
 			}
 
 			.texto-1, .texto-2, .texto-3 {

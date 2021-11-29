@@ -28,8 +28,9 @@ const Services = ({ title, text }) => {
 			}
 
 			p {
-				width: 40rem;
+				width: 70%;
 				margin: auto;
+				font-weight: 000;
 			}
 
 

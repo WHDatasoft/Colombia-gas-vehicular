@@ -166,11 +166,15 @@ const contentSlider2 = [
 ]
 
 const SuccessStories = () => {
+
+
+
+
 	return <section>
 
 		<h1>CASOS DE ÉXITO</h1>
 
-		{<Slider contentSlider={contentSlider} id="empresas" />}
+		<Slider contentSlider={contentSlider} id="empresas" />
 
 		<h2>MARCAS DISPONIBLES CON GARANTÍA DE FÁBRICA Y DEDICADOS 1,5 A 3,5 TONELADAS</h2>
 

@@ -56,6 +56,23 @@ const Footer = () => {
 				border: 1px solid white;
 			}
 
+
+			@media screen and (max-width: 780px) {
+				
+				footer {
+					grid-template-columns: 1fr;
+					
+				}
+
+				.image {
+					justify-self: center;
+					width: 5rem;
+					height: 5rem;
+					margin-bottom: 2rem;
+				}
+				
+			}
+
 		`}</style>
 	</footer>
 }

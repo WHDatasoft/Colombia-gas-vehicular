@@ -64,6 +64,10 @@ const Schedule = () => {
 
 		<style jsx>{`
 
+			:global(:root) {
+				--size: 1
+			}
+
 			section {
 				position: relative;
 				z-index: 1;
@@ -71,40 +75,34 @@ const Schedule = () => {
 				border-top-left-radius: 50%;
 				border-bottom-left-radius: 50%;
 				border: 1px solid white;
+				border-right: none;
 				display: grid;
 				align-items: center;
-				padding-right: 2rem;
-				padding-left: 5rem;
-				padding:  7rem 2rem 7rem 5rem;
+				padding-right: calc(2rem * var(--size));
+				padding-left: calc(5rem * var(--size));
+				padding:  calc(7rem * var(--size)) calc(2rem * var(--size)) calc(7rem * var(--size)) calc(5rem * var(--size));
 				justify-self: flex-end;
 			}
 
 			h2 {
 				text-align: center;
-				font-size: 2.5rem;
+				font-size: calc(2.5rem * var(--size));
 				color: var(--light-orange);
-				margin-bottom: .5rem;
-			}
-
-			.schedule-wrapper {
-				
-			}
-
-			.schedule {
+				margin-bottom: calc(0.5rem * var(--size));
 			}
 
 			ul {
 				color: white;
 				display: grid;
-				grid-template-columns: repeat(7, 4.2rem);
-				font-size: .7rem;
+				grid-template-columns: repeat(7, calc(4.2rem * var(--size)));
+				font-size: calc(0.7rem * var(--size));
 			}
 
 			li {
 				border: 1px solid white;
 				display: grid;
 				place-items: center;
-				padding: .7rem .5rem;
+				padding: calc(0.7rem * var(--size)) calc(0.5rem * var(--size));
 				text-transform: capitalize;
 			}
 
@@ -113,7 +111,19 @@ const Schedule = () => {
 			}
 
 			.size {
-				font-size: 2rem;
+				font-size: calc(2rem * var(--size));
+			}
+
+			@media screen and (max-width: 650px) {
+				:global(:root) {
+					--size: 0.7;
+				}
+			}
+
+			@media screen and (max-width: 460px) {
+				:global(:root) {
+					--size: 0.65;
+				}
 			}
 
 		`}</style>

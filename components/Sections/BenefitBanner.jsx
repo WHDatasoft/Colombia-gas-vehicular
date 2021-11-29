@@ -61,7 +61,8 @@ const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => 
 			}
 
 			h2 {
-				font-size: ${scaleSubtitle ? `${scaleSubtitle}rem` : '1rem'}
+				font-size: ${scaleSubtitle ? `${scaleSubtitle}rem` : '1.5rem'};
+				padding: 0 5rem;
 			}
 
 			.row {
@@ -79,6 +80,46 @@ const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => 
 				to {
 					transform: translateY(.3rem)
 				}
+			}
+
+			@media screen and (max-width: 660px) {
+
+				h1 {
+					font-size: 4.5rem;
+				}
+
+			}
+
+			@media screen and (max-width: 580px) {
+
+				h1 {
+					font-size: 4.0rem;
+				}
+
+			}
+
+			@media screen and (max-width: 525px) {
+
+				h1 {
+					font-size: 3rem;
+				}
+
+				.icon {
+					height: 6rem;
+				}
+
+			}
+
+			@media screen and (max-width: 430px) {
+
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				.icon {
+					height: 5rem;
+				}
+
 			}
 				
 			}

@@ -21,22 +21,22 @@ const Index = () => {
 
 		<ServiceImg
 			title="Plataforma para verificar consumos"
-			img="primera.png"
+			img="primera.jpg"
 		/>
 
 		<ServiceImg
 			title="Chip de control"
-			img="segunda.png"
+			img="segunda.jpg"
 		/>
 
 		<ServiceImg
 			title="Registro de Kilómetraje en el suministro"
-			img="tercera.png"
+			img="tercera.jpg"
 		/>
 
 		<ServiceImg
 			title="El gas no es manipulable por los conductores"
-			img="cuarta.png"
+			img="cuarta.jpg"
 		/>
 		<style jsx>{`
 		

@@ -6,9 +6,11 @@ const ServiceImg = ({ img, title }) => {
 
 		<style jsx>{`
 
+			:global(:root) {
+				--height: 13rem;
+			}
+
 			section {
-				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat;
-				background-size: cover;
 				position: relative;
 				display: grid;
 				grid-template-columns: auto 1fr;
@@ -16,15 +18,36 @@ const ServiceImg = ({ img, title }) => {
 			}
 
 			img {
-				height: 13rem;
+				height: var(--height);
 			}
 
 			h3 {
+				height: var(--height);
+				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat right;
+				background-size: cover;
 				text-align: center;
 				align-self: center;
 				font-weight: 700;
 				color: white;
 				font-size: 1.7rem;
+				display: grid;
+				place-items: center;
+				padding-right: 7rem;
+				padding-left: 2rem;
+			}
+
+			@media screen and (max-width: 920px) {
+
+				img {
+					height: auto;
+					width: 100%;
+				}
+
+				section {
+					grid-template-columns: 1fr;
+					
+				}
+
 			}
 
 		`}</style>

@@ -15,8 +15,8 @@ const Whatsapp = () => {
 			button {
 				position: fixed;
 				z-index: 10;
-				right: 2rem;
-				bottom: 2rem;
+				right: 1rem;
+				bottom: 1rem;
 				background-color: unset;
 			}
 
@@ -68,13 +68,15 @@ const Whatsapp = () => {
 			@media screen and (max-width: 730px) {
 
 				button {
-					right: .5rem;
-					bottom: .5rem;
+					right: 0rem;
+					bottom: 0rem;
 				}
 
 				img {
 					height: 7rem;
 				}
+
+				
 
 			}
 

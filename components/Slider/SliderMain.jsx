@@ -4,11 +4,11 @@ import Portada2 from './Portada2' */
 
 const SliderMain = () => {
 
-    const [img, setImg] = useState(0);
+    const [img, setImg] = useState(1);
     const [direccion, setDireccion] = useState(true);
 
     useEffect(() => {
-        const tiempo = setTimeout(() => {
+        /* const tiempo = setTimeout(() => {
             if (direccion) {
                 setImg(img + 1)
                 if (img >= 1) setDireccion(!direccion)
@@ -20,7 +20,7 @@ const SliderMain = () => {
         console.log();
         return () => {
             clearTimeout(tiempo)
-        }
+        } */
     }, [img]);
 
     //Para evitar que se desfase el slider
@@ -103,49 +103,48 @@ const SliderMain = () => {
 
             <style jsx>{`
                 .content {
-                    width: 100%;
                     height: 80vh;
-                    overflow: hidden;
                     position: relative;
-                    max-height: 630px;
+                    
                 }
 
                 .select {
+                    position: absolute;
                     border-radius: 2rem;
                     background-color: var(--blue-transparent);
-                    bottom: 1rem;
+                    bottom: 5%;
                     left: 50%;
                     transform: translateX(-50%);
-                    position: absolute;
                     z-index: 30;
                     padding: 1rem;
                 }
 
                 .content > ul {
                     display: grid;
-                    height: 400vw;
-                    width: 100%;
+                    height: 100%;
+                    width: 400vw;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
                     transition: margin-left 1.5s ease;
                 }
 
                 .content > ul > li {
                     list-style: none;
-                    width: 100%;
+                    width: 100vw;
                     height: 80vh;
                     position: relative;
+                    
                 }
 
                 button {
-                    width: 20px;
-                    height: 20px;
+                    width: 25px;
+                    height: 25px;
                     cursor: pointer;
                     border: 2px solid var(--light-green);
                     border-radius: 50%;
                     outline: none;
                     background: none;
                     transition: background .5s;
-                    margin: 3px;
+                    margin: 3px 6px;
                 }
 
                 button:hover {
@@ -154,30 +153,35 @@ const SliderMain = () => {
 
                 img {
                     width: 100vw;
+                    height: 100%;
                     object-fit: cover;
                 }
 
                 .icon {
                     display: block;
                     margin: auto;
-                    height: 10rem;
+                    height: 15rem;
                     width: auto;
                 }
 
                 .icons {
+                    box-sizing: border-box;
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    grid-column-gap: 5rem;
                     justify-items: center;
+                    padding-bottom: 3%;
+                    padding-top: 2rem;
+                    width: 80vw;
+                    
                 }
 
                 h2 {
+                    padding-top: 3%;
                     text-align: center;
-                    margin: 1rem 0;
                 }
 
                 .fondo {
-                    padding: 3rem 8rem;
+                    padding: 0;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -190,13 +194,82 @@ const SliderMain = () => {
                 }
 
                 p {
-                    min-width: 60rem;
+                    box-sizing: border-box;
+
+                    padding: 10% 15%;
+                    width: 80vw;
+                    
                 }
 
                 h4 {
                     text-align: center;
-                    margin: 1rem 0;
+                    margin-top: 1rem;
                 }
+
+                @media screen and (max-width: 1300px) {
+                    .icon {
+                        height: 11rem;
+                    }
+                }
+
+                @media screen and (max-width: 1070px) {
+
+                    .icon {
+                        height: 10rem;
+                    }
+
+                    .content, .content > ul > li {
+                        height: 70vh;
+                    }
+
+                    .select {
+                        bottom: -15%;
+                    }
+
+                    .fondo {
+                        font-size: 1.7rem;
+                        line-height: 1.5rem;
+                    }
+
+                }
+
+                @media screen and (max-width: 730px) {
+
+                    .fondo {
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                    }
+
+                    .icon {
+                        height: 6rem;
+                    }
+
+                }
+
+                @media screen and (max-width: 730px) {
+
+                    .fondo {
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+
+                }
+
+                @media screen and (max-width: 500px) {
+
+                    .icon {
+                        height: 4.5rem;
+                    }
+
+                    .icons {
+                        grid-template-columns: 1fr;
+                        padding-top: 1rem;
+                        grid-row-gap: 1rem;
+                    }
+
+                }
+
+                
 
             `}</style>
         </div>

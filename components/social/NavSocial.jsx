@@ -32,24 +32,25 @@ const NavSocial = () => {
 		<style jsx>{`
 
 			nav {
+				font-size: 1rem;
 				background-color: var(--blue-opacity);
 				position: fixed;
 				z-index: 10;
-				padding: .5rem;
-				border-top-right-radius: 2rem;
-				border-bottom-right-radius: 2rem;
+				padding: .5em;
+				border-top-right-radius: 2em;
+				border-bottom-right-radius: 2em;
 				top: 50%;
 				left: 0;
 			}
 
 			img {
-				width: 2.5rem;
+				width: 2.5em;
 			}
 
 			ul {
 				display: grid;
 				grid-template-rows: repeat(1fr, 5);
-				grid-row-gap: .3rem;
+				grid-row-gap: .3em;
 			}
 
 			li {
@@ -58,6 +59,12 @@ const NavSocial = () => {
 
 			li:hover {
 				transform: scale(1.1);
+			}
+
+			@media screen and (max-width: 730px) {
+				nav {
+					font-size: 14px;
+				}
 			}
 
 		`}</style>
