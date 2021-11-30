@@ -39,7 +39,12 @@ const Nav = ({ setEnableNav, enableNav }) => {
 			]
 
 		},
-		{ title: 'Clientes', url: '/clientes' },
+		{
+			title: 'Clientes', url: '/clientes',
+			list: [
+				{ title: 'Alianza DIDI', url: '/clientes/alianza-didi' }
+			]
+		},
 		{ title: 'Debes saber', url: '/debes-saber' },
 		{ title: 'Contáctenos', url: '/contactenos' },
 	]
@@ -187,7 +192,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 			.second-link a {
 				display: block;
-				padding: 1rem 1rem;
+				padding: 1rem 2rem;
 				text-align: center;
 				text-transform: capitalize;
 			}

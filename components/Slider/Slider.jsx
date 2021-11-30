@@ -1,121 +1,46 @@
-import { useState, useEffect } from "react"
 
-const Slider = ({ contentSlider, id, infinite }) => {
+const Slider = ({ contentSlider }) => {
 
-	const [state, setState] = useState(0)
-	const [autoTimerRight, setAutoTimerRight] = useState(0)
-	const [autoTimerLeft, setAutoTimerLeft] = useState(0)
-	const [selected, setSelected] = useState(false)
-
-	const selectBusiness = () => {
-		setSelected(sel => !sel)
-	}
-
-	useEffect(() => {
-		clearInterval(autoTimerRight)
-		clearInterval(autoTimerLeft)
-	}, [selected]);
-
-	useEffect(() => {
-		if (infinite) {
-			const slide = document.getElementById(id)
-			const right = true
-			setState(setInterval(() => {
-				if (right) {
-					if (Number(slide.style.left.slice(0, -2)) > -2500) {
-						slide.style.left = `${slide.style.left.slice(0, -2) - 4}px`
-						if (Number(slide.style.left.slice(0, -2)) <= -1499) right = false
-					}
-				} else {
-					if (Number(slide.style.left.slice(0, -2)) < 0) {
-						slide.style.left = `${Number(slide.style.left.slice(0, -2)) + 4}px`
-						if (Number(slide.style.left.slice(0, -2)) >= -1) right = true
-					}
-				}
-			}, 50))
-		}
-
-		return () => {
-			clearInterval(state)
-		}
-	}, [])
-
-	/* const mouseEnterRight = () => {
-		const slide = document.getElementById(id)
-		setState(setInterval(() => {
-			if (Number(slide.style.left.slice(0, -2)) > - 3500) {
-				slide.style.left = `${slide.style.left.slice(0, -2) - 4}px`
-			}
-		}, 20))
-	}
-
-	const mouseLeaveRight = () => {
-		clearInterval(state)
-	}
-
-	const mouseEnterleft = () => {
-		const slide = document.getElementById(id)
-		setState(setInterval(() => {
-			if (Number(slide.style.left.slice(0, -2)) < 0) {
-				slide.style.left = `${Number(slide.style.left.slice(0, -2)) + 4}px`
-			}
-		}, 20))
-	}
-
-	const mouseLeaveleft = () => {
-		clearInterval(state)
-	} */
 
 	const onClickRight = () => {
-
-		clearInterval(autoTimerRight)
-		clearInterval(autoTimerLeft)
-
-		const slide = document.getElementById(id)
-
-		setAutoTimerRight(setInterval(() => {
-			if (Number(slide.style.left.slice(0, -2)) > - 3500) {
-				slide.style.left = `${slide.style.left.slice(0, -2) - 4}px`
+		const ul = document.getElementById("list")
+		const count = 0
+		const time = setInterval(() => {
+			if (count <= 50) {
+				console.log(count)
+				ul.scrollBy(10, 0)
+				count++
+			} else {
+				clearInterval(time)
 			}
-		}, 20))
-
-
+		}, 1);
 	}
 
 	const onClickLeft = () => {
-
-		clearInterval(autoTimerRight)
-		clearInterval(autoTimerLeft)
-
-		const slide = document.getElementById(id)
-
-		setAutoTimerLeft(setInterval(() => {
-			if (Number(slide.style.left.slice(0, -2)) < 0) {
-				slide.style.left = `${Number(slide.style.left.slice(0, -2)) + 4}px`
+		const ul = document.getElementById("list")
+		const count = 0
+		const time = setInterval(() => {
+			if (count <= 50) {
+				console.log(count)
+				ul.scrollBy(-10, 0)
+				count++
+			} else {
+				clearInterval(time)
 			}
-		}, 20))
-
+		}, 1);
 	}
 
 
 	return <div className="slider">
-		{
-			!infinite
-				?
-				<>
-					<button /* onMouseEnter={mouseEnterleft} onMouseLeave={mouseLeaveleft} */ className="left" onClick={onClickLeft}>
-						<img src="/icon/row-green.svg" alt="icono de una flecha" />
-					</button>
-					<button /* onMouseEnter={mouseEnterRight} onMouseLeave={mouseLeaveRight} */ className="right" onClick={onClickRight} >
-						<img src="/icon/row-green.svg" alt="icono de una flecha" />
-					</button>
-				</>
-				:
-				''
 
-		}
+		<button /* onMouseEnter={mouseEnterleft} onMouseLeave={mouseLeaveleft} */ className="left" onClick={onClickLeft}>
+			<svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+		</button>
+		<button /* onMouseEnter={mouseEnterRight} onMouseLeave={mouseLeaveRight} */ className="right" onClick={onClickRight} >
+			<svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+		</button>
 
-		<ul id={id} onClick={selectBusiness}>
+		<ul id="list">
 			{
 				contentSlider.map((slide, index) => (
 					<li key={index}>{slide}</li>
@@ -134,23 +59,33 @@ const Slider = ({ contentSlider, id, infinite }) => {
 				position: absolute;
 				top: 50%;
 				z-index: 3;
-				transform: translateY(-50%);
 				background-color: unset;
-				
+			}
+
+			svg {
+				height: 2rem;
+				fill: none;
+				stroke: var(--light-green);
+				stroke-miterlimit: 10;
+				stroke-width: 6px;
 			}
 
 			.right {
-				right: 3rem;
+				right: 5rem;
+				transform: translateY(-50%) rotate(-90deg);
+			}
+
+			.right:hover {
+				transform: translateY(-50%) rotate(-90deg) scale(1.1);
 			}
 
 			.left {
-				left: 3rem;
-				transform: translateY(-50%) rotate(180deg);
+				left: 5rem;
+				transform: translateY(-50%) rotate(90deg);
 			}
 
-
-			img {
-				height: 2rem;
+			.left:hover {
+				transform: translateY(-50%) rotate(90deg)  scale(1.1);
 			}
 
 			ul {
@@ -159,7 +94,30 @@ const Slider = ({ contentSlider, id, infinite }) => {
 				position: relative;
 				overflow-x: scroll;
 				overflow-y: visible;
-				height: 30rem;
+				height: 28rem;
+			}
+
+			ul::-webkit-scrollbar {
+				width: 1px;
+				height: 0;
+			}
+
+			ul::-webkit-scrollbar-thumb {
+				background-color: #3b3b3bcc;
+				border-radius: 0px;
+			}
+
+			ul::-webkit-scrollbar-track {
+				background-color: #3b3b3b22;
+				border-radius: 5px;
+			}
+
+			@media screen and (max-width: 730px) {
+				
+				button {
+					display: none;
+				}
+
 			}
 
 

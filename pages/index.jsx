@@ -41,7 +41,15 @@ const Index = () => {
 				animation: move 1s infinite alternate-reverse;
 			}
 			
-			
+			@keyframes move {
+				from {
+					transform: translateY(-.3rem)
+				}
+
+				to {
+					transform: translateY(.3rem)
+				}
+			}
 		
 		`}</style>
 	</MainLayout>
