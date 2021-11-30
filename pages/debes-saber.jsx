@@ -13,6 +13,7 @@ const Index = () => {
 
 		<Video
 			videoUrl="debes-saber"
+			videoUrlResponsive="debes-saber"
 			control
 		/>
 		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />

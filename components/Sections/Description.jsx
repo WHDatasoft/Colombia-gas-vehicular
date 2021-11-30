@@ -1,8 +1,19 @@
-const Description = ({ title, text, icon, left, right }) => {
+const Description = ({ title, textList, icon, left, right, children }) => {
 	return <section>
 
 		<h3>{title}</h3>
-		<p>{text}</p>
+		{
+			textList.map((text, index) => (
+				<div key={Math.random()}>
+					<p>{text}</p>
+					{textList.length - 1 !== index ? <br /> : ''}
+				</div >
+			))
+		}
+
+		{
+			children
+		}
 		{
 			icon
 				?
@@ -21,6 +32,7 @@ const Description = ({ title, text, icon, left, right }) => {
 			}
 
 			h3 {
+				font-size: 1.5rem;
 				position: absolute;
 				top: 0;
 				left: 50%;

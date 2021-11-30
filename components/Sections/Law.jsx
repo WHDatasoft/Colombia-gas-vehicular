@@ -40,8 +40,11 @@ const Law = () => {
 		<p>
 			<span>PARÁGRAFO 3.</span> {' '} La Contraloría General de la República será la entidad encargada de hacer seguimiento y control al cumplimiento del presente artículo.
 		</p>
+		<div className="law">
 
-		<a href="/download/ley-2128-del-4-de-agosto-de-2021.pdf" download>CONSULTAR LEY COMPLETA</a>
+			<a href="/download/ley-2128-del-4-de-agosto-de-2021.pdf" download>CONSULTAR LEY COMPLETA</a>
+
+		</div>
 
 		<style jsx>{`
 
@@ -71,10 +74,14 @@ const Law = () => {
 				margin: .3rem 0;
 			}
 
+			.law {
+				display: grid;
+				justify-items: center;
+			}
+
 			a {
 				display: block;
-				width: 18rem;
-				margin:  2rem auto 0;
+				margin:  2rem auto;
 				padding: .5rem 2rem;
 				border-radius: 1rem;
 				color: var(--blue);

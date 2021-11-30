@@ -1,11 +1,12 @@
+import TitleRight from "../title/TitleRight"
+
 const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 	const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q']
 	return <article>
 
-		<div className="title">
-			<img src="/icon/row.svg" alt="icono de flechaz" />
-			<h2>{title}</h2>
-		</div>
+		<TitleRight
+			title={title}
+		/>
 
 		<div className="wrapper-section">
 			<h3>{subtitle}</h3>
@@ -80,6 +81,7 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 				text-align: center;
 				color: var(--blue);
 				font-weight: 800;
+				font-size: 1.2rem;
 				margin-bottom: 2rem;
 			}
 

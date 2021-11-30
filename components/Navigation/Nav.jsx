@@ -23,9 +23,9 @@ const Nav = ({ setEnableNav, enableNav }) => {
 			title: 'servicios', url: '/servicios',
 			list: [
 				{ title: 'instalación GNV', url: '/servicios/instalacion-gnv' },
-				{ title: 'Prueba hidrostática', url: '/servicios/prueba-hidrostatica' },
 				{ title: 'Mantenimiento', url: '/servicios/mantenimiento' },
 				{ title: 'Revisión anual', url: '/servicios/revision-anual' },
+				{ title: 'Prueba hidrostática', url: '/servicios/prueba-hidrostatica' },
 				{ title: 'venta de repuestos', url: '/servicios/venta-de-repuestos' },
 			]
 		},
@@ -51,7 +51,11 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 	return <nav>
 
-		<button className="close" onClick={() => { setEnableNav(false) }}>
+		<button className="close" onClick={() => {
+			setEnableNav(false)
+			setSubmenu(false)
+			setSubmenuActive('')
+		}}>
 			<svg viewBox="0 0 352 512">
 				<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
 			</svg>

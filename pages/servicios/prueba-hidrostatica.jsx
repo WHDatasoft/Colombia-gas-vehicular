@@ -27,7 +27,9 @@ const Index = () => {
 
 		<Description
 			title="Prueba Hidrostática"
-			text="La aplicación de una presión a un equipo o línea de tuberías fuera de operación, con el fin de verificar la hermeticidad de los accesorios bridados y la soldadura, utilizando como elemento principal el agua o en su defecto un fluido no corrosivo."
+			textList={[
+				'La Prueba Hidrostática es el procedimiento a través del cual podemos determinar si el cilindro posee fugas, defectos o si está en perfectas condiciones para ser recargado. Durante una prueba hidrostática, se examina el cilindro para garantizar que puede contener de forma segura la presión para la que está aprobado.'
+			]}
 
 		/>
 

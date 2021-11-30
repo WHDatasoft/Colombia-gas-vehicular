@@ -7,7 +7,6 @@ const Slider = ({ contentSlider }) => {
 		const count = 0
 		const time = setInterval(() => {
 			if (count <= 50) {
-				console.log(count)
 				ul.scrollBy(10, 0)
 				count++
 			} else {
@@ -21,7 +20,6 @@ const Slider = ({ contentSlider }) => {
 		const count = 0
 		const time = setInterval(() => {
 			if (count <= 50) {
-				console.log(count)
 				ul.scrollBy(-10, 0)
 				count++
 			} else {
@@ -57,7 +55,7 @@ const Slider = ({ contentSlider }) => {
 
 			button {
 				position: absolute;
-				top: 50%;
+				top: 35%;
 				z-index: 3;
 				background-color: unset;
 			}
@@ -71,7 +69,7 @@ const Slider = ({ contentSlider }) => {
 			}
 
 			.right {
-				right: 5rem;
+				right: 4rem;
 				transform: translateY(-50%) rotate(-90deg);
 			}
 
@@ -80,7 +78,7 @@ const Slider = ({ contentSlider }) => {
 			}
 
 			.left {
-				left: 5rem;
+				left: 4rem;
 				transform: translateY(-50%) rotate(90deg);
 			}
 

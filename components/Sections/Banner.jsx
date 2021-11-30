@@ -98,6 +98,13 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				width: 6rem;
 			}
 
+			@media screen and (max-width: 1400px) {
+
+				main {
+					grid-template-columns: 3fr 1fr 4fr;
+				}
+			}
+
 			@media screen and (max-width: 1200px) {
 
 				main {
@@ -117,9 +124,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				}
 
 				.gnv {
-					position: absolute;
-					opacity: .3;	
-					right: 5rem;
+					display: none;
 				}
 
 				.text, .person {
@@ -155,7 +160,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 				p {
 					width: 3rem;
-					font-size: .7rem;
+					font-size: .5rem;
 					padding: 0 1rem;
 				}
 
@@ -180,7 +185,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 				p {
 					width: 2.5rem;
-					font-size: .5rem;
+					font-size: .4rem;
 					padding: 0 .5rem;
 				}
 

@@ -12,14 +12,7 @@ const NavServices = () => {
 					</a>
 				</Link>
 			</li>
-			<li>
-				<Link href="/servicios/prueba-hidrostatica">
-					<a>
-						<img src="/icon/servicio2.svg" alt="" />
-						<span>Prueba Hodristática</span>
-					</a>
-				</Link>
-			</li>
+
 			<li>
 				<Link href="/servicios/mantenimiento">
 					<a>
@@ -33,6 +26,14 @@ const NavServices = () => {
 					<a>
 						<img src="/icon/servicio4.svg" alt="" />
 						<span>Revisión anual</span>
+					</a>
+				</Link>
+			</li>
+			<li>
+				<Link href="/servicios/prueba-hidrostatica">
+					<a>
+						<img src="/icon/servicio2.svg" alt="" />
+						<span>Prueba Hodristática</span>
 					</a>
 				</Link>
 			</li>

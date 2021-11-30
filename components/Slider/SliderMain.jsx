@@ -71,7 +71,7 @@ const SliderMain = ({ slideList, top }) => {
 
                 {
                     slideList.map(slide => (
-                        <li>
+                        <li key={Math.random()}>
                             {slide}
                         </li>
                     ))

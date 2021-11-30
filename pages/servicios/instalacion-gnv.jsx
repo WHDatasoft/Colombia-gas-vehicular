@@ -2,6 +2,7 @@ import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
+import GnvInfo from '../../components/Sections/GnvInfo'
 import MainLayout from "../../layout/MainLayout"
 
 const Index = () => {
@@ -27,17 +28,26 @@ const Index = () => {
 
 		<Description
 			title="Tercera Generación"
-			text="Esta tecnología se aplica para vehículos con motores alimentados por carburador o con control electrónico de combustible sin sensor de Oxigeno. La dosificación del gas se realiza a través de una válvula de potencia que es graduada por el técnico que realiza la instalación para que el paso del gas sea el necesario."
+			textList={[
+				"Lazo abierto: Se aplica para vehículos con motores alimentados por carburador.",
+				"Usada en motores alimentados por carburador o con control electrónico de combustible sin sensor de oxígeno. La dosificación del gas se realiza a través de una válvula de potencia que es graduada por parte del técnico que realiza la instalación."
+			]}
 			icon="car-blue.svg"
 			right
 		/>
 
 		<Description
 			title="Quinta Generación"
-			text="Esta tecnología se aplica para vehículos con motores alimentados por carburador o con control electrónico de combustible sin sensor de Oxigeno. La dosificación del gas se realiza a través de una válvula de potencia que es graduada por el técnico que realiza la instalación para que el paso del gas sea el necesario."
+			textList={[
+				"Sistema de Inyección GNV: Se aplica para vehículos con motores alimentados por inyección electrónica, donde se instala un equipo que entrega el combustible en cada cilindro por un inyector independiente, simulando la operación que se hace al utilizar gasolina."
+			]}
 			icon="car-orange.svg"
 			left
 		/>
+
+		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" className="row" />
+
+		<GnvInfo />
 
 		<MainFooter />
 
@@ -72,6 +82,23 @@ const Index = () => {
 
 			.number {
 				font-size: 2.5em;
+			}
+
+			.row {
+				display: block;
+				height: 2rem;
+				margin: 2rem auto;
+				animation: move 1s infinite alternate-reverse;
+			}
+			
+			@keyframes move {
+				from {
+					transform: translateY(-.3rem)
+				}
+
+				to {
+					transform: translateY(.3rem)
+				}
 			}
 
 			@media screen and (max-width: 625px) {

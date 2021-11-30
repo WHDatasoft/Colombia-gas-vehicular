@@ -1,9 +1,11 @@
+import Row from '../../components/Decorations/Row'
 import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import ArticleBussines from '../../components/Sections/ArticleBussines'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
 import Slider from '../../components/Slider/Slider'
+import TitleRight from '../../components/title/TitleRight'
 import MainLayout from "../../layout/MainLayout"
 
 const Index = () => {
@@ -221,14 +223,24 @@ const Index = () => {
 
 		<Description
 			title="Repuestos"
-			text="Resolución 0957 del 2012 del Ministro de Comercia, industria y turismo. “Reglamento técnico aplicable a talleres, equipos y procesos de conversión a Gas Natural comprimido para su vehicular"
+			textList={[
+				'Colombiagas Vehicular cuenta con los repuestos para asegurar el correcto funcionamiento de su vehiculo a gas natural vehicular.',
+				'Resolución 0957 del 2012 del Ministro de Comercia, industria y turismo. “Reglamento técnico aplicable a talleres, equipos y procesos de conversión a Gas Natural comprimido para su vehicular'
+			]}
+		>
+		</Description>
+
+		<Row />
+
+		<h1>Lista de Repuestos</h1>
+		<Slider contentSlider={contentSlider} />
+		<br /><br />
+
+		<TitleRight
+			title="Componentes Gas Natural Vehicular"
 		/>
 
-		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
-
-		<h1>Repuestos</h1>
-		<Slider contentSlider={contentSlider} id="empresas" />
-		<br /><br /><br /><br />
+		<img src="/img/servicios/componentes.png" alt="" />
 
 		<MainFooter />
 
@@ -255,13 +267,6 @@ const Index = () => {
 				font-size: calc(1.2rem * var(--size));
 			}
 
-			img {
-				display: block;
-				height: 2rem;
-				margin: 1rem auto;
-				animation: move 1s infinite alternate-reverse;
-			}
-
 			h1 {
 				position: relative;
 				text-align: center;
@@ -269,17 +274,20 @@ const Index = () => {
 				color: white;
 				margin-top: 3rem;
 				padding: 1rem;
+				font-size: 1.5rem;
 			}
 
-			@keyframes move {
-				from {
-					transform: translateY(-.3rem)
-				}
-
-				to {
-					transform: translateY(.3rem)
-				}
+			img {
+				display: block;
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
 			}
+
+			.description {
+				text-align: justify;
+			}
+
 
 			@media screen and (max-width: 625px) {
 

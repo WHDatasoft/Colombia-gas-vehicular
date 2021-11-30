@@ -12,6 +12,7 @@ const ServiceLink = ({ url }) => {
 
 		<style jsx>{`
 
+
 			a {
 				display: block;
 				color: var(--dark-green);
@@ -22,10 +23,12 @@ const ServiceLink = ({ url }) => {
 				grid-template-columns: 1fr auto;
 				padding: 1rem 2rem;
 				grid-column-gap: 1rem;
+				transition: transform .5s;
 				font-size: 1.5rem;
 			}
 
-			a:hover svg {
+			a:hover {
+				transform: scale(1.1)
 			}
 
 			svg {
