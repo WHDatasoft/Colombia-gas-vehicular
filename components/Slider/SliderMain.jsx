@@ -7,8 +7,11 @@ const SliderMain = () => {
     const [img, setImg] = useState(3);
     const [direccion, setDireccion] = useState(true);
 
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+
     useEffect(() => {
-        /* const tiempo = setTimeout(() => {
+        const tiempo = setTimeout(() => {
             if (direccion) {
                 setImg(img + 1)
                 if (img >= 1) setDireccion(!direccion)
@@ -20,7 +23,7 @@ const SliderMain = () => {
         console.log();
         return () => {
             clearTimeout(tiempo)
-        } */
+        }
     }, [img]);
 
     //Para evitar que se desfase el slider
@@ -28,6 +31,16 @@ const SliderMain = () => {
         if (img < 0) setImg(0)
         if (img > 2) setImg(2)
     }, [img]);
+
+    useEffect(() => {
+
+        if (touchStart < touchEnd) {
+            setImg(img => img - 1)
+        } else {
+            setImg(img => img + 1)
+        }
+
+    }, [touchEnd])
 
     //Mover el slider
     const move = (num) => {
@@ -38,6 +51,14 @@ const SliderMain = () => {
         return {
             background: num === img ? "var(--light-green)" : "",
         };
+    }
+
+    const onTouchStart = e => {
+        setTouchStart(e.touches[0].pageX)
+    }
+
+    const onTouchEnd = e => {
+        setTouchEnd(e.changedTouches[0].pageX)
     }
 
     return (
@@ -57,7 +78,7 @@ const SliderMain = () => {
                 ></button>
             </div> */}
 
-            <ul>
+            <ul onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
                 <li>
                     <img src="/img/colombiagas/primera.jpg" alt="" loading="eager" />
                 </li>
@@ -262,9 +283,13 @@ const SliderMain = () => {
                     }
 
                     .icons {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: 1fr 1fr;
                         padding-top: 1rem;
                         grid-row-gap: 1rem;
+                    }
+
+                    .icons div:nth-child(3) {
+                        grid-column: 1/3;
                     }
 
                 }

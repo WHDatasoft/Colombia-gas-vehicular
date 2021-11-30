@@ -44,6 +44,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				display: grid;
 				place-items: center;
 				border-radius: 0 1rem 1rem 0;
+				z-index: 1;
 			}
 
 			.back:before, .back:after  {
@@ -117,7 +118,6 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 				.gnv {
 					position: absolute;
-					z-index: 0;
 					opacity: .3;	
 					right: 5rem;
 				}
@@ -150,6 +150,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 				.icon img {
 					width: 4rem;
+					margin-bottom: .3rem;
 				}
 
 				p {
@@ -164,6 +165,33 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 					transform: rotate(-17.5deg);
 				}
 
+			}
+
+			@media screen and (max-width: 410px) {
+
+				.icon img {
+					width: 3rem;
+				}
+
+				.back:after  {
+					bottom: -0.92rem;
+					transform: rotate(-17.5deg);
+				}
+
+				p {
+					width: 2.5rem;
+					font-size: .5rem;
+					padding: 0 .5rem;
+				}
+
+				main {
+					padding-left: 3.5rem; 
+					padding-right: 1rem;
+				}
+
+				.person {
+					width: ${8 * (personSize ? personSize : 1)}rem;
+				}
 			}
 
 		`}</style>

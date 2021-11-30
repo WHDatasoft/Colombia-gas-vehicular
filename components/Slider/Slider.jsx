@@ -140,23 +140,26 @@ const Slider = ({ contentSlider, id, infinite }) => {
 			}
 
 			.right {
-				right: 5rem;
+				right: 3rem;
 			}
 
 			.left {
-				left: 5rem;
+				left: 3rem;
 				transform: translateY(-50%) rotate(180deg);
 			}
 
 
 			img {
-				height: 5rem;
+				height: 2rem;
 			}
 
 			ul {
 				display: grid;
 				grid-template-columns: repeat(${contentSlider.length}, auto);
 				position: relative;
+				overflow-x: scroll;
+				overflow-y: visible;
+				height: 30rem;
 			}
 
 

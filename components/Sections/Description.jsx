@@ -51,7 +51,7 @@ const Description = ({ title, text, icon, left, right }) => {
 			@media screen and (max-width: 625px) {
 
 				section {
-					padding: 4rem 5rem;
+					padding: 4rem 3rem;
 				}
 
 			}

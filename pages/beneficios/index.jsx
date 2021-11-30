@@ -11,6 +11,7 @@ const Index = () => {
 
 		<Video
 			videoUrl="beneficios"
+			videoUrlResponsive="beneficios"
 			control
 		/>
 

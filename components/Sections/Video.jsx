@@ -1,23 +1,20 @@
 import { useEffect, useState } from "react";
 
-const Video = ({ videoUrl, deleteFinish, handlePlayButton, control }) => {
+const Video = ({ videoUrl, deleteFinish, handlePlayButton, control, videoUrlResponsive }) => {
 
 	const [deleteElement, setDeleteElement] = useState(false)
 
 	const [playButton, setPlayButton] = useState(true)
 
-	const [complete, setComplete] = useState(false);
-
-	const [height, setHeight] = useState(0);
+	const [isResponsive, setIsResponsive] = useState(false);
 
 	useEffect(() => {
-		const { clientWidth } = document.body
-		const video = document.getElementsByTagName('video')[0]
-		const completVideo = clientWidth <= video.offsetWidth
-		setHeight(video.offsetHeight)
-		console.log(completVideo)
-		setComplete(completVideo)
-	}, []);
+		const { offsetWidth } = document.body
+		console.log(offsetWidth)
+		if (offsetWidth <= 800) {
+			setIsResponsive(true)
+		}
+	});
 
 	const play = () => {
 		const video = document.getElementsByTagName('video')[0]
@@ -30,7 +27,8 @@ const Video = ({ videoUrl, deleteFinish, handlePlayButton, control }) => {
 	}
 
 	const handlePlay = () => {
-		setPlayButton(play => !play)
+
+		setPlayButton(false)
 	}
 
 	const handleDelete = () => {
@@ -57,15 +55,15 @@ const Video = ({ videoUrl, deleteFinish, handlePlayButton, control }) => {
 				''
 		}
 		<video
-			src={`/video/${videoUrl}.mp4`}
 			preload="true"
-			type="video/mp4"
 			autoPlay
 			onEnded={deleteFinish ? handleDelete : null}
 			onPause={handlePlay}
 			onPlay={handlePlay}
 			controls={control ? true : false}
-		></video>
+			src={`/video/${isResponsive ? videoUrlResponsive : videoUrl}.mp4`} type="video/mp4"
+		>
+		</video>
 
 		<style jsx>{`
 
@@ -88,7 +86,7 @@ const Video = ({ videoUrl, deleteFinish, handlePlayButton, control }) => {
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				z-index: 30;
+				z-index: 1;
 				background-color: unset;
 			}
 

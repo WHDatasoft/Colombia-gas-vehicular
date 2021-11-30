@@ -10,17 +10,19 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 		<Banner imgPerson="person-1.png" fondo="banner-fondo-claro.png" icon="servicio1.svg" text="Instalación de GNV">
-			<p className="texto-1">
-				<span>Ya son más de 600.000 vehículos y más de 700 buses de</span>
-				<br />
-				<span> Transmilenio que se pasaron a Gas Natural</span>
-			</p>
-			<h1 className="texto-2">PÁSATE A GAS NATURAL VEHICULAR</h1>
-			<h2 className="texto-3">
-				<span>CONVERSIONES DESDE</span>
-				<br />
-				<span className="number">$ 500.000</span>
-			</h2>
+			<div className="text-wrapper">
+				<p className="texto-1">
+					<span>Ya son más de 600.000 vehículos y más de 700 buses de</span>
+					<br />
+					<span> Transmilenio que se pasaron a Gas Natural</span>
+				</p>
+				<h1 className="texto-2">PÁSATE A GAS NATURAL VEHICULAR</h1>
+				<h2 className="texto-3">
+					<span>CONVERSIONES DESDE</span>
+					<br />
+					<span className="number">$ 500.000</span>
+				</h2>
+			</div>
 		</Banner>
 
 		<Description
@@ -39,12 +41,10 @@ const Index = () => {
 
 		<MainFooter />
 
-		<br /><br /><br />
-
 		<style jsx>{`
 
-			:global(:root) {
-				--size: 1
+			.text-wrapper {
+				font-size: 1rem;
 			}
 
 			.texto-1, .texto-2, .texto-3 {
@@ -53,13 +53,13 @@ const Index = () => {
 		
 			.texto-1 {
 				color: var(--blue);
-				font-size: calc(1rem * var(--size));
+				font-size: 1em;
 				font-weight: 600;
 			}
 
 			.texto-2 {
 				font-weight: 600;
-				font-size: calc(1.2rem * var(--size));
+				font-size: 1.2em;
 				color: var(--dark-green);
 				margin: 2rem 0;
 			}
@@ -67,17 +67,41 @@ const Index = () => {
 			.texto-3 {
 				font-weight: 600;
 				color: var(--blue);
-				font-size: calc(1rem * var(--size));
+				font-size: 1em;
 			}
 
 			.number {
-				font-size: calc(2.5rem * var(--size));
+				font-size: 2.5em;
 			}
 
 			@media screen and (max-width: 625px) {
 
-				:global(:root) {
-					--size: 0.7
+				.text-wrapper {
+					font-size: .7rem;
+				}
+
+				.texto-2 {
+					margin: 1rem 0;
+				}
+
+			}
+
+			@media screen and (max-width: 440px) {
+
+				.text-wrapper {
+					font-size: .6rem;
+				}
+
+				.texto-2 {
+					margin: 1rem 0;
+				}
+
+			}
+
+			@media screen and (max-width: 330px) {
+
+				.text-wrapper {
+					font-size: .55rem;
 				}
 
 				.texto-2 {

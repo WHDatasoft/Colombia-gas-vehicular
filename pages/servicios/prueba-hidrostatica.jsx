@@ -10,15 +10,17 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 		<Banner imgPerson="person-2.png" fondo="banner-fondo-oscuro.png" icon="servicio2.svg" text="Prueba Hodristática">
-			<p className="texto-1">
-				<span>COLOMBIAGAS VEHICULAR TE HACE</span>
-				<br />
-				<span>LA PRUEBA HIDROSTÁTICA</span>
-			</p>
-			<h2 className="texto-3">
-				<span className="number">$ 250.000</span>
-			</h2>
-			<h1 className="texto-2">¡Pide tu cita ahora!</h1>
+			<div className="text-wrapper">
+				<p className="texto-1">
+					<span>COLOMBIAGAS VEHICULAR TE HACE</span>
+					<br />
+					<span>LA PRUEBA HIDROSTÁTICA</span>
+				</p>
+				<h2 className="texto-3">
+					<span className="number">$ 250.000</span>
+				</h2>
+				<h1 className="texto-2">¡Pide tu cita ahora!</h1>
+			</div>
 		</Banner>
 
 		<br /><br />
@@ -33,8 +35,8 @@ const Index = () => {
 
 		<style jsx>{`
 
-			:global(:root) {
-				--size: 1
+			.text-wrapper {
+				font-size: 1rem;
 			}
 
 			.texto-1, .texto-2, .texto-3 {
@@ -44,12 +46,12 @@ const Index = () => {
 			.texto-1 {
 				color: white;
 				font-weight: 600;
-				font-size: calc(1.5rem * var(--size));
+				font-size: 1.5em;
 			}
 
 			.texto-2 {
 				font-weight: 600;
-				font-size: calc(1.5rem * var(--size));
+				font-size: 1.5em;
 				color: var(--light-green);
 			}
 
@@ -60,13 +62,13 @@ const Index = () => {
 			}
 
 			.number {
-				font-size: calc(2.5rem * var(--size));
+				font-size: 2.5em;
 			}
 
 			@media screen and (max-width: 625px) {
 
-				:global(:root) {
-					--size: 0.7
+				.text-wrapper {
+					font-size: 0.7rem;
 				}
 
 				.texto-3 {
@@ -74,6 +76,7 @@ const Index = () => {
 				}
 
 			}
+			
 		
 		`}</style>
 

@@ -52,6 +52,8 @@ const Header = () => {
 					height: 100%;
 					width: 4rem;
 					background-color: unset;
+					transition: opacity 0.5s;
+					opacity: ${enableNav ? '0' : '1'};
 				}
 
 				header {

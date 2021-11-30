@@ -17,6 +17,7 @@ const Index = () => {
 
 		<Video
 			videoUrl="introduccion"
+			videoUrlResponsive="introduccion-responsive"
 			handlePlayButton
 			deleteFinish
 		/>

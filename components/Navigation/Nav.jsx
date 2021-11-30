@@ -78,7 +78,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 									:
 									<>
 										{
-											mainLink.title === 'servicios' || mainLink.title === 'Beneficios'
+											(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav)
 												?
 												<button className="handle-submenu" onClick={() => {
 													setSubmenu(true)
@@ -103,6 +103,18 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 								<ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
 									{
+										enableNav
+											?
+											<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+												<Link href={mainLink.url}>
+													<a>{mainLink.title}</a>
+												</Link>
+											</li>
+											:
+											''
+									}
+									{
+
 										mainLink.list.map(secondLink => (
 
 											<li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
@@ -124,6 +136,11 @@ const Nav = ({ setEnableNav, enableNav }) => {
 		</ul>
 
 		<style jsx>{`
+
+			nav {
+				position: relative;
+				z-index: 1000;
+			}
 
 			.close {
 				display: none;
@@ -208,6 +225,11 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					place-items: center;
 					color: white;
 					background-color: unset;
+				}
+
+				.close {
+					transition: opacity 0.5s;
+					opacity: ${enableNav ? '1' : '0'};
 				}
 
 				.return {
