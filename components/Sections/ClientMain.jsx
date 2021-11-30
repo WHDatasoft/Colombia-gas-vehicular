@@ -16,13 +16,14 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 			section {
 				background: url('/img/clientes/${urlImg}.jpg') center 20%;
 				background-size: cover;
+				background-position: 70%;
 				height: 100%;
 				position: relative;
 			}
 
 			header {
 				height: 100%;
-				width: 40%;
+				width: 45%;
 				background-color: ${backgroundColor};
 				position: relative;
 				display: grid;
@@ -33,7 +34,7 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 			.cuadro {
 				position: absolute;
 				height: 80%;
-				width: 7rem;
+				width: 7em;
 				border: 2px solid white;
 				right: 0;
 				top: 50%;
@@ -42,13 +43,42 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 			}
 
 			.hoja-circle {
-				width: 6rem;
+				width: 8em;
 			}
 
 			.content {
+				font-size: 1rem;
 				display: grid;
 				justify-items: center;
-				grid-row-gap: ${rowGap}rem;
+				grid-row-gap: ${rowGap}em;
+				padding: 6em;
+			}
+
+			@media screen and (max-width: 870px) {
+				header {
+					width: 50%;
+				}
+
+			}
+
+			@media screen and (max-width: 715px) {
+				.cuadro {
+					display: none;
+				}
+			}
+
+			@media screen and (max-width: 550px) {
+				header {
+					width: 100%;
+				}
+
+				.content {
+					padding: 2rem;
+				}
+
+				.hoja-circle {
+					width: 6em;
+				}
 			}
 
 		`}</style>

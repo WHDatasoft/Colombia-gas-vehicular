@@ -2,13 +2,6 @@ import MainLayout from "../../layout/MainLayout"
 import Head from '../../components/Head/Head'
 import SliderMain from "../../components/Slider/SliderMain"
 import SlideDidi from "../../components/slides-didi/SlideDidi"
-import SlideSalud from "../../components/slides-didi/SlideSalud"
-import SlideMechanic from "../../components/slides-didi/SlideMechanic"
-import SlideOil from "../../components/slides-didi/SlideOil"
-import SlideFreno from "../../components/slides-didi/SlideFreno"
-import SlideGas from "../../components/slides-didi/SlideGas"
-import SlidePrueba from "../../components/slides-didi/SlidePrueba"
-import SlideCompra from "../../components/slides-didi/SlideCompra"
 import Icons from "../../components/Sections/Icons"
 import FormEmail from "../../components/Forms/FormEmail"
 import SlideSecond from "../../components/slides-didi/SlideSecond"
@@ -23,7 +16,7 @@ const AlianzaDidi = () => {
 			mainTitle="PROGRAMA DE SALUD"
 			secondTitle="GRATIS"
 			img="/logo/logo-blanco.png"
-			link="/servicios/programa-de-salud"
+			link="/beneficios/programa-de-salud"
 		/>,
 		<SlideSecond
 			backgroundImg="mecanic"
@@ -31,6 +24,7 @@ const AlianzaDidi = () => {
 			mainTitle="Instalación de GNV"
 			secondTitle="10% DE DESCUENTO"
 			img="/logo/logo-blanco.png"
+			link="/servicios/instalacion-gnv"
 		/>,
 		<SlideSecond
 			backgroundImg="oil"
@@ -76,6 +70,7 @@ const AlianzaDidi = () => {
 
 		<SliderMain
 			slideList={slideList}
+			top
 		/>
 
 		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
@@ -89,7 +84,7 @@ const AlianzaDidi = () => {
 
 		<Icons />
 
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7954.147574776101!2d-74.1038668!3d4.5807723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0ec797bfca78393!2sSERVITEK!5e0!3m2!1ses!2sco!4v1638223294712!5m2!1ses!2sco" width="100%" height="450" allowfullscreen="" loading="lazy"></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7954.147574776101!2d-74.1038668!3d4.5807723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0ec797bfca78393!2sSERVITEK!5e0!3m2!1ses!2sco!4v1638223294712!5m2!1ses!2sco" width="100%" height="450" allowFullScreen="" loading="lazy"></iframe>
 
 		<br /><br /><br />
 

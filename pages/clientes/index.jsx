@@ -16,7 +16,7 @@ const Index = () => {
 				backgroundImg="car"
 				color="#1c580dAA"
 				mainTitle="TRABAJA CON NOSOTROS"
-				secondTitle="GRATIS"
+				secondTitle="GAS NATURAL VEHICULAR "
 				img="/icon/aliance.svg"
 			/>,
 		</div>

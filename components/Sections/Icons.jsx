@@ -29,6 +29,8 @@ const Icons = () => {
 				height: 15em;
 				border-radius: 50%;
 				border: 3px solid var(--orange);
+				animation: rotate 3s infinite alternate ease-in-out;
+				transform-origin: center center;
 			}
 
 			.logo {
@@ -41,6 +43,16 @@ const Icons = () => {
 
 			.didi {
 				width: 12em;
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(-15deg)
+				}
+
+				to {
+					transform: rotate(15deg)
+				}
 			}
 
 			@media screen and (max-width: 1050px) {

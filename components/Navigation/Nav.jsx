@@ -83,7 +83,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 									:
 									<>
 										{
-											(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav)
+											(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
 												?
 												<button className="handle-submenu" onClick={() => {
 													setSubmenu(true)

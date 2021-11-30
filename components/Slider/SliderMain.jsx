@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const SliderMain = ({ slideList }) => {
+const SliderMain = ({ slideList, top }) => {
 
     const [img, setImg] = useState(0);
     const [direccion, setDireccion] = useState(true);
@@ -88,6 +88,7 @@ const SliderMain = ({ slideList }) => {
             <style jsx>{`
 
                 .content {
+                    min-height: 850px;
                     height: 80vh;
                     position: relative;
                 }
@@ -101,6 +102,7 @@ const SliderMain = ({ slideList }) => {
                 }
 
                 .content > ul > li {
+                    min-height: 850px;
                     list-style: none;
                     height: 80vh;
                     position: relative;
@@ -109,7 +111,7 @@ const SliderMain = ({ slideList }) => {
 
                 button {
                     position: absolute;
-                    top: 50%;
+                    top: ${top ? '20%' : '50%'};
                     z-index: 3;
                     background-color: unset;
                 }
@@ -123,7 +125,7 @@ const SliderMain = ({ slideList }) => {
                 }
 
                 .right {
-                    right: 5rem;
+                    right: 4rem;
                     transform: translateY(-50%) rotate(-90deg);
                 }
 
@@ -132,7 +134,7 @@ const SliderMain = ({ slideList }) => {
                 }
 
                 .left {
-                    left: 5rem;
+                    left: 4rem;
                     transform: translateY(-50%) rotate(90deg);
                 }
 
@@ -145,6 +147,14 @@ const SliderMain = ({ slideList }) => {
 
                     .content, .content > ul > li {
                         height: 70vh;
+                    }
+
+                }
+
+                @media screen and (max-width: 730px) {
+
+                    button {
+                        display: none;
                     }
 
                 }

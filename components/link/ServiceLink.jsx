@@ -36,18 +36,19 @@ const ServiceLink = ({ url }) => {
 				stroke-width: 6px;
 				transform: rotate(-90deg);
 				transition: transform .5s;
-				animation: move 1s infinite alternate;
+				animation: move-right 1s infinite alternate;
 			}
 
-			@keyframes move {
+			@keyframes move-right {
 				from {
-					transform: rotate(-90deg) translateY(50%);
-				}
-				to {
-					transform: rotate(-90deg) translateY(-50%);
+					transform: rotate(-90deg) translateY(-.5rem);
 				}
 
+				to {
+					transform: rotate(-90deg) translateY(.5em);
+				}
 			}
+
 
 		`}</style>
 	</div>

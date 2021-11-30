@@ -9,9 +9,6 @@ const SlideSecond = ({ mainTitle, secondTitle, backgroundImg, color, img, posImg
 			backgroundColor={color}
 			rowGap="3"
 		>
-			{/* <h3>Compra del SOAT</h3>
-			<h2>5% DE DESCUENTO</h2>
-			<img src="/logo/logo-blanco.png" alt="" className="final" /> */}
 			<h3>{mainTitle}</h3>
 			<h2>{secondTitle}</h2>
 			<img src={img} alt="" className="final" />
@@ -30,33 +27,61 @@ const SlideSecond = ({ mainTitle, secondTitle, backgroundImg, color, img, posImg
 
 		<style jsx>{`
 
+			:global(:root) {
+				--scale: 1
+			}
+
 			h2, h3 {
 				text-align: center;
 			}
 
 			h3 {
 				color: white;
-				font-size: 5rem;
+				font-size: calc(5.5em * var(--scale));
 				font-weight: 600;
-				max-width: 540px;
-				letter-spacing: 0.2rem;
+				max-width: calc(33.7em * var(--scale));
 			}
 
 			h2 {
 				box-sizing: border-box;
 				color: var(--light-green);
 				background-color: white;
-				padding: .5rem 1rem;
-				font-size: 2rem;
-				letter-spacing: 0.1rem;
-				width: 80%;
+				padding: calc(.5em * var(--scale)) calc(1em * var(--scale));
+				font-size: calc(2em * var(--scale));
+				width: 90%;
 
 			}
 
 			img {
-				height: 5rem;
+				height: ${img === '/icon/servitek.svg' ? '8rem' : '5rem'};
 				${posImg ? `grid-row: ${posImg}` : ''}
 			}
+
+			@media screen and (max-width: 1250px) {
+
+				:global(:root) {
+					--scale: 0.8;
+				}
+				
+
+			}
+
+			@media screen and (max-width: 1100px) {
+
+				:global(:root) {
+					--scale: 0.6;
+				}
+				
+			}
+
+			@media screen and (max-width: 870px) {
+
+				:global(:root) {
+					--scale: 0.5;
+				}
+
+			}
+
 
 		`}</style>
 	</>

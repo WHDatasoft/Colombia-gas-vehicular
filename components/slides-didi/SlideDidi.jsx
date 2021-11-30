@@ -45,13 +45,31 @@ const SlideDidi = () => {
 				height: 8rem;
 			}
 
-			@media screena and (max-width: 1450px) {
+			@media screen and (max-width: 1250px) {
 
 				.title {
 					font-size: .8rem;
 				}
 
 			}
+
+			@media screen and (max-width: 1100px) {
+
+				.title {
+					font-size: .6rem;
+				}
+
+			}
+
+			@media screen and (max-width: 870px) {
+
+				.title {
+					font-size: .5rem;
+				}
+
+			}
+
+			
 
 		`}</style>
 	</>
