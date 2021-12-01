@@ -1,7 +1,28 @@
+import axios from 'axios'
+
 const FormEmail = () => {
 
-	const onSubmit = e => {
+	const [data, setData] = useState({
+		name: '',
+		phone: '',
+		from: 'Colombiagas'
+	});
+
+	const onSubmit = async e => {
 		e.preventDefault();
+
+		const { name, phone } = data
+		const URL = '/api/email'
+		try {
+			const response = await axios.post(URL, { name, phone, from })
+			console.log(response.data)
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
+	const onChange = e => {
+		setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
 	}
 
 	return <div className="form-wrapper">
@@ -9,8 +30,8 @@ const FormEmail = () => {
 		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		<form onSubmit={onSubmit}>
 			<h1>COMUNÍCATE CON NOSOTROS</h1>
-			<input type="text" placeholder="Nombre" />
-			<input type="text" placeholder="Celular" />
+			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
+			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
 			<button>Enviar</button>
 		</form>
 

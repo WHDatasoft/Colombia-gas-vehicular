@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 
 const SliderMain = ({ slideList, top }) => {
 
-    const [img, setImg] = useState(0);
+    const [img, setImg] = useState(-1);
     const [direccion, setDireccion] = useState(true);
 
     const [touchStart, setTouchStart] = useState(0);
     const [touchEnd, setTouchEnd] = useState(0);
 
     useEffect(() => {
+        console.log('inicio')
         const tiempo = setTimeout(() => {
+            console.log('se ejecuto')
             if (direccion) {
                 setImg(img + 1)
                 if (img >= 1) setDireccion(!direccion)
@@ -26,7 +28,7 @@ const SliderMain = ({ slideList, top }) => {
 
     //Para evitar que se desfase el slider
     useEffect(() => {
-        if (img < 0) setImg(0)
+        if (img <= 0) setImg(0)
         if (img > slideList.length - 1) setImg(slideList.length - 1)
     }, [img]);
 

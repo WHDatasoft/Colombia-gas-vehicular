@@ -29,7 +29,10 @@ const Header = () => {
 			}
 
 			header {
-				position: relative;
+				box-sizing: border-box;
+				top: 1rem;
+				position: fixed;
+				width: 100%;
 				z-index: 5;
 				background-color: white;
 				display: flex;

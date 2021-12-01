@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { useState } from 'react';
 
 const FormDidi = () => {
@@ -12,10 +13,10 @@ const FormDidi = () => {
 	const onSubmit = async e => {
 		e.preventDefault();
 
-		const { name, phone } = data
+		const { name, phone, from } = data
 		const URL = '/api/email'
 		try {
-			const response = await axios.post(URL, { name, phone })
+			const response = await axios.post(URL, { name, phone, from })
 			console.log(response.data)
 		} catch (error) {
 			console.log(error)
@@ -29,13 +30,13 @@ const FormDidi = () => {
 	return <div className="form-wrapper">
 
 		<div className="icon">
-			<img className="cabeza" onChange={onChange} src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-			<img className="manubrio" onChange={onChange} src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+			<img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+			<img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		</div>
 		<form onSubmit={onSubmit}>
 			<h3>COMUNÍCATE CON NOSOTROS</h3>
-			<input type="text" placeholder="Nombre" />
-			<input type="text" placeholder="Celular" />
+			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
+			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
 			<button>Enviar</button>
 		</form>
 

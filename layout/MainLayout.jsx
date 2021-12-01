@@ -47,7 +47,7 @@ const MainLayout = ({ children }) => {
 			.container {
 				position: relative;
 				box-sizing: border-box;
-				padding-top: 1rem;
+				padding-top: 7rem;
 				min-height: 100vh;
 				overflow: hidden;
 				background: rgb(6,132,55);
