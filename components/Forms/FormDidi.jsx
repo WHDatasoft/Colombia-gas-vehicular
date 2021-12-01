@@ -1,13 +1,36 @@
+import axios from 'axios'
+import { useState } from 'react';
+
 const FormDidi = () => {
-	const onSubmit = e => {
+
+	const [data, setData] = useState({
+		name: '',
+		phone: '',
+		from: 'DIDI'
+	});
+
+	const onSubmit = async e => {
 		e.preventDefault();
+
+		const { name, phone } = data
+		const URL = '/api/email'
+		try {
+			const response = await axios.post(URL, { name, phone })
+			console.log(response.data)
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
+	const onChange = e => {
+		setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
 	}
 
 	return <div className="form-wrapper">
 
 		<div className="icon">
-			<img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-			<img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+			<img className="cabeza" onChange={onChange} src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+			<img className="manubrio" onChange={onChange} src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		</div>
 		<form onSubmit={onSubmit}>
 			<h3>COMUNÍCATE CON NOSOTROS</h3>
