@@ -7,13 +7,14 @@ const FormDidi = () => {
 	const [data, setData] = useState({
 		name: '',
 		phone: '',
+		message: '',
 		from: 'DIDI'
 	});
 
 	const onSubmit = async e => {
 		e.preventDefault();
 
-		const { name, phone, from } = data
+		const { name, phone, from, message } = data
 		const URL = '/api/email'
 		try {
 			const response = await axios.post(URL, { name, phone, from, message })

@@ -13,7 +13,7 @@ const FormEmail = () => {
 	const onSubmit = async e => {
 		e.preventDefault();
 
-		const { name, phone } = data
+		const { name, phone, message, from } = data
 		const URL = '/api/email'
 		try {
 			const response = await axios.post(URL, { name, phone, message, from })
