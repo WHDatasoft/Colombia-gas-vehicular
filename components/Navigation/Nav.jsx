@@ -275,7 +275,6 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					border: none;
 					margin: .5rem 0;
 					font-size: 1.3rem;
-					font-weight: 700;
 					padding: .2rem 0;
 				}
 

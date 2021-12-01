@@ -52,6 +52,7 @@ const FormDidi = () => {
 				color: var(--orange);
 				font-size: 2em;
 				text-align: center;
+				font-weight: 100;
 			}
 
 			form {
