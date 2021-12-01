@@ -5,6 +5,7 @@ import SlideDidi from "../../components/slides-didi/SlideDidi"
 import Icons from "../../components/Sections/Icons"
 import FormEmail from "../../components/Forms/FormEmail"
 import SlideSecond from "../../components/slides-didi/SlideSecond"
+import FormDidi from "../../components/Forms/FormDidi"
 
 const AlianzaDidi = () => {
 
@@ -82,15 +83,13 @@ const AlianzaDidi = () => {
 			</p>
 		</div>
 
+		<FormDidi />
+
+		<br /><br /><br /><br />
+
 		<Icons />
 
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7954.147574776101!2d-74.1038668!3d4.5807723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0ec797bfca78393!2sSERVITEK!5e0!3m2!1ses!2sco!4v1638223294712!5m2!1ses!2sco" width="100%" height="450" allowFullScreen="" loading="lazy"></iframe>
-
-		<br /><br /><br />
-
-		<FormEmail />
-
-		<br /><br /><br /><br /><br /><br />
 
 		<style jsx>{`
 		

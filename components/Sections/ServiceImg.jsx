@@ -1,8 +1,21 @@
-const ServiceImg = ({ img, title }) => {
+const ServiceImg = ({ img, title, paragraph }) => {
 	return <section>
 
-		<img src={`/img/beneficios/combustible/${img}`} alt="" />
-		<h3>{title}</h3>
+		<img src={`/img/beneficios/${img}`} alt="" />
+		{
+			title
+				?
+				<h3>{title}</h3>
+				:
+				''
+		}
+		{
+			paragraph
+				?
+				<p>{paragraph}</p>
+				:
+				''
+		}
 
 		<style jsx>{`
 
@@ -21,7 +34,7 @@ const ServiceImg = ({ img, title }) => {
 				height: var(--height);
 			}
 
-			h3 {
+			h3, p {
 				height: var(--height);
 				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat right;
 				background-size: cover;
@@ -34,6 +47,10 @@ const ServiceImg = ({ img, title }) => {
 				place-items: center;
 				padding-right: 7rem;
 				padding-left: 2rem;
+			}
+
+			p {
+				font-size: 1rem;
 			}
 
 			@media screen and (max-width: 920px) {
@@ -50,6 +67,25 @@ const ServiceImg = ({ img, title }) => {
 
 			}
 
+			@media screen and (max-width: 500px) {
+				p {
+					font-size: .8rem;
+				}
+			}
+			
+			@media screen and (max-width: 400px) {
+				p {
+					font-size: .7rem;
+				}
+			}
+			
+			@media screen and (max-width: 340px) {
+				p {
+					font-size: .6rem;
+				}
+			}
+
+		
 		`}</style>
 	</section>
 }

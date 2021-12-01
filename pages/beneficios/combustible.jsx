@@ -2,6 +2,7 @@ import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
 import ServiceImg from '../../components/Sections/ServiceImg'
+import TitleCenter from '../../components/title/TitleCenter'
 import MainLayout from "../../layout/MainLayout"
 
 const Index = () => {
@@ -20,40 +21,35 @@ const Index = () => {
 			light
 		/>
 
-		<h2>CONTROL DE CONSUMO</h2>
+		<TitleCenter
+			title="CONTROL DE CONSUMO"
+		/>
 
 		<ServiceImg
 			title="Plataforma para verificar consumos"
-			img="primera.jpg"
+			img="combustible/primera.jpg"
 		/>
 
 		<ServiceImg
 			title="Chip de control"
-			img="segunda.jpg"
+			img="combustible/segunda.jpg"
 		/>
 
 		<ServiceImg
 			title="Registro de Kilómetraje en el suministro"
-			img="tercera.jpg"
+			img="combustible/tercera.jpg"
 		/>
 
 		<ServiceImg
 			title="El gas no es manipulable por los conductores"
-			img="cuarta.jpg"
+			img="combustible/cuarta.jpg"
 		/>
 
 		<MainFooter />
 
 		<style jsx>{`
 		
-			h2 {
-				position: relative;
-				color: white;
-				text-align: center;
-				padding: 1rem 0;
-				background-color: var(--orange);
-				margin-bottom: 2rem;
-			}
+			
 		
 		`}</style>
 

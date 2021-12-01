@@ -13,12 +13,27 @@ const Services = ({ title, text }) => {
 
 			section {
 				position: relative;
-				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat;
+				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat right;
 				background-size: cover;
 				text-align: center;
 				color: white;
 				padding: 2rem;
 				margin-bottom: 2rem;
+			}
+
+			
+
+			p, h3 {
+				height: var(--height);
+				text-align: center;
+				align-self: center;
+				font-weight: 700;
+				color: white;
+				font-size: 1.3rem;
+				display: grid;
+				place-items: center;
+				padding-right: 7rem;
+				padding-left: 7rem;
 			}
 
 			h3 {
@@ -27,10 +42,21 @@ const Services = ({ title, text }) => {
 				margin-bottom: 2rem;
 			}
 
-			p {
-				width: 70%;
-				margin: auto;
-				font-weight: 000;
+			@media screen and (max-width: 730px) {
+
+				section {
+					background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat center;
+				}
+
+				p, h3 {
+					padding-right: 2rem;
+					padding-left: 2rem;
+				}
+
+				p {
+					text-align: justify;
+					font-size: 1rem;
+				}
 			}
 
 

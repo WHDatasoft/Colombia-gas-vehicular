@@ -37,16 +37,16 @@ const Index = () => {
 			cilindro="65"
 			metros="16"
 			reemplazo="5.5"
-			rango="1000 A 2400"
+			rango="2400 A 4000"
 			cilindroNum="gas54"
 			carNum="car54"
 		/>
 
 		<Gas
-			cilindro="40"
-			metros="10"
-			reemplazo="5.5"
-			rango="1000 A 2400"
+			cilindro="100"
+			metros="25"
+			reemplazo="8.5"
+			rango="4000 EN ADELANTE"
 			cilindroNum="gas82"
 			carNum="car82"
 		/>
@@ -59,7 +59,7 @@ const Index = () => {
 				position: relative;
 				color: white;
 				text-align: center;
-				padding: 1rem 0;
+				padding: 1rem 1.5rem;
 				margin-bottom: 2rem;
 				font-size: 2rem;
 				font-weight: 600;
