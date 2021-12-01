@@ -9,7 +9,7 @@ const SliderMain = ({ slideList, top }) => {
     const [touchEnd, setTouchEnd] = useState(0);
 
     useEffect(() => {
-        /* const tiempo = setTimeout(() => {
+        const tiempo = setTimeout(() => {
             if (direccion) {
                 setImg(img + 1)
                 if (img >= 1) setDireccion(!direccion)
@@ -21,7 +21,7 @@ const SliderMain = ({ slideList, top }) => {
 
         return () => {
             clearTimeout(tiempo)
-        } */
+        }
     }, [img]);
 
     //Para evitar que se desfase el slider

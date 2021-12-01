@@ -1,8 +1,9 @@
 
 
 :root {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Roboto', sans-serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	--dark-green: #068437;
+	--intermediate-gren: #2D9B36;
 	--light-green: #4AAC35;
 	--smoth-green: #A5D3B1;
 	--blue: #0E566C;

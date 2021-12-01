@@ -1,4 +1,4 @@
-const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => {
+const BenefitBanner = ({ icon, title, titleComplement, subtitle, background, scaleSubtitle, light }) => {
 	return <main>
 
 		<main>
@@ -6,7 +6,19 @@ const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => 
 			<div className="content">
 				<img className="icon" src={`/icon/${icon}`} alt="" />
 				<hgroup>
-					<h1>{title}</h1>
+					<h1>
+						{
+							titleComplement
+								?
+								<>
+									<span className="first">{title}</span>
+									<span className="second">{titleComplement}</span>
+								</>
+								:
+								<span>{title}</span>
+
+						}
+					</h1>
 					<h2>{subtitle}</h2>
 				</hgroup>
 			</div>
@@ -43,6 +55,8 @@ const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => 
 
 			.icon {
 				height: 8rem;
+				align-self: flex-end;
+				margin-bottom: 2rem;
 			}
 
 			hgroup {
@@ -54,11 +68,20 @@ const BenefitBanner = ({ icon, title, subtitle, background, scaleSubtitle }) => 
 			}
 
 			h1 {
-				font-size: 5.3rem;
+				display: grid;
+				font-size: 8rem;
 				font-weight: 900;
 				border-bottom: .3rem solid var(--orange);
 				margin-bottom: .4rem;
 			}
+
+			.second {
+				font-size: 4.4rem;
+				font-weight: ${light ? '100' : '600'}
+			}
+
+
+
 
 			h2 {
 				font-size: ${scaleSubtitle ? `${scaleSubtitle}rem` : '1.5rem'};

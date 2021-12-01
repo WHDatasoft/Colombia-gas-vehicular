@@ -15,7 +15,9 @@ const Index = () => {
 			background="combustible.jpg"
 			icon="car-fuel.svg"
 			title="COMBUSTIBLE"
-			subtitle="Ahorra hasta el 50%"
+			titleComplement="Ahorra hasta el 50%"
+			subtitle=""
+			light
 		/>
 
 		<h2>CONTROL DE CONSUMO</h2>

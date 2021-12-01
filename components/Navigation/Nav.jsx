@@ -35,7 +35,8 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				{ title: 'Programa de salud', url: '/beneficios/programa-de-salud' },
 				{ title: 'ahorro', url: '/beneficios/ahorro' },
 				{ title: 'combustible', url: '/beneficios/combustible' },
-				{ title: 'garantia', url: '/beneficios/garantia' },
+				{ title: 'beneficios medio ambientales', url: '/beneficios/beneficios-medio-ambientales' },
+				{ title: 'financianción', url: '/beneficios/financiacion' },
 			]
 
 		},
