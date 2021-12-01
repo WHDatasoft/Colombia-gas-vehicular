@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const SliderMain = ({ slideList, top }) => {
 
-    const [img, setImg] = useState(-1);
+    const [img, setImg] = useState(0);
     const [direccion, setDireccion] = useState(true);
 
     const [touchStart, setTouchStart] = useState(0);
@@ -13,18 +13,18 @@ const SliderMain = ({ slideList, top }) => {
         const tiempo = setTimeout(() => {
             console.log('se ejecuto')
             if (direccion) {
-                setImg(img + 1)
-                if (img >= 1) setDireccion(!direccion)
+                setImg(i => i + 1)
+                if (img >= slideList.length - 1) setDireccion(!direccion)
             } else {
-                setImg(img - 1)
-                if (img <= 1) setDireccion(!direccion)
+                setImg(i => i - 1)
+                if (img <= 0) setDireccion(!direccion)
             }
         }, 4000)
 
         return () => {
             clearTimeout(tiempo)
         }
-    }, [img]);
+    }, []);
 
     //Para evitar que se desfase el slider
     useEffect(() => {
@@ -33,20 +33,23 @@ const SliderMain = ({ slideList, top }) => {
     }, [img]);
 
     useEffect(() => {
-
+        console.log(touchStart, touchEnd)
         if (touchStart < touchEnd) {
-            setImg(img => img - 1)
+            setImg(i => i - 1)
         } else {
-            setImg(img => img + 1)
+            setImg(i => i + 1)
         }
 
     }, [touchEnd])
 
     const onTouchStart = e => {
+        console.log('pres')
         setTouchStart(e.touches[0].pageX)
     }
 
     const onTouchEnd = e => {
+        console.log('pres end')
+        console.log(e.changedTouches[0].pageX)
         setTouchEnd(e.changedTouches[0].pageX)
     }
 
@@ -69,11 +72,11 @@ const SliderMain = ({ slideList, top }) => {
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
             </button>
 
-            <ul onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <ul  >
 
                 {
                     slideList.map(slide => (
-                        <li key={Math.random()}>
+                        <li key={Math.random()} onTouchEnd={onTouchEnd} onTouchStart={onTouchStart} onTouchMove={() => console.log('hola')}>
                             {slide}
                         </li>
                     ))

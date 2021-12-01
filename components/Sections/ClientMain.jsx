@@ -51,7 +51,7 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 				display: grid;
 				justify-items: center;
 				grid-row-gap: ${rowGap}em;
-				padding: 6em;
+				padding: 4em;
 			}
 
 			@media screen and (max-width: 870px) {

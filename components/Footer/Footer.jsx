@@ -3,11 +3,11 @@ const Footer = () => {
 		<div className="image"></div>
 		<div className="content">
 			<p className="phone">
-				<a href="tel:+573134229281">3134229281</a>
+				<a href="tel:+573134229281">313 422 9281</a>
 				{' '}
 				-
 				{' '}
-				<a href="tel:+573232230714">3232230714</a>
+				<a href="tel:+573232230714">323 223 0740</a>
 			</p>
 			<br />
 			<p className="direcction">CRA 51 # 71 c 27 Bogotá, D.C Colombia</p>

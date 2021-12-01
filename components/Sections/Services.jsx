@@ -27,7 +27,6 @@ const Services = ({ title, text }) => {
 				height: var(--height);
 				text-align: center;
 				align-self: center;
-				font-weight: 700;
 				color: white;
 				font-size: 1.3rem;
 				display: grid;
@@ -54,7 +53,7 @@ const Services = ({ title, text }) => {
 				}
 
 				p {
-					text-align: justify;
+					text-align: center;
 					font-size: 1rem;
 				}
 			}

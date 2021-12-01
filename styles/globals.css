@@ -27,6 +27,10 @@
 	--light-orange: #F4A06C;
 }
 
+textarea {
+	font-family: inherit;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -74,10 +78,9 @@ table {
 button {
 	transition: transform .5s;
 	cursor: pointer;
-	outline: none;
 }
 
-input {
+input, textarea, button, a {
 	outline: none;
 }
 

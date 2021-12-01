@@ -16,7 +16,7 @@ const FormDidi = () => {
 		const { name, phone, from } = data
 		const URL = '/api/email'
 		try {
-			const response = await axios.post(URL, { name, phone, from })
+			const response = await axios.post(URL, { name, phone, from, message })
 			console.log(response.data)
 		} catch (error) {
 			console.log(error)
@@ -37,6 +37,7 @@ const FormDidi = () => {
 			<h3>COMUNÍCATE CON NOSOTROS</h3>
 			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
 			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
+			<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
 			<button>Enviar</button>
 		</form>
 
@@ -84,12 +85,18 @@ const FormDidi = () => {
 				grid-row-gap: 1.5em;
 			}
 
-			button, input {
+			button, input, textarea {
 				padding: .8em;
 			}
 
 			input {
 				border: 1px solid var(--orange);
+			}
+
+			textarea {
+				border: 1px solid var(--orange);
+				font-size: 1rem;
+				height: 6rem;
 			}
 
 			button {

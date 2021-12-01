@@ -29,7 +29,7 @@ const MainFooter = () => {
 				position: relative;
 				z-index: 1;
 				box-shadow: 15px 15px 25px -5px #3339;
-				margin-bottom: 4rem;
+				margin-bottom: 2rem;
 			}
 
 

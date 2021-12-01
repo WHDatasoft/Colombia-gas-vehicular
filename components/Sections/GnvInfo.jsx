@@ -13,7 +13,10 @@ const GnvInfo = () => {
 			</div>
 		</header>
 		<div className="transparent"></div>
-		<img src="/img/servicios/InfografiaGNV.png" alt="" className="info" />
+		<div className="info-wrapper">
+			<img src="" alt="" />
+			<img src="/img/servicios/InfografiaGNV.png" alt="" className="info" />
+		</div>
 
 		<style jsx>{`
 
@@ -62,6 +65,10 @@ const GnvInfo = () => {
 
 			.gnv {
 				width: 18em;
+			}
+
+			.info-wrapper {
+				position: relative;
 			}
 
 			.info {

@@ -6,6 +6,7 @@ const FormEmail = () => {
 	const [data, setData] = useState({
 		name: '',
 		phone: '',
+		message: '',
 		from: 'Colombiagas'
 	});
 
@@ -15,7 +16,7 @@ const FormEmail = () => {
 		const { name, phone } = data
 		const URL = '/api/email'
 		try {
-			const response = await axios.post(URL, { name, phone, from })
+			const response = await axios.post(URL, { name, phone, message, from })
 			console.log(response.data)
 		} catch (error) {
 			console.log(error)
@@ -33,6 +34,7 @@ const FormEmail = () => {
 			<h1>COMUNÍCATE CON NOSOTROS</h1>
 			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
 			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
+			<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
 			<button>Enviar</button>
 		</form>
 
@@ -66,8 +68,13 @@ const FormEmail = () => {
 				grid-row-gap: 1.5em;
 			}
 
-			button, input {
+			button, input, textarea {
 				padding: .8em;
+			}
+
+			textarea {
+				font-size: 1rem;
+				height: 6rem;
 			}
 
 			button {
