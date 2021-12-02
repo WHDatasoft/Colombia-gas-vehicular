@@ -1,17 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const SliderMain = ({ slideList, top }) => {
 
     const [img, setImg] = useState(0);
     const [direccion, setDireccion] = useState(true);
 
-    const [touchStart, setTouchStart] = useState(0);
-    const [touchEnd, setTouchEnd] = useState(0);
+    const touchStart = useRef(0);
+
 
     useEffect(() => {
-        console.log('inicio')
-        const tiempo = setTimeout(() => {
-            console.log('se ejecuto')
+
+        const tiempo = setInterval(() => {
             if (direccion) {
                 setImg(i => i + 1)
                 if (img >= slideList.length - 1) setDireccion(!direccion)
@@ -22,7 +21,7 @@ const SliderMain = ({ slideList, top }) => {
         }, 4000)
 
         return () => {
-            clearTimeout(tiempo)
+            clearInterval(tiempo)
         }
     }, []);
 
@@ -32,25 +31,20 @@ const SliderMain = ({ slideList, top }) => {
         if (img > slideList.length - 1) setImg(slideList.length - 1)
     }, [img]);
 
-    useEffect(() => {
-        console.log(touchStart, touchEnd)
-        if (touchStart < touchEnd) {
+
+
+
+    const onTouchStart = (e) => {
+        touchStart = e.touches[0].pageX
+    }
+
+    const onTouchEnd = (e) => {
+        const touchEnd = e.changedTouches[0].pageX
+        if (touchStart <= touchEnd) {
             setImg(i => i - 1)
         } else {
             setImg(i => i + 1)
         }
-
-    }, [touchEnd])
-
-    const onTouchStart = e => {
-        console.log('pres')
-        setTouchStart(e.touches[0].pageX)
-    }
-
-    const onTouchEnd = e => {
-        console.log('pres end')
-        console.log(e.changedTouches[0].pageX)
-        setTouchEnd(e.changedTouches[0].pageX)
     }
 
     const onClickRight = () => {
@@ -63,7 +57,7 @@ const SliderMain = ({ slideList, top }) => {
     }
 
     return (
-        <div className="content">
+        <div className="content" onTouchEnd={onTouchEnd} onTouchStart={onTouchStart}>
 
             <button className="left" onClick={onClickLeft}>
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
@@ -72,11 +66,11 @@ const SliderMain = ({ slideList, top }) => {
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
             </button>
 
-            <ul  >
+            <ul>
 
                 {
                     slideList.map(slide => (
-                        <li key={Math.random()} onTouchEnd={onTouchEnd} onTouchStart={onTouchStart} onTouchMove={() => console.log('hola')}>
+                        <li key={Math.random()} >
                             {slide}
                         </li>
                     ))

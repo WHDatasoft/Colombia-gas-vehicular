@@ -58,7 +58,7 @@ const FormEmail = ({ didi }) => {
 			}
 
 			textarea {
-				${didi ? 'border: 1px solid var(--orange)' : ''}
+				${didi ? 'border: 1px solid var(--orange);' : ''}
 				font-size: 1rem;
 				height: 6rem;
 			}

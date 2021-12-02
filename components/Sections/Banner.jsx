@@ -47,7 +47,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				z-index: 1;
 				transition: transform .5s;
 				box-shadow: 5px 10px 10px 0px #0006;
-				animation: enter-banner 1s 1s forwards;
+				animation: enter-banner 1s .5s forwards;
 			}
 
 			.back:after  {

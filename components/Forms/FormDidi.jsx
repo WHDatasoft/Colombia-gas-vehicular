@@ -3,7 +3,7 @@ import FormEmail from './FormEmail';
 
 const FormDidi = () => {
 
-	return <div className="form-wrapper">
+	return <div className="form-wrapper" >
 
 		<div className="icon">
 			<img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
