@@ -7,7 +7,7 @@ import MainLayout from "../../layout/MainLayout"
 const Index = () => {
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Revisión Anual</title>
 		</Head>
 		<Banner imgPerson="person-3.png" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
 

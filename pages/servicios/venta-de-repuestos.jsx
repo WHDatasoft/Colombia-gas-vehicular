@@ -110,7 +110,7 @@ const Index = () => {
 	]
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Venta De Repuestos</title>
 		</Head>
 		<Banner imgPerson="person-5.png" fondo="banner-fondo-claro.png" icon="servicio5.svg" text="Venta de repuestos">
 			<p className="texto-1">

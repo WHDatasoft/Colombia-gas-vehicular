@@ -10,7 +10,7 @@ const Index = () => {
 	return <MainLayout>
 
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Beneficios Medio Ambientales</title>
 		</Head>
 
 		<BenefitBanner

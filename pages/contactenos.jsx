@@ -7,7 +7,7 @@ import MainLayout from "../layout/MainLayout"
 const Index = () => {
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Contactenos</title>
 		</Head>
 		<main>
 			<FormCol />

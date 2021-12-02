@@ -66,7 +66,7 @@ const AlianzaDidi = () => {
 
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Aliza DIDI</title>
 		</Head>
 
 		<SliderMain

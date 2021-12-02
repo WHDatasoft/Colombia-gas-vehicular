@@ -13,6 +13,7 @@ const Index = () => {
 	return <MainLayout>
 		<Head>
 			<title>Colombia Gas Vehicular</title>
+			<meta name="description" content="Colombiagas Vehicular te brinda opciones de accesibilidad para ti y tu vehículo con beneficios unicos pensados en tu bienestar, ayúdanos a cuidar el medio ambiente, te esperamos..." />
 		</Head>
 
 		<Video

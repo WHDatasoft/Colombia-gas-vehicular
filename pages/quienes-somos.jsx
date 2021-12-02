@@ -16,7 +16,7 @@ const Index = () => {
 
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Quiénes Somos</title>
 		</Head>
 		<SliderMain
 			slideList={slideList}

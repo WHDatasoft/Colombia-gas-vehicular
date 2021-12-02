@@ -8,7 +8,7 @@ import MainLayout from "../layout/MainLayout"
 const Index = () => {
 	return <MainLayout>
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Debes Saber</title>
 		</Head>
 
 		<Video

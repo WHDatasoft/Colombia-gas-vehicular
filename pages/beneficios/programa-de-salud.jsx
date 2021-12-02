@@ -8,7 +8,7 @@ const Index = () => {
 	return <MainLayout>
 
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Programa de Salud</title>
 		</Head>
 
 		<BenefitBanner

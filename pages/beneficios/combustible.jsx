@@ -9,7 +9,7 @@ const Index = () => {
 	return <MainLayout>
 
 		<Head>
-			<title>Colombia Gas Vehicular</title>
+			<title>Combustible</title>
 		</Head>
 
 		<BenefitBanner
