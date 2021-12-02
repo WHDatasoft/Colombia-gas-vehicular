@@ -10,7 +10,6 @@ const Video = ({ videoUrl, deleteFinish, handlePlayButton, control, videoUrlResp
 
 	useEffect(() => {
 		const { offsetWidth } = document.body
-		console.log(offsetWidth)
 		if (offsetWidth <= 800) {
 			setIsResponsive(true)
 		}

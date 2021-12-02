@@ -16,6 +16,17 @@ const Nav = ({ setEnableNav, enableNav }) => {
 		setLinkSelected(router.asPath)
 	}, [])
 
+	const close = () => {
+		setEnableNav(false)
+		setSubmenu(false)
+		setSubmenuActive('')
+	}
+
+	const goBack = () => {
+		setSubmenu(false)
+		setSubmenuActive('')
+	}
+
 	const linkList = [
 		{ title: 'Inicio', url: '/' },
 		{ title: '¿Quiénes somos?', url: '/quienes-somos' },
@@ -50,106 +61,112 @@ const Nav = ({ setEnableNav, enableNav }) => {
 		{ title: 'Contáctenos', url: '/contactenos' },
 	]
 
-	return <nav>
+	return <div className="wrapper">
+		<div className="background-nav" onClick={close}></div>
+		<nav>
 
-		<button className="close" onClick={() => {
-			setEnableNav(false)
-			setSubmenu(false)
-			setSubmenuActive('')
-		}}>
-			<svg viewBox="0 0 352 512">
-				<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
-			</svg>
-		</button>
-		{
-			submenu
-				?
-				<button className="return" onClick={() => {
-					setSubmenu(false)
-					setSubmenuActive('')
-				}}>
-					<svg viewBox="0 0 448 512">
-						<path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-					</svg>
-				</button>
-				:
-				''
-		}
-
-		<ul className="main-link-list">
+			<button className="close" onClick={close}>
+				<svg viewBox="0 0 352 512">
+					<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+				</svg>
+			</button>
 			{
-				linkList.map(mainLink => (
-					<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
-						<>
-							{
-								submenu
-									?
-									''
-									:
-									<>
-										{
-											(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
-												?
-												<button className="handle-submenu" onClick={() => {
-													setSubmenu(true)
-													setSubmenuActive(mainLink.title)
-												}}>{mainLink.title}</button>
-												:
-												<Link href={mainLink.url}>
-													<a>
-														<span>
-															{mainLink.title}
-														</span>
-													</a>
-												</Link>
-
-										}
-									</>
-							}
-						</>
-						{
-							mainLink.list
-								?
-
-								<ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
-									{
-										enableNav
-											?
-											<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
-												<Link href={mainLink.url}>
-													<a>{mainLink.title}</a>
-												</Link>
-											</li>
-											:
-											''
-									}
-									{
-
-										mainLink.list.map(secondLink => (
-
-											<li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
-												<Link href={secondLink.url}>
-													<a>{secondLink.title}</a>
-												</Link>
-											</li>
-
-										))
-									}
-								</ul>
-								:
-								null
-						}
-					</li>
-				))
+				submenu
+					?
+					<button className="return" onClick={goBack}>
+						<svg viewBox="0 0 448 512">
+							<path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+						</svg>
+					</button>
+					:
+					''
 			}
 
-		</ul>
+			<ul className="main-link-list">
+				{
+					linkList.map(mainLink => (
+						<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+							<>
+								{
+									submenu
+										?
+										''
+										:
+										<>
+											{
+												(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
+													?
+													<button className="handle-submenu" onClick={() => {
+														setSubmenu(true)
+														setSubmenuActive(mainLink.title)
+													}}>{mainLink.title}</button>
+													:
+													<Link href={mainLink.url}>
+														<a>
+															<span>
+																{mainLink.title}
+															</span>
+														</a>
+													</Link>
+
+											}
+										</>
+								}
+							</>
+							{
+								mainLink.list
+									?
+
+									<ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
+										{
+											enableNav
+												?
+												<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+													<Link href={mainLink.url}>
+														<a>{mainLink.title}</a>
+													</Link>
+												</li>
+												:
+												''
+										}
+										{
+
+											mainLink.list.map(secondLink => (
+
+												<li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
+													<Link href={secondLink.url}>
+														<a>{secondLink.title}</a>
+													</Link>
+												</li>
+
+											))
+										}
+									</ul>
+									:
+									null
+							}
+						</li>
+					))
+				}
+
+			</ul>
+
+		</nav>
 
 		<style jsx>{`
 
-			nav {
+			.background-nav {
+				display: none;
+			}
+
+			.wrapper {
 				position: relative;
 				z-index: 1000;
+
+			}
+
+			nav {
+				height: 100%;
 			}
 
 			.close {
@@ -223,6 +240,15 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 			@media screen and (max-width: 1080px) {
 
+				.background-nav {
+					display: block;
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
 				.close, .return {
 					box-sizing: border-box;
 					padding: 1rem;
@@ -246,19 +272,26 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					left: 2rem;
 				}
 
-				nav {
+				.wrapper {
 					position: fixed;
 					width: 100%;
 					min-height: 100vh;
 					background-color: var(--blue-transparent);
 					top: 0;
 					left: 0;
-					display: grid;
-					place-items: center;
 					transition: transform .5s, opacity .5s;
 					opacity: ${enableNav ? '1' : '0'};
 					transform: translateY(${enableNav ? '0' : '-100'}%);
-					font-weight: 600;
+					display: grid;
+					place-items: center;
+				}
+
+				nav {
+					display: grid;
+					place-items: center;
+					z-index: 1;
+					height; fit-content;
+					padding: 1rem;
 				}
 
 				.main-link-list {
@@ -279,12 +312,17 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					padding: .2rem 0;
 				}
 
-				.main-link > a {
-					padding: 0;
+				a {
+					font-size: 1.5rem;
 				}
 
+				.main-link > a {
+					padding: 0;
+					font-size: 1.5rem;
+				}
 				.handle-submenu {
 					display: block;
+					font-size: 1.5rem;
 				}
 
 				.main-link:hover .second-link-list {
@@ -307,7 +345,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 
 		`}</style>
-	</nav>
+	</div>
 }
 
 export default Nav

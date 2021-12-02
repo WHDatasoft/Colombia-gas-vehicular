@@ -57,6 +57,7 @@ const Header = () => {
 					background-color: unset;
 					transition: opacity 0.5s;
 					opacity: ${enableNav ? '0' : '1'};
+					justify-self: flex-end;
 				}
 
 				header {
