@@ -68,6 +68,7 @@ const PayTable = () => {
 			</tr>
 		</table>
 
+
 		<p>Para ampliar esta información comunícate al 4748800.</p>
 
 
