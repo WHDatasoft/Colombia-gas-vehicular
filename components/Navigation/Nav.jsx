@@ -258,6 +258,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 					transition: transform .5s, opacity .5s;
 					opacity: ${enableNav ? '1' : '0'};
 					transform: translateY(${enableNav ? '0' : '-100'}%);
+					font-weight: 600;
 				}
 
 				.main-link-list {

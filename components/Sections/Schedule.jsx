@@ -78,8 +78,6 @@ const Schedule = () => {
 				border-right: none;
 				display: grid;
 				align-items: center;
-				padding-right: calc(2rem * var(--size));
-				padding-left: calc(5rem * var(--size));
 				padding:  calc(7rem * var(--size)) calc(2rem * var(--size)) calc(7rem * var(--size)) calc(5rem * var(--size));
 				justify-self: flex-end;
 			}
@@ -116,14 +114,37 @@ const Schedule = () => {
 
 			@media screen and (max-width: 650px) {
 				:global(:root) {
-					--size: 0.7;
+					--size: 0.9;
+				}
+
+				section {
+					position: relative;
+					z-index: 1;
+					background-color: var(--blue-opacity);
+					border-radius: 0;
+					border: none;
+					display: grid;
+					align-items: center;
+					justify-items: center;
+					padding:  2em 0;
+					justify-self: center;
+					width: 100%;
 				}
 			}
 
 			@media screen and (max-width: 460px) {
 				:global(:root) {
+					--size: 0.8;
+				}
+			}
+
+			@media screen and (max-width: 400px) {
+				
+				:global(:root) {
 					--size: 0.65;
 				}
+				
+
 			}
 
 		`}</style>

@@ -1,6 +1,8 @@
 import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import BenefitBanner from '../../components/Sections/BenefitBanner'
+import PayTable from '../../components/Sections/payTable'
+import RequestDoc from '../../components/Sections/RequestDoc'
 import Services from '../../components/Sections/Services'
 import TitleCenter from '../../components/title/TitleCenter'
 import MainLayout from "../../layout/MainLayout"
@@ -29,6 +31,10 @@ const Index = () => {
 		<TitleCenter
 			title="Para solicitar la financiación se requieren los siguientes documentos"
 		/>
+
+		<RequestDoc />
+
+		<PayTable />
 
 
 		<MainFooter />

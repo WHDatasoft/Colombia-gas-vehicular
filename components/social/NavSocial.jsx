@@ -35,7 +35,7 @@ const NavSocial = ({ responsive }) => {
 				font-size: 1rem;
 				background-color: var(--blue-opacity);
 				position: fixed;
-				z-index: 10;
+				z-index: 4;
 				padding: .5em;
 				border-top-right-radius: 2em;
 				border-bottom-right-radius: 2em;

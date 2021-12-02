@@ -14,7 +14,7 @@ const GnvInfo = () => {
 		</header>
 		<div className="transparent"></div>
 		<div className="info-wrapper">
-			<img src="" alt="" />
+			<img src="/logo/logo-vanti.svg" alt="" className="logo-vanti" />
 			<img src="/img/servicios/InfografiaGNV.png" alt="" className="info" />
 		</div>
 
@@ -75,6 +75,13 @@ const GnvInfo = () => {
 				width: 100%;
 			}
 
+			.logo-vanti {
+				position: absolute;
+				right: 5em;
+				top: 5em;
+				height: 5em;
+			}
+
 			@media screen and (max-width: 1550px) {
 				section {
 					font-size: 0.8rem;
@@ -89,17 +96,11 @@ const GnvInfo = () => {
 
 			@media screen and (max-width: 1150px) {
 				section {
-					font-size: 0.6rem;
+					font-size: 0.5rem;
 				}
 
 				.wrapper {
 					margin: 0 8.5em;
-				}
-			}
-
-			@media screen and (max-width: 1050px) {
-				section {
-					font-size: 0.5rem;
 				}
 			}
 
@@ -122,8 +123,16 @@ const GnvInfo = () => {
 				.transparent {
 					height: 1.5em;
 				}
+
 			}
 			
+			@media screen and (max-width: 450px) {
+
+				.logo-vanti {
+					right: 3em;
+					top: 3em;
+				}
+			}
 
 		`}</style>
 

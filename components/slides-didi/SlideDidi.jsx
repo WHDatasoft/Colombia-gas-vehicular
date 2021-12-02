@@ -5,7 +5,7 @@ const SlideDidi = () => {
 
 		<ClientMain
 			urlImg="phone"
-			backgroundColor="#000000AA"
+			backgroundColor="#1c580dAA"
 			rowGap="3"
 		>
 			<div className="title">

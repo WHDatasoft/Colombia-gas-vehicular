@@ -1,32 +1,7 @@
-import axios from 'axios'
 
-import { useState } from 'react';
+import FormEmail from './FormEmail';
 
 const FormDidi = () => {
-
-	const [data, setData] = useState({
-		name: '',
-		phone: '',
-		message: '',
-		from: 'DIDI'
-	});
-
-	const onSubmit = async e => {
-		e.preventDefault();
-
-		const { name, phone, from, message } = data
-		const URL = '/api/email'
-		try {
-			const response = await axios.post(URL, { name, phone, from, message })
-			console.log(response.data)
-		} catch (error) {
-			console.log(error)
-		}
-	}
-
-	const onChange = e => {
-		setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
-	}
 
 	return <div className="form-wrapper">
 
@@ -34,13 +9,8 @@ const FormDidi = () => {
 			<img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 			<img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		</div>
-		<form onSubmit={onSubmit}>
-			<h3>COMUNÍCATE CON NOSOTROS</h3>
-			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
-			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
-			<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
-			<button>Enviar</button>
-		</form>
+
+		<FormEmail didi />
 
 		<style jsx>{`
 
@@ -72,39 +42,6 @@ const FormDidi = () => {
 
 			.cabeza {
 				width: 4.5em;
-			}
-
-			h3 {
-				color: var(--orange);
-				font-size: 2em;
-				text-align: center;
-				font-weight: 100;
-			}
-
-			form {
-				display: inline-grid;
-				grid-row-gap: 1.5em;
-			}
-
-			button, input, textarea {
-				padding: .8em;
-			}
-
-			input {
-				border: 1px solid var(--orange);
-			}
-
-			textarea {
-				border: 1px solid var(--orange);
-				font-size: 1rem;
-				height: 6rem;
-			}
-
-			button {
-				background-color: var(--orange);
-				color: white;
-				justify-self: center;
-				padding: .8em 1.5em; 
 			}
 
 			@keyframes rotate {

@@ -43,7 +43,7 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 			}
 
 			.hoja-circle {
-				width: 8em;
+				width: 7em;
 			}
 
 			.content {

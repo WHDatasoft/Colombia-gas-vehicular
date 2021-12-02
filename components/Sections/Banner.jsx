@@ -36,7 +36,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 			.back {
 				position: absolute;
-				left: 0;
+				left: -20rem;
 				top: 50%;
 				transform: translateY(-50%);
 				background-color: var(--blue);
@@ -45,6 +45,17 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 				place-items: center;
 				border-radius: 0 1rem 1rem 0;
 				z-index: 1;
+				transition: transform .5s;
+				box-shadow: 5px 10px 10px 0px #0006;
+				animation: enter-banner 1s 1s forwards;
+			}
+
+			.back:after  {
+				box-shadow: -5px 15px 10px -7px #0006;
+			}
+
+			.back:hover {
+				transform: translateY(-50%) scale(1.1);
 			}
 
 			.back:before, .back:after  {
@@ -95,7 +106,18 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 			.icon img {
 				display: block;
 				margin: auto;
-				width: 6rem;
+				margin-bottom: .3rem;
+				width: 5rem;
+			}
+
+			@keyframes enter-banner {
+				from {
+					left: -20rem;
+				}
+
+				to {
+					left: 0;
+				}
 			}
 
 			@media screen and (max-width: 1400px) {

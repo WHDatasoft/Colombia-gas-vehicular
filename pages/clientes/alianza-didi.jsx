@@ -36,7 +36,7 @@ const AlianzaDidi = () => {
 		/>,
 		<SlideSecond
 			backgroundImg="disk"
-			color="#1c580dAA"
+			color="#EF861CAA"
 			mainTitle="Mécanica general y frenos"
 			secondTitle="12% DE DESCUENTO"
 			img="/icon/servitek.svg"
@@ -50,7 +50,7 @@ const AlianzaDidi = () => {
 		/>,
 		<SlideSecond
 			backgroundImg="car-panel"
-			color="#1c580dAA"
+			color="#EF861CAA"
 			mainTitle="Prueba hidrostática"
 			secondTitle="20% DE DESCUENTO"
 			img="/logo/logo-blanco.png"

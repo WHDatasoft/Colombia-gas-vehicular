@@ -27,12 +27,11 @@ const Index = () => {
 				"Se hacen pruebas de hermeticidad, escapes y funcionamiento, para garantizar el cumplimiento de las condiciones técnicas y de seguridad exigidas."
 			]}
 		>
-
-			<div className="law">
-				<a href="/download/ley0957-2012.pdf" download>CONSULTAR LEY 0957 del 2012</a>
-			</div>
-
 		</Description>
+
+		<div className="law">
+			<a href="/download/ley0957-2012.pdf" download>CONSULTAR LEY 0957 del 2012</a>
+		</div>
 
 		<MainFooter />
 
@@ -76,7 +75,7 @@ const Index = () => {
 
 			a {
 				display: block;
-				margin-top: 2rem;
+				margin-bottom: 2rem;
 				padding: .5rem 2rem;
 				border-radius: 1rem;
 				color: var(--blue);

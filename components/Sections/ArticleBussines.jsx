@@ -7,7 +7,7 @@ const ArticleBussines = ({ img, type, bussinesName, characterList }) => {
 				<li>
 					<span>{type ? 'Nombre:' : 'Empresa:'}</span>
 					{' '}
-					<h2>{bussinesName}</h2>
+					<h2>{bussinesName}.</h2>
 				</li>
 				{
 					characterList.map(item => (

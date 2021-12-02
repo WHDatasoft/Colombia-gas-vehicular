@@ -30,7 +30,7 @@ const Index = () => {
 		<ArticleBussines
 			type
 			img="manometro.jpg"
-			bussinesName="Manometro"
+			bussinesName="Manómetro"
 			characterList={[
 				'Precio: $150.000'
 			]}
@@ -46,7 +46,7 @@ const Index = () => {
 		<ArticleBussines
 			type
 			img="cableado.jpg"
-			bussinesName="Cableado electrico 5ta generación"
+			bussinesName="Cableado eléctrico 5ta generación"
 			characterList={[
 				'Precio: $300.000'
 			]}
@@ -102,103 +102,7 @@ const Index = () => {
 		<ArticleBussines
 			type
 			img="hace-parte-del-kit.jpg"
-			bussinesName="Cableado electrico de llave conmutadora"
-			characterList={[
-				'Precio: $60.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="filtro-de-gas.jpg"
-			bussinesName="Filtro de gas"
-			characterList={[
-				'Precio: $80.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="computadora.jpg"
-			bussinesName="Computadora a gas 4 cilindros"
-			characterList={[
-				'Precio: $800.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="manometro.jpg"
-			bussinesName="Manometro"
-			characterList={[
-				'Precio: $150.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="capuchon-pico-de-carga-1.jpg"
-			bussinesName="Capuchon pico de carga"
-			characterList={[
-				'Precio: $25.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="cableado.jpg"
-			bussinesName="Cableado electrico 5ta generación"
-			characterList={[
-				'Precio: $300.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="emulador-inyextores-4-cilindros.jpg"
-			bussinesName="Emulador inyectores 4 cilindros"
-			characterList={[
-				'Precio: $160.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="tubería.jpg"
-			bussinesName="Tubería"
-			characterList={[
-				'Precio: $150.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="regulador.jpg"
-			bussinesName="Regulador de 3ra generación"
-			characterList={[
-				'Precio: $60.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="riel-de-inyectores.jpg"
-			bussinesName="Riel de inyectores 4 cilindros."
-			characterList={[
-				'Precio: $480.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="sensor-y-emulador-de-nivel-de-asolina.jpg"
-			bussinesName="Sensor y emulador de gasolina"
-			characterList={[
-				'Precio: $180.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="llave.jpg"
-			bussinesName="Llave conmutadora"
-			characterList={[
-				'Precio: $150.000'
-			]}
-		/>,
-		<ArticleBussines
-			type
-			img="hace-parte-del-kit.jpg"
-			bussinesName="Cableado electrico de llave conmutadora"
+			bussinesName="Cableado eléctrico de llave conmutadora"
 			characterList={[
 				'Precio: $60.000'
 			]}
@@ -229,6 +133,10 @@ const Index = () => {
 			]}
 		>
 		</Description>
+
+		<div className="law">
+			<a href="/download/ley0957-2012.pdf" download>CONSULTAR LEY 0957 del 2012</a>
+		</div>
 
 		<Row />
 
@@ -286,6 +194,22 @@ const Index = () => {
 
 			.description {
 				text-align: justify;
+			}
+
+			.law {
+				display: grid;
+				justify-items: center;
+			}
+
+			a {
+				display: block;
+				margin-bottom: 2rem;
+				padding: .5rem 2rem;
+				border-radius: 1rem;
+				color: var(--blue);
+				font-weight: 600;
+				background-color: white;
+				text-align: center;
 			}
 
 

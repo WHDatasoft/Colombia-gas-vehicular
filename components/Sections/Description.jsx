@@ -56,8 +56,29 @@ const Description = ({ title, textList, icon, left, right, children }) => {
 				height: 2rem;
 				position: absolute;
 				bottom: 0;	
-				${right ? 'right: 7rem' : ''}
-				${left ? 'left: 7rem' : ''}
+				${right ? `right: -20rem;` : ''}
+				${left ? `left: -20rem;` : ''}
+				animation: ${right ? 'car-right' : left ? 'car-left' : ''} 1s 1s forwards;
+			}
+
+			@keyframes car-right {
+				from {
+					right: -20rem
+				}
+
+				to {
+					right: 9rem
+				}
+			}
+
+			@keyframes car-left {
+				from {
+					left: -20rem
+				}
+
+				to {
+					left: 9rem
+				}
 			}
 
 			@media screen and (max-width: 625px) {

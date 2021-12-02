@@ -13,7 +13,7 @@ const Index = () => {
 		<Banner imgPerson="person-4.png" fondo="banner-fondo-oscuro.png" icon="servicio3.svg" text="mantenimiento" personSize={1.2}>
 			<br />
 			<p className="texto-1">
-				Colombiagas vehicular te ofrece respaldo y los equipos pecializados para realizar el mantenimiento de su vehículo
+				Colombiagas vehicular te ofrece respaldo y los equipos especializados para realizar el mantenimiento de su vehículo
 			</p>
 			<h2 className="texto-3">
 				<span className="number">$ 50.000</span>
@@ -25,7 +25,7 @@ const Index = () => {
 		<Description
 			title="Mantenimiento"
 			textList={[
-				"El mantenimiento se basa en registros a ejecutarse a los 1,500 Km y en adelante periódicamente cada 20,000 kms. Eso para garantizar siempre un correcto funcionamiento de su vehículo y del equipo de Gas- GNV. Los talleres autorizados (*) para ejercer el mantenimiento preventivo del sistema GNV."
+				"El mantenimiento se basa en registros a ejecutarse a los 1,500 Km y en adelante periódicamente cada 20,000 kms. Eso para garantizar siempre un correcto funcionamiento de su vehículo y del equipo de Gas- GNV. Los talleres autorizados como Colombiagas vehicular ejercen el mantenimiento preventivo del sistema GNV."
 			]}
 		/>
 

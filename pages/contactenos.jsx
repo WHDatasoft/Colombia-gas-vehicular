@@ -1,6 +1,6 @@
 import Head from '../components/Head/Head'
 import Footer from '../components/Footer/Footer'
-import FormEmail from '../components/Forms/FormEmail'
+import FormCol from '../components/Forms/FormCol'
 import Schedule from '../components/Sections/Schedule'
 import MainLayout from "../layout/MainLayout"
 
@@ -10,7 +10,7 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 		</Head>
 		<main>
-			<FormEmail />
+			<FormCol />
 			<Schedule />
 		</main>
 		<Footer />

@@ -1,13 +1,14 @@
 import axios from 'axios'
 import { useState } from 'react';
 
-const FormEmail = () => {
+
+const FormEmail = ({ didi }) => {
 
 	const [data, setData] = useState({
 		name: '',
 		phone: '',
 		message: '',
-		from: 'Colombiagas'
+		from: didi ? 'DIDI' : 'Colombiagas'
 	});
 
 	const onSubmit = async e => {
@@ -27,80 +28,56 @@ const FormEmail = () => {
 		setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
 	}
 
-	return <div className="form-wrapper">
-
-		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-		<form onSubmit={onSubmit}>
-			<h1>COMUNÍCATE CON NOSOTROS</h1>
-			<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
-			<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
-			<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
-			<button>Enviar</button>
-		</form>
+	return <form onSubmit={onSubmit}>
+		<h3>COMUNÍCATE CON NOSOTROS</h3>
+		<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
+		<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
+		<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
+		<button>Enviar</button>
 
 		<style jsx>{`
 
-			.form-wrapper {
-				font-size: 1rem;
-				position: relative;
-				z-index: 1;
-				display: grid;
-				justify-items: center;
-				align-items: center;
-			}
-
-			img {
-				padding: 3em 0;
-				width: 9em;
-				display: block;
-				transform-origin: top center;
-				animation: rotate 2s infinite alternate-reverse ease-in-out;
-			}
-
-			h1 {
-				color: white;
-				font-size: 1.5em;
-				text-align: center;
-			}
-
 			form {
+				font-size: 1rem;
 				display: inline-grid;
 				grid-row-gap: 1.5em;
+			}
+
+			h3 {
+				${didi ? 'color: var(--orange);' : 'color: white;'}
+				font-size: 1.5em;
+				text-align: center;
 			}
 
 			button, input, textarea {
 				padding: .8em;
 			}
 
+			input {
+				${didi ? 'border: 1px solid var(--orange)' : ''}
+			}
+
 			textarea {
+				${didi ? 'border: 1px solid var(--orange)' : ''}
 				font-size: 1rem;
 				height: 6rem;
 			}
 
 			button {
+				${didi ? 'background-color: var(--orange);' : ''}
+				${didi ? 'color: white;' : ''}
 				justify-self: center;
 				padding: .8em 1.5em; 
 			}
 
-			@keyframes rotate {
-				from {
-					transform: rotate(-10deg)
-				}
-
-				to {
-					transform: rotate(10deg)
-				}
-			}
-
 			@media screen and (max-width: 360px) {
-				.form-wrapper {
-					font-size: .8rem;
+				form {
+					font-size: .7rem;
 				}
 			}
-
 
 		`}</style>
-	</div>
+	</form>
 }
 
 export default FormEmail
