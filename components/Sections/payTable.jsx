@@ -1,6 +1,7 @@
 const PayTable = () => {
 	return <section>
 
+
 		<p>Adicionalmente cada cliente tiene un valor a financiar preaprobado hasta 24 meses según el estrato:</p>
 
 		<table>
