@@ -24,8 +24,8 @@ const MainLayout = ({ children }) => {
 		count++
 		setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
 		const timer = setInterval(() => {
-			setIsActive(state => {
-				if (state) {
+			setIsActive((active) => {
+				if (active) {
 					count++
 					if (count < 4) {
 						setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
@@ -34,7 +34,7 @@ const MainLayout = ({ children }) => {
 						count = 0
 					}
 				}
-				return state
+				return active
 			})
 		}, 4000);
 
