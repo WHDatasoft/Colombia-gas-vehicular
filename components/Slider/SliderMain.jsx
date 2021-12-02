@@ -22,7 +22,7 @@ const SliderMain = ({ slideList, top }) => {
                     return dir
                 }
             })
-        }, 4000)
+        }, 7000)
 
         return () => {
             clearTimeout(tiempo)

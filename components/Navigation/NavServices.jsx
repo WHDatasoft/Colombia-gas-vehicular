@@ -33,7 +33,7 @@ const NavServices = () => {
 				<Link href="/servicios/prueba-hidrostatica">
 					<a>
 						<img src="/icon/servicio2.svg" alt="" />
-						<span>Prueba Hidristática</span>
+						<span>Prueba Hidrostática</span>
 					</a>
 				</Link>
 			</li>

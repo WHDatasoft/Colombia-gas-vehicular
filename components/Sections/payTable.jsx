@@ -68,7 +68,7 @@ const PayTable = () => {
 			</tr>
 		</table>
 
-		<p>Para ampliar esta información comunícate al 6502012  opción 3 y le asignan un centro de instalación.</p>
+		<p>Para ampliar esta información comunícate al 4748800.</p>
 
 		<style jsx>{`
 
@@ -140,6 +140,7 @@ const PayTable = () => {
 					font-size: .6rem;
 				}
 			}
+
 
 		`}</style>
 	</section>
