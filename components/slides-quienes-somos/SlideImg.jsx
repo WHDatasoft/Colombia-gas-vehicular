@@ -1,7 +1,7 @@
 const SlideImg = () => {
 	return <>
 
-		<img src="/img/colombiagas/primera.png" alt="" loading="eager" />
+		<img src="/img/colombiagas/slide-primera.png" alt="" loading="eager" />
 
 		<style jsx>{`
 

@@ -1,7 +1,7 @@
 const SlideIcons = () => {
 	return <>
 
-		<img src="/img/colombiagas/segunda.png" alt="" loading="lazy" />
+		<img src="/img/colombiagas/slide-segunda.png" alt="" loading="lazy" />
 		<div className="fondo">
 			<h2>OBJETIVOS CLAVES</h2>
 			<div className="icons">
