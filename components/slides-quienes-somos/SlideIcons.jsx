@@ -1,7 +1,7 @@
 const SlideIcons = () => {
 	return <>
 
-		<img src="/img/colombiagas/tercera.jpg" alt="" loading="lazy" />
+		<img src="/img/colombiagas/segunda.png" alt="" loading="lazy" />
 		<div className="fondo">
 			<h2>OBJETIVOS CLAVES</h2>
 			<div className="icons">
@@ -26,6 +26,7 @@ const SlideIcons = () => {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				object-position: 80%;
 			}
 
 			.fondo {

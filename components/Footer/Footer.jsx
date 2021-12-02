@@ -35,7 +35,7 @@ const Footer = () => {
 			.phone {
 				font-weight: 900;
 				font-size: 2rem;
-				color: var(--orange);
+				color: white;
 			}
 
 			p {

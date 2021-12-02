@@ -7,6 +7,16 @@ import Whatsapp from "../components/social/Whatsapp";
 const MainLayout = ({ children }) => {
 
 	const [hojasList, setHojasList] = useState([]);
+	const [isActive, setIsActive] = useState(true)
+
+	useEffect(() => {
+		window.addEventListener("focus", function () {
+			setIsActive(true)
+		})
+		window.addEventListener("blur", function () {
+			setIsActive(false)
+		})
+	}, []);
 
 	useEffect(() => {
 		const count = 0
@@ -14,13 +24,18 @@ const MainLayout = ({ children }) => {
 		count++
 		setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
 		const timer = setInterval(() => {
-			count++
-			if (count < 4) {
-				setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
-			} else {
-				setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/GNV.svg" />])
-				count = 0
-			}
+			setIsActive(state => {
+				if (state) {
+					count++
+					if (count < 4) {
+						setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
+					} else {
+						setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/GNV.svg" />])
+						count = 0
+					}
+				}
+				return state
+			})
 		}, 4000);
 
 		return () => {
@@ -35,9 +50,9 @@ const MainLayout = ({ children }) => {
 		<Whatsapp />
 		<NavSocial />
 
-		{/* {
+		{
 			hojasList.map(hoja => hoja)
-		} */}
+		}
 
 
 		{children}

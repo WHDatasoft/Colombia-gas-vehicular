@@ -10,20 +10,24 @@ const SliderMain = ({ slideList, top }) => {
 
     useEffect(() => {
 
-        const tiempo = setInterval(() => {
-            if (direccion) {
-                setImg(i => i + 1)
-                if (img >= slideList.length - 1) setDireccion(!direccion)
-            } else {
-                setImg(i => i - 1)
-                if (img <= 0) setDireccion(!direccion)
-            }
+        const tiempo = setTimeout(() => {
+            setDireccion(dir => {
+                if (dir) {
+                    if (img >= slideList.length - 1) return false
+                    setImg(img + 1)
+                    return dir
+                } else {
+                    if (img <= 0) return true
+                    setImg(img - 1)
+                    return dir
+                }
+            })
         }, 4000)
 
         return () => {
-            clearInterval(tiempo)
+            clearTimeout(tiempo)
         }
-    }, []);
+    }, [img]);
 
     //Para evitar que se desfase el slider
     useEffect(() => {
@@ -57,7 +61,7 @@ const SliderMain = ({ slideList, top }) => {
     }
 
     return (
-        <div className="content" onTouchEnd={onTouchEnd} onTouchStart={onTouchStart}>
+        <div className="content">
 
             <button className="left" onClick={onClickLeft}>
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
@@ -66,7 +70,7 @@ const SliderMain = ({ slideList, top }) => {
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
             </button>
 
-            <ul>
+            <ul onTouchEnd={onTouchEnd} onTouchStart={onTouchStart}>
 
                 {
                     slideList.map(slide => (

@@ -1,7 +1,7 @@
 const SlideText = () => {
 	return <>
 
-		<img src="/img/colombiagas/segunda.jpg" alt="" />
+		<img src="/img/colombiagas/segunda.png" alt="" />
 		<div className="fondo">
 			<p>Somos un centro especializado en instalación de gas
 				natural vehicular, con más de 15 años de trayectoria,
