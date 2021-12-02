@@ -70,6 +70,7 @@ const PayTable = () => {
 
 		<p>Para ampliar esta información comunícate al 4748800.</p>
 
+
 		<style jsx>{`
 
 			section {

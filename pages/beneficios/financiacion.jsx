@@ -7,6 +7,7 @@ import Services from '../../components/Sections/Services'
 import TitleCenter from '../../components/title/TitleCenter'
 import MainLayout from "../../layout/MainLayout"
 
+
 const Index = () => {
 	return <MainLayout>
 		<Head>
