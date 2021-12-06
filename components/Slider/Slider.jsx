@@ -91,7 +91,6 @@ const Slider = ({ contentSlider }) => {
 				grid-template-columns: repeat(${contentSlider.length}, auto);
 				position: relative;
 				overflow-x: scroll;
-				overflow-y: visible;
 				height: 28rem;
 			}
 

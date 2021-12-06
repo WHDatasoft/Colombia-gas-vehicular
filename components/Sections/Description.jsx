@@ -87,6 +87,10 @@ const Description = ({ title, textList, icon, left, right, children }) => {
 					padding: 4rem 3rem;
 				}
 
+				p {
+					text-align: center;
+				}
+
 			}
 		
 

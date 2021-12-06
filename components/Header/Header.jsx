@@ -48,16 +48,23 @@ const Header = () => {
 
 			@media screen and (max-width: 1080px) {
 				.open {
+					align-self: center;
 					display: block;
 					box-sizing: border-box;
-					padding: 1rem;
+					padding: .5rem;
 					color: var(--dark-green);
 					height: 100%;
-					width: 4rem;
 					background-color: unset;
 					transition: opacity 0.5s;
 					opacity: ${enableNav ? '0' : '1'};
 					justify-self: flex-end;
+					border: 1px solid var(--dark-green);
+					border-radius: .6rem;
+				}
+
+				svg {
+					width: 2rem;
+					height: 2rem;
 				}
 
 				header {

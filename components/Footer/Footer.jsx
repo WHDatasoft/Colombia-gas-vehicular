@@ -12,10 +12,21 @@ const Footer = () => {
 			<br />
 			<p className="direcction">CRA 51 # 71 c 27 Bogotá, D.C Colombia</p>
 			<br />
-			<div className="email">
-				<a href="mailto:gerencia@colombiagasvehicular.co">gerencia@colombiagasvehicular.co</a>
-				<a href="mailto:comercialcolombiagas1@gmail.com">comercialcolombiagas1@gmail.com</a>
-			</div>
+
+			<ul className="email">
+				<li>
+					<h5>Gerencia</h5>
+					<a href="mailto:gerencia@colombiagasvehicular.co">gerencia@colombiagasvehicular.co</a>
+				</li>
+				<li>
+					<h5>Servicio al cliente</h5>
+					<a href="mailto:servicioalcliente@colombiagasvehicular.co">servicioalcliente@colombiagasvehicular.co</a>
+				</li>
+				<li>
+					<h5>Marketing</h5>
+					<a href="mailto:marketing@colombiagasvehicular.co">marketing@colombiagasvehicular.co</a>
+				</li>
+			</ul>
 		</div>
 		<br />
 
@@ -36,19 +47,35 @@ const Footer = () => {
 				font-weight: 900;
 				font-size: 2rem;
 				color: white;
+				margin-bottom: 0rem;
 			}
 
 			p {
 				color: white;
 				text-align: center;
 				font-weight: 600;
+				margin-bottom: 1.5rem;
 			}
 
-			.email > a {
+			h5 {
 				color: white;
 				font-weight: 600;
+				margin-bottom: .5rem;
+			}
+
+			ul {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1rem;
+			}
+
+			li {
 				text-align: center;
-				display: block;
+			}
+
+			.email li a {
+				color: white;
+				text-align: center;
 				margin-bottom: .5rem;
 			}
 
@@ -56,6 +83,15 @@ const Footer = () => {
 				border: 1px solid white;
 			}
 
+			@media screen and (max-width: 1190px) {
+
+				ul {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 1rem;
+				}
+
+			}
 
 			@media screen and (max-width: 780px) {
 				

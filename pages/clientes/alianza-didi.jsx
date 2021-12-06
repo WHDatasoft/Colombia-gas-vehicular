@@ -77,9 +77,11 @@ const AlianzaDidi = () => {
 		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
 
 		<div className="text">
-			<p>Por ser parte de la familia DIDI conductores, si instalas gas natural vehicular con nosotros tendrás acceso a muy buenos beneficios los cuales podrás hacer efectivos en:</p>
 			<p>
-				La oficina de ateción DiDi Av Caracas 23 - 33 Sur.<br />(Servitek - Colombiagas Vehicular)
+				Por ser parte de la familia DIDI conductores, si instalas gas natural vehicular con nosotros tendrás acceso a muy buenos beneficios los cuales podrás hacer efectivos en:
+			</p>
+			<p>
+				La oficina privada DiDi Avenida Caracas #23-33 Sur (Servitek de Colombiagas Vehicular)
 			</p>
 		</div>
 

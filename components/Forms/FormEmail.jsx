@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 
 
 const FormEmail = ({ didi }) => {
@@ -8,24 +9,52 @@ const FormEmail = ({ didi }) => {
 		name: '',
 		phone: '',
 		message: '',
-		from: didi ? 'DIDI' : 'Colombiagas'
+		from: didi ? 'DIDI' : 'Colombiagas',
+		check: false
 	});
 
 	const onSubmit = async e => {
 		e.preventDefault();
 
-		const { name, phone, message, from } = data
-		const URL = '/api/email'
-		try {
-			const response = await axios.post(URL, { name, phone, message, from })
-			console.log(response.data)
-		} catch (error) {
-			console.log(error)
+		if (data.check) {
+
+			const { name, phone, message, from } = data
+			const URL = '/api/email'
+			try {
+				const response = await axios.post(URL, { name, phone, message, from })
+				console.log(response.data)
+			} catch (error) {
+				console.log(error)
+			}
+
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				text: 'Mensaje enviado correctamente, pronto nos comunicaremos contigo',
+				showConfirmButton: true,
+				confirmButtonColor: 'var(--dark-green)',
+				color: 'var(--blue)'
+			})
+
+		} else {
+			Swal.fire({
+				position: 'bottom-end',
+				icon: 'error',
+				text: 'Debes aceptar los terminos y condiciones',
+				showConfirmButton: false,
+				timer: 2500,
+				color: 'var(--blue)'
+			})
 		}
+
 	}
 
 	const onChange = e => {
 		setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
+	}
+
+	const onClick = e => {
+		setData(Object.assign({}, data, { [e.target.name]: !data.check }))
 	}
 
 	return <form onSubmit={onSubmit}>
@@ -33,6 +62,11 @@ const FormEmail = ({ didi }) => {
 		<input onChange={onChange} type="text" placeholder="Nombre" name="name" />
 		<input onChange={onChange} type="text" placeholder="Celular" name="phone" />
 		<textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
+		<div className="terminos">
+			<input type="checkbox" onChange={onClick} name="check" />
+			<p>Acepto Terminos y condiciones.</p>
+		</div>
+		<a href="http://" target="_blank" rel="noopener noreferrer">Leer terminos y condiciones</a>
 		<button>Enviar</button>
 
 		<style jsx>{`
@@ -68,6 +102,26 @@ const FormEmail = ({ didi }) => {
 				${didi ? 'color: white;' : ''}
 				justify-self: center;
 				padding: .8em 1.5em; 
+			}
+
+			a {
+				color: var(--light-orange);
+				text-decoration: underline;
+				height: 100%;
+				display: grid;
+				place-items: center;
+				padding: .1rem .5rem;
+			}
+
+			.terminos {
+				text-align: center;
+				display: grid;
+				grid-template-columns: auto 1fr;
+				align-items: center;
+				
+				padding: 0 1rem;
+				box-sizing: border-box;
+				color: white;
 			}
 
 			@media screen and (max-width: 360px) {

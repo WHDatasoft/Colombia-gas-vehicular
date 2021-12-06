@@ -2,21 +2,28 @@
 
 const Whatsapp = () => {
 
-	return <button>
+	return <div className="wrapper">
+
 		<div className="message">
 			<p>Chatea con nosotros</p>
 		</div>
-		<a href="https://wa.me/message/NF2C4CFYJIJBG1" target="_blank" rel="noopener noreferrer">
-			<img src="/icon/whatsapp.svg" alt="icono de contacto por whatsapp" />
-		</a>
+		<button>
+			<a href="https://wa.me/message/NF2C4CFYJIJBG1" target="_blank" rel="noopener noreferrer">
+				<img src="/icon/whatsapp.svg" alt="icono de contacto por whatsapp" />
+			</a>
+
+		</button>
 
 		<style jsx>{`
 
-			button {
+			.wrapper {
 				position: fixed;
 				z-index: 10;
 				right: 1rem;
 				bottom: 1rem;
+			}
+
+			button {
 				background-color: unset;
 			}
 
@@ -57,17 +64,21 @@ const Whatsapp = () => {
 					right: 0;
 				}
 
-				to {
+				99% {
 					transform: scale(1.3);
 					opacity: 0;
 					right: 0;
 					visibility: none;
 				}
+
+				to {
+					right: -30rem;
+				}
 			}
 
 			@media screen and (max-width: 730px) {
 
-				button {
+				.wrapper {
 					right: 0rem;
 					bottom: 0rem;
 				}
@@ -81,7 +92,8 @@ const Whatsapp = () => {
 			}
 
 		`}</style>
-	</button>
+
+	</div>
 }
 
 export default Whatsapp

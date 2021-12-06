@@ -56,6 +56,8 @@ const MainLayout = ({ children }) => {
 
 
 		{children}
+		{/* Light Mode */}
+		{/* background-color: #c1e1c0; */}
 
 		<style jsx>{`
 
@@ -65,6 +67,7 @@ const MainLayout = ({ children }) => {
 				padding-top: 7rem;
 				min-height: 100vh;
 				overflow: hidden;
+				
 				background: rgb(6,132,55);
 				background: linear-gradient(180deg, var(--dark-green) 0%, var(--light-green) 100%);
 			}

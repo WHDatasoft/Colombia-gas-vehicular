@@ -31,7 +31,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 		{ title: 'Inicio', url: '/' },
 		{ title: '¿Quiénes somos?', url: '/quienes-somos' },
 		{
-			title: 'servicios', url: '/servicios',
+			title: 'Servicios', url: '/servicios',
 			list: [
 				{ title: 'instalación GNV', url: '/servicios/instalacion-gnv' },
 				{ title: 'Mantenimiento', url: '/servicios/mantenimiento' },
@@ -94,7 +94,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 										:
 										<>
 											{
-												(mainLink.title === 'servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
+												(mainLink.title === 'Servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
 													?
 													<button className="handle-submenu" onClick={() => {
 														setSubmenu(true)

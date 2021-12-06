@@ -85,7 +85,6 @@ const BenefitBanner = ({ icon, title, titleComplement, subtitle, background, sca
 
 			h2 {
 				font-size: ${scaleSubtitle ? `${scaleSubtitle}rem` : '1.5rem'};
-				padding: 0 5rem;
 			}
 
 			.row {
@@ -105,26 +104,38 @@ const BenefitBanner = ({ icon, title, titleComplement, subtitle, background, sca
 				}
 			}
 
-			@media screen and (max-width: 660px) {
+			@media screen and (max-width: 850px) {
 
 				h1 {
-					font-size: 4.5rem;
+					font-size: 4rem;
+				}
+
+				.second {
+					font-size: 3.7rem;
 				}
 
 			}
 
-			@media screen and (max-width: 580px) {
+			@media screen and (max-width: 650px) {
 
 				h1 {
-					font-size: 4.0rem;
+					font-size: 3.5rem;
+				}
+
+				.second {
+					font-size: 3.2rem;
 				}
 
 			}
 
-			@media screen and (max-width: 525px) {
+			@media screen and (max-width: 550px) {
 
 				h1 {
 					font-size: 3rem;
+				}
+
+				.second {
+					font-size: 2.5rem;
 				}
 
 				.icon {
@@ -137,6 +148,10 @@ const BenefitBanner = ({ icon, title, titleComplement, subtitle, background, sca
 
 				h1 {
 					font-size: 2.5rem;
+				}
+
+				.second {
+					font-size: 2rem;
 				}
 
 				.icon {
