@@ -66,7 +66,7 @@ const FormEmail = ({ didi }) => {
 			<input type="checkbox" onChange={onClick} name="check" />
 			<p>Acepto Terminos y condiciones.</p>
 		</div>
-		<a href="http://" target="_blank" rel="noopener noreferrer">Leer terminos y condiciones</a>
+		<a href="/download/terminos-y-condiciones-colombia-gas-vehicular.pdf" download>Leer terminos y condiciones</a>
 		<button>Enviar</button>
 
 		<style jsx>{`
