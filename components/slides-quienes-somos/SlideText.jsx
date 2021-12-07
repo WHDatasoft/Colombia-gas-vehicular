@@ -52,14 +52,9 @@ const SlideText = () => {
 
 				p {
 					padding: 0 10%;
-					font-size: 1rem;
+					font-size: 1.3rem;
 					line-height: 2rem;
 				}
-
-			}
-
-			@media screen and (max-width: 730px) {
-
 
 			}
 

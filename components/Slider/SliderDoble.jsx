@@ -99,14 +99,14 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 
 			.main-img {
 				background: url('${mainImg}') no-repeat;
-				background-size: auto 100%;
+				background-size: cover;
 				background-position: center;
 
 			}
 
 			.second-img {
 				background: url('${secondImg}') no-repeat;
-				background-size: auto 100%;
+				background-size: cover;
 				background-position: center;
 
 			}
@@ -195,6 +195,14 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 			}
 
 			@media screen and (max-width: 1070px) {
+
+				.main-img, .second-img {
+					background-size: auto 100%;
+					background-position-x: 62%;
+
+				}
+
+				
 
 				.content, .main-slide > li {
 					height: 70vh;

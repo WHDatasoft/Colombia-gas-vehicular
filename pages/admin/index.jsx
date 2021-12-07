@@ -1,10 +1,10 @@
-import MainLayout from "../layout/MainLayout"
+import MainLayout from "../../layout/MainLayout"
 import axios from 'axios'
 import { useEffect, useState } from "react"
 
 // AWS Config
 import AWS from 'aws-sdk'
-import { isImg } from "../utils/isImg";
+import { isImg } from "../../utils/isImg";
 const albumBucketName = "colombiagasvehicular";
 const bucketRegion = "us-east-1";
 const IdentityPoolId = "us-east-1:50e9fc82-6903-4b22-b4ad-f8b2467ce46b";
