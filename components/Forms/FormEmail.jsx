@@ -121,10 +121,9 @@ const FormEmail = ({ didi }) => {
 				display: grid;
 				grid-template-columns: auto 1fr;
 				align-items: center;
-				
+				color: ${didi ? 'var(--orange);' : 'white'};
 				padding: 0 1rem;
 				box-sizing: border-box;
-				color: white;
 			}
 
 			@media screen and (max-width: 360px) {

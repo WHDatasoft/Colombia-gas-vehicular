@@ -1,8 +1,6 @@
 const SlideIcons = () => {
 	return <>
-
-		<img src="/img/colombiagas/slide-primera.png" alt="" loading="lazy" />
-		<div className="fondo">
+		<div>
 			<h2>OBJETIVOS CLAVES</h2>
 			<div className="icons">
 				<div>
@@ -22,25 +20,6 @@ const SlideIcons = () => {
 
 		<style jsx>{`
 
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: 40%;
-			}
-
-			.fondo {
-				padding: 0;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				position: absolute;
-				z-index: 3;
-				background-color: var(--blue-transparent);
-				color: white;
-				font-size: 2rem;
-				text-align: justify
-			}
 
 			.icon {
 				display: block;
@@ -61,19 +40,26 @@ const SlideIcons = () => {
 			}
 
 			h2 {
-				padding-top: 3%;
+				color: white;
 				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+				padding: 0 1rem;
 			}
 
 			h4 {
+				color: white;
 				margin-top: .5rem;
 				text-align: center;
+				font-size: 1.5rem;
 			}
 
 			@media screen and (max-width: 1300px) {
+
 				.icon {
 					height: 11rem;
 				}
+
 			}
 
 			@media screen and (max-width: 1070px) {
@@ -82,44 +68,12 @@ const SlideIcons = () => {
 					height: 10rem;
 				}
 
-				.fondo {
-					font-size: 1.7rem;
-					line-height: 1.5rem;
-				}
-
-				img {
-					object-position: 30%;
-				}
-
 			}
 
 			@media screen and (max-width: 730px) {
 
-				.fondo {
-					font-size: 1.3rem;
-					font-weight: 600;
-				}
-
-				.icon {
-					height: 6rem;
-				}
-
-			}
-
-			@media screen and (max-width: 730px) {
-
-				.fondo {
-					font-size: 1rem;
-					font-weight: 600;
-				}
-
-			}
-
-			
-			@media screen and (max-width: 500px) {
-
-				.icon {
-					height: 4.5rem;
+				.icons div:nth-child(3) {
+					grid-column: 1/3;
 				}
 
 				.icons {
@@ -128,8 +82,22 @@ const SlideIcons = () => {
 					grid-row-gap: 1rem;
 				}
 
+			}
+			
+			@media screen and (max-width: 500px) {
+
+				.icon {
+					height: 8rem;
+				}
+
 				.icons div:nth-child(3) {
-					grid-column: 1/3;
+					grid-column: 1/2;
+				}
+
+				.icons {
+					grid-template-columns: 1fr;
+					padding-top: 1rem;
+					grid-row-gap: 1rem;
 				}
 
 			}

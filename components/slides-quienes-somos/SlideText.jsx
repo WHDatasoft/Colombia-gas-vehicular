@@ -1,16 +1,13 @@
 const SlideText = () => {
 	return <>
 
-		<img src="/img/colombiagas/slide-segunda.png" alt="" />
-		<div className="fondo">
-			<p>Somos un centro especializado en instalación de gas
-				natural vehicular, con más de 15 años de trayectoria,
-				pertenecemos a la red de talleres de GAS VANTI y estamos
-				certificados por BUREAUVERITAS e ICONTEC.
-				Lo que nos hace una marca segura, de calidad y
-				comprometida con sus clientes.
-			</p>
-		</div>
+		<p>Somos un centro especializado en instalación de gas
+			natural vehicular, con más de 15 años de trayectoria,
+			pertenecemos a la red de talleres de GAS VANTI y estamos
+			certificados por BUREAUVERITAS e ICONTEC.
+			Lo que nos hace una marca segura, de calidad y
+			comprometida con sus clientes.
+		</p>
 
 		<style jsx>{`
 
@@ -34,35 +31,35 @@ const SlideText = () => {
 			}
 
 			p {
-				box-sizing: border-box;
-				padding: 10% 15%;
-				width: 80vw;	
+				color: white;
+				padding: 0 20%;
+				font-size: 2rem;
+				text-align: center;
+				line-height: 3rem;
 			}
 
-			@media screen and (max-width: 1070px) {
+			@media screen and (max-width: 900px) {
 
-				.fondo {
-					font-size: 1.7rem;
-					line-height: 1.5rem;
+				p {
+					padding: 0 15%;
+					font-size: 1.5rem;
+					line-height: 2.5rem;
 				}
 
 			}
 
-			@media screen and (max-width: 730px) {
+			@media screen and (max-width: 550px) {
 
-				.fondo {
-					font-size: 1.3rem;
-					font-weight: 600;
-				}
-
-			}
-
-			@media screen and (max-width: 730px) {
-
-				.fondo {
+				p {
+					padding: 0 10%;
 					font-size: 1rem;
-					font-weight: 600;
+					line-height: 2rem;
 				}
+
+			}
+
+			@media screen and (max-width: 730px) {
+
 
 			}
 

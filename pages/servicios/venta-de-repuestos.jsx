@@ -15,98 +15,74 @@ const Index = () => {
 			type
 			img="computadora.jpg"
 			bussinesName="Computadora a gas 4 cilindros"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="capuchon-pico-de-carga-1.jpg"
 			bussinesName="Válvula de cilindro"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="regulador.jpg"
 			bussinesName="Regulador de 3ra generación"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="emulador-inyextores-4-cilindros.jpg"
 			bussinesName="Emulador inyectores 4 cilindros"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="riel-de-inyectores.jpg"
 			bussinesName="Riel de inyectores 4 cilindros."
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="tubería.jpg"
 			bussinesName="Tubería"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="manometro.jpg"
 			bussinesName="Manómetro"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="llave.jpg"
 			bussinesName="Llave conmutadora"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="sensor-y-emulador-de-nivel-de-asolina.jpg"
 			bussinesName="Llave conmutadora de 3RA generación"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="filtro-de-gas.jpg"
 			bussinesName="Filtro de gas"
-			characterList={[
-				''
-			]}
+
 		/>,
 
 		<ArticleBussines
 			type
 			img="cableado.jpg"
 			bussinesName="Cableado eléctrico 5ta generación"
-			characterList={[
-				''
-			]}
+
 		/>,
 		<ArticleBussines
 			type
 			img="hace-parte-del-kit.jpg"
 			bussinesName="Cableado eléctrico de llave conmutadora"
-			characterList={[
-				''
-			]}
+
 		/>,
 	]
 	return <MainLayout>
