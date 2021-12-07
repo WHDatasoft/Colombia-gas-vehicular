@@ -1,8 +1,6 @@
 import AWS from 'aws-sdk'
 
-import { formData } from '../../../utils/getImgForm'
-
-const albumBucketName = "colombiagasvehicular";
+const Bucket = "colombiagasvehicular";
 const bucketRegion = "us-east-1";
 const IdentityPoolId = "us-east-1:50e9fc82-6903-4b22-b4ad-f8b2467ce46b";
 
@@ -16,7 +14,7 @@ AWS.config.update({
 
 const s3 = new AWS.S3({
 	apiVersion: "2006-03-01",
-	params: { Bucket: albumBucketName }
+	params: { Bucket }
 });
 
 export const config = {
@@ -32,78 +30,17 @@ const handler = async (req, res) => {
 
 		try {
 
-			s3.listObjects({ Prefix: 'photoKey2' }, function (err, data) {
-				if (err) {
+			const data = await s3.listObjects({ Prefix: 'advertising/' }).promise()
 
-					console.log(err)
-					return res.status(200).json({
-						success: 'error',
-						message: 'primer error'
-					})
-				}
+			const url = 'https://s3.amazonaws.com/colombiagasvehicular/'
 
-				const href = this.request.httpRequest.endpoint.href
-				console.log(href)
-				console.log('------------------------------------------------------------')
-				console.log(href + albumBucketName + '/')
-				console.log(data)
-				console.log('------------------------- photos ---------------------------')
-				const photos = data.Contents.forEach((photo) => {
-					const photoKey = photo.Key;
-					console.log(photo.Key)
-					/* const photoUrl = bucketUrl + encodeURIComponent(photoKey); */
-				})
-			})
+			const hreImgList = data.Contents.map(photo => url + photo.Key)
 
 			return res.status(200).json({
 				success: 'ok',
 				message: 'Message sended',
-
+				hreImgList
 			})
-
-		} catch (error) {
-
-			console.log(error)
-
-			return res.status(200).json({
-				success: 'error',
-				message: 'AWS can not sent email'
-			})
-
-		}
-
-	} else if (req.method === 'POST') {
-
-		/* const data = await formData(req)
-
-		console.log(data) */
-
-		console.log(req.body)
-
-		try {
-
-			/* console.log(file, test)
-
-			const upload = new AWS.S3.ManagedUpload({
-				params: {
-					Bucket: 'colombiagasvehicular',
-					Key: 'photoKey4.png',
-					Body: Buffer.from("binary", file)
-				}
-			});
-
-			const promise = await upload.promise(); */
-
-			/* const buket = await s3.listObjects().promise()
-
-			console.log(buket) */
-
-			return res.status(200).json({
-				success: 'ok',
-				message: 'Message sended',
-				/* promise */
-			})
-
 
 		} catch (error) {
 
