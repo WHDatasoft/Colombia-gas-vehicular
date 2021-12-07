@@ -78,7 +78,7 @@ const AlianzaDidi = () => {
 
 		<div className="text">
 			<p>
-				Por ser parte de la familia DIDI conductores, si instalas gas natural vehicular con nosotros tendrás acceso a muy buenos beneficios los cuales podrás hacer efectivos en:
+				Por estar registrado en DiDi Conductor, si instalas gas vehicular con nosotros podrás acceder a muy buenos beneficios los cuales podrás hacer efectivos en:
 			</p>
 			<p>
 				La oficina privada DiDi Avenida Caracas #23-33 Sur (Servitek de Colombiagas Vehicular)

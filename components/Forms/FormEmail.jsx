@@ -27,6 +27,9 @@ const FormEmail = ({ didi }) => {
 				console.log(error)
 			}
 
+			const form = document.getElementsByTagName('form')[0]
+			form.reset()
+
 			Swal.fire({
 				position: 'center',
 				icon: 'success',
