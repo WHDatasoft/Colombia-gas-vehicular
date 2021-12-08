@@ -4,6 +4,7 @@ import Head from '../../components/Head/Head'
 import ArticleBussines from '../../components/Sections/ArticleBussines'
 import Banner from '../../components/Sections/Banner'
 import Description from '../../components/Sections/Description'
+import GnvComponent from '../../components/Sections/GnvComponent'
 import Slider from '../../components/Slider/Slider'
 import TitleRight from '../../components/title/TitleRight'
 import MainLayout from "../../layout/MainLayout"
@@ -125,7 +126,8 @@ const Index = () => {
 			title="Componentes Gas Natural Vehicular"
 		/>
 
-		<img src="/img/servicios/componentes.png" alt="" />
+		<GnvComponent />
+
 
 		<MainFooter />
 
@@ -160,13 +162,6 @@ const Index = () => {
 				margin-top: 3rem;
 				padding: 1rem;
 				font-size: 1.5rem;
-			}
-
-			img {
-				display: block;
-				width: 100%;
-				max-width: 1200px;
-				margin: auto;
 			}
 
 			.description {
