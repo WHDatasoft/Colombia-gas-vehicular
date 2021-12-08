@@ -163,7 +163,7 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 
 			button {
 				position: absolute;
-				top: ${top ? '20%' : '50%'};
+				top: 20%;
 				z-index: 3;
 				background-color: unset;
 			}
