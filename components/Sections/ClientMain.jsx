@@ -17,7 +17,7 @@ const ClientMain = ({ urlImg, backgroundColor, children, rowGap }) => {
 				background: url('/img/clientes/${urlImg}.jpg') center 20%;
 				background-size: cover;
 				background-position: 70%;
-				height: 100%;
+				height: 40rem;
 				position: relative;
 			}
 

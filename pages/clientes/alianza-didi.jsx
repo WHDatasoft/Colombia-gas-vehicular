@@ -6,27 +6,16 @@ import Icons from "../../components/Sections/Icons"
 import FormEmail from "../../components/Forms/FormEmail"
 import SlideSecond from "../../components/slides-didi/SlideSecond"
 import FormDidi from "../../components/Forms/FormDidi"
+import TitleDidi from "../../components/title/TitleDidi"
+import MainServices from "../../components/Sections/MainServices"
+import Row from "../../components/Decorations/Row"
 
 const AlianzaDidi = () => {
 
-	const slideList = [
+	const slideServiteck = [
 		<SlideDidi />,
-		<SlideSecond
-			backgroundImg="person"
-			color="#1c580dAA"
-			mainTitle="PROGRAMA DE SALUD"
-			secondTitle="GRATIS"
-			img="/logo/logo-blanco.png"
-			link="/beneficios/programa-de-salud"
-		/>,
-		<SlideSecond
-			backgroundImg="mecanic"
-			color="#EF861CAA"
-			mainTitle="Instalación de GNV"
-			secondTitle="10% DE DESCUENTO"
-			img="/logo/logo-blanco.png"
-			link="/servicios/instalacion-gnv"
-		/>,
+
+
 		<SlideSecond
 			backgroundImg="oil"
 			color="#1c580dAA"
@@ -42,11 +31,31 @@ const AlianzaDidi = () => {
 			img="/icon/servitek.svg"
 		/>,
 		<SlideSecond
-			backgroundImg="car-back"
+			backgroundImg="car-aside"
 			color="#1c580dAA"
-			mainTitle="Análisis de gases"
-			secondTitle="20% DE DESCUENTO"
+			mainTitle="Compra del SOAT"
+			secondTitle="5% DE DESCUENTO"
 			img="/logo/logo-blanco.png"
+		/>
+	]
+
+	const slideColombiagas = [
+
+		<SlideSecond
+			backgroundImg="mecanic"
+			color="#EF861CAA"
+			mainTitle="Instalación de GNV"
+			secondTitle="10% DE DESCUENTO"
+			img="/logo/logo-blanco.png"
+			link="/servicios/instalacion-gnv"
+		/>,
+		<SlideSecond
+			backgroundImg="person"
+			color="#1c580dAA"
+			mainTitle="PROGRAMA DE SALUD"
+			secondTitle="GRATIS"
+			img="/logo/logo-blanco.png"
+			link="/beneficios/programa-de-salud"
 		/>,
 		<SlideSecond
 			backgroundImg="car-panel"
@@ -56,12 +65,13 @@ const AlianzaDidi = () => {
 			img="/logo/logo-blanco.png"
 		/>,
 		<SlideSecond
-			backgroundImg="car-aside"
+			backgroundImg="car-back"
 			color="#1c580dAA"
-			mainTitle="Compra del SOAT"
-			secondTitle="5% DE DESCUENTO"
+			mainTitle="Análisis de gases"
+			secondTitle="20% DE DESCUENTO"
 			img="/logo/logo-blanco.png"
-		/>
+		/>,
+
 	]
 
 	return <MainLayout>
@@ -69,12 +79,29 @@ const AlianzaDidi = () => {
 			<title>Aliza DIDI</title>
 		</Head>
 
+
+		<TitleDidi />
+
+		<MainServices />
+		<br />
+		<Row />
+		<br />
+
 		<SliderMain
-			slideList={slideList}
+			slideList={slideServiteck}
 			top
 		/>
 
-		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
+		<br /><br /><br />
+
+		<SliderMain
+			slideList={slideColombiagas}
+			top
+		/>
+
+		<br />
+		<Row />
+		<br />
 
 		<div className="text">
 			<p>
@@ -114,23 +141,6 @@ const AlianzaDidi = () => {
 				position: relative;
 				margin-bottom: 1em;
 				font-weight: 100;
-			}
-
-			img {
-				display: block;
-				height: 2rem;
-				margin: 2rem auto;
-				animation: move 1s infinite alternate-reverse;
-			}
-
-			@keyframes move {
-				from {
-					transform: translateY(-.3rem)
-				}
-
-				to {
-					transform: translateY(.3rem)
-				}
 			}
 
 			@media screen and (max-width: 1120px) {

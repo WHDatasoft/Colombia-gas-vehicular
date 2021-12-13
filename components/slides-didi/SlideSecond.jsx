@@ -39,7 +39,6 @@ const SlideSecond = ({ mainTitle, secondTitle, backgroundImg, color, img, posImg
 				color: white;
 				font-size: calc(4em * var(--scale));
 				font-weight: 600;
-				max-width: calc(33.7em * var(--scale));
 			}
 
 			h2 {

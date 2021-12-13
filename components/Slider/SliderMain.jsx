@@ -90,14 +90,14 @@ const SliderMain = ({ slideList, top }) => {
             <style jsx>{`
 
                 .content {
-                    min-height: 850px;
-                    height: 80vh;
+                    height: 40rem;
                     position: relative;
+                    overflow: hidden;
                 }
 
                 .content > ul {
                     display: grid;
-                    height: 100%;
+                    height: 40rem;
                     width: ${slideList.length}00%;
                     grid-template-columns: repeat(${slideList.length}, 1fr);
                     transition: margin-left 1.5s ease;
@@ -106,7 +106,7 @@ const SliderMain = ({ slideList, top }) => {
                 .content > ul > li {
                     min-height: 850px;
                     list-style: none;
-                    height: 80vh;
+                    height: 30rem;
                     position: relative;
                     
                 }

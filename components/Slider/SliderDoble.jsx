@@ -112,8 +112,7 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 			}
 
 			.content {
-				min-height: 850px;
-				height: 80vh;
+				height: calc(90vh - 10rem);
 				position: relative;
 			}
 
@@ -128,14 +127,14 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 			.main-slide > li {
 				min-height: 850px;
 				list-style: none;
-				height: 80vh;
+				height: calc(90vh - 10rem);
 				position: relative;
 				overflow: hidden;
 			}
 
 			.second-slide {
 				display: grid;
-				height: 100%;
+				height: calc(90vh - 10rem);
 				width: 200%;
 				grid-template-columns: repeat(2, 1fr);
 				transition: margin-left 1.5s ease;
@@ -144,7 +143,7 @@ const SliderDoble = ({ slideList, mainImg, secondImg }) => {
 			.second-slide > li {
 				min-height: 850px;
 				list-style: none;
-				height: 80vh;
+				height: calc(90vh - 10rem);
 				position: relative;
 				overflow: hidden;
 				display: grid;
