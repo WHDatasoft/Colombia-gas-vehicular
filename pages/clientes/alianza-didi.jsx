@@ -3,7 +3,6 @@ import Head from '../../components/Head/Head'
 import SliderMain from "../../components/Slider/SliderMain"
 import SlideDidi from "../../components/slides-didi/SlideDidi"
 import Icons from "../../components/Sections/Icons"
-import FormEmail from "../../components/Forms/FormEmail"
 import SlideSecond from "../../components/slides-didi/SlideSecond"
 import FormDidi from "../../components/Forms/FormDidi"
 import TitleDidi from "../../components/title/TitleDidi"
@@ -89,6 +88,7 @@ const AlianzaDidi = () => {
 
 		<SliderMain
 			slideList={slideServiteck}
+			id="serviteck"
 			top
 		/>
 
@@ -96,6 +96,7 @@ const AlianzaDidi = () => {
 
 		<SliderMain
 			slideList={slideColombiagas}
+			id="colombiagas"
 			top
 		/>
 

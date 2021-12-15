@@ -19,7 +19,8 @@ const MainServices = () => {
 		'Conversión a GNV.',
 		'Mantenimiento.',
 		'Revisión anual.',
-		'Prueba hidrostática.Venta de repuestos.',
+		'Prueba hidrostática.',
+		'Venta de repuestos.',
 		'Análisis de gases.',
 	]
 
@@ -31,6 +32,8 @@ const MainServices = () => {
 			icon="serviteck-icon"
 			whatsapp="whatsapp-left"
 			color
+			id="serviteck"
+			whatsappUrl="https://wa.me/message/QKZG4E6O2X7VH1"
 		/>
 
 		<ServicesClients
@@ -39,6 +42,8 @@ const MainServices = () => {
 			icon="colombiagas-icon"
 			whatsapp="whatsapp-right"
 			reverse
+			id="colombiagas"
+			whatsappUrl="https://wa.me/message/NF2C4CFYJIJBG1"
 		/>
 
 		<style jsx>{`
@@ -48,6 +53,14 @@ const MainServices = () => {
 				grid-template-columns: 1fr 1fr;
 				gap: 1rem;
 				position: relative;
+			}
+
+
+			@media screen and (max-width: 900px) {
+				main {
+					grid-template-columns: 1fr;
+				}
+				
 			}
 
 		`}</style>

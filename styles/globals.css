@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family: 'frank';
     src: url('/tipografia/franklin-gothic-book.ttf');
@@ -100,4 +99,9 @@ a {
 
 button:hover {
 	transform: scale(1.05);
+}
+
+
+body {
+	scroll-behavior: smooth;
 }

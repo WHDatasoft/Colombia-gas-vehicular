@@ -1,4 +1,4 @@
-const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsapp }) => {
+const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsapp, id, whatsappUrl }) => {
 	return <article>
 		<div className="content">
 			<header>
@@ -10,7 +10,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 				<ul>
 					{
 						serviceList.map(service => (
-							<li>
+							<li key={service}>
 								{service}
 							</li>
 						))
@@ -21,12 +21,16 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 
 		<footer>
 
-			<a className="whatsapp" href="http://" target="_blank" rel="noopener noreferrer">
+			<a className="whatsapp" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
 				<img src={`/icon/${whatsapp}.svg`} alt="icono de contacto por whatsapp" />
 			</a>
 
-			<a className="ver-mas" href="">
-				Ver más
+			<a className="ver-mas" href={`#${id}`}>
+				<span>
+					Ver más
+				</span>
+				<svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+
 			</a>
 
 		</footer>
@@ -34,10 +38,16 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 		<style jsx>{`
 
 			.content {
-				background: url("/img/clientes/${background}.png");
-				background-size: cover;
+				background: url("/img/clientes/${background}.png") no-repeat;
+				background-position: center center;
+				background-size: 100% auto ;
 				margin: 0 1rem;
+				transition: background 2s;
 			}
+
+			.content:hover {
+				background-size: 110% auto;
+			} 
 
 			header {
 				display: grid;
@@ -58,9 +68,9 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 				background-color: white;
 				display: grid;
 				grid-template-columns: ${reverse ? '1fr auto' : 'auto 1fr'};
+				gap: 4rem;
 				place-items: center;
-				padding: 1rem;
-				
+				padding: 1rem 4rem;
 			}
 
 			section {
@@ -73,6 +83,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 			ul {
 				text-align: center;
 				color: white;
+				padding: 0 1rem;
 			}
 
 			li {
@@ -91,9 +102,75 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 				border: 3px solid ${color ? 'var(--light-blue)' : 'var(--light-green)'};
 				text-align: center;
 				border-radius: 1rem;
-				padding: .5rem;
+				padding: .5rem 1rem;
 				color: ${color ? 'var(--light-blue)' : 'var(--light-green)'};
-				width: 20rem;
+				width: 100%;
+				box-sizing: border-box;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				place-items: center;
+			}
+
+			a {
+				transition: transform .5s;
+			}
+
+			a:hover {
+				transform: scale(1.05);
+			}
+
+			svg {
+				height: .6rem;
+				fill: none;
+				stroke: ${color ? 'var(--light-blue)' : 'var(--light-green)'};
+				stroke-miterlimit: 10;
+				stroke-width: 6px;
+				transform: rotate(-90deg);
+				transition: transform .5s;
+				animation: move-right 1s infinite alternate;
+			}
+
+			@media screen and (max-width: 1170px) {
+
+				.content {
+					background-size: auto 100% ;
+				}
+
+				.content:hover {
+					background-size: auto 110%;
+				} 
+
+
+			}
+
+			@media screen and (max-width: 900px) {
+				
+				.content {
+					background-size: 100% auto ;
+				}
+
+				.content:hover {
+					background-size: 110% auto;
+				} 
+				
+			}
+
+
+			@media screen and (max-width: 600px) {
+				
+				.content {
+					background-size: auto 100% ;
+				}
+
+				.content:hover {
+					background-size: auto 110%;
+				} 
+
+				footer {
+					gap: 1rem;
+					padding: 1rem;
+				}
+				
 			}
 
 		`}</style>

@@ -40,6 +40,7 @@ const Header = () => {
 				justify-content: space-between;
 				padding: 0 2rem;
 				margin-bottom: 2rem;
+				box-shadow: 0 10px 15px -5px #0002;
 			}
 
 			img {

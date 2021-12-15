@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const SliderMain = ({ slideList, top }) => {
+const SliderMain = ({ slideList, top, id }) => {
 
     const [img, setImg] = useState(0);
     const [direccion, setDireccion] = useState(true);
@@ -60,7 +60,7 @@ const SliderMain = ({ slideList, top }) => {
     }
 
     return (
-        <div className="content">
+        <div className="content" id={id}>
 
             <button className="left" onClick={onClickLeft}>
                 <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
