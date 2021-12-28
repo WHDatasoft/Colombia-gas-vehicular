@@ -2,6 +2,8 @@ import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import ClientMain from '../../components/Sections/ClientMain'
 import SuccessStories from '../../components/Sections/SuccessStories'
+import DidiContent from '../../components/slides-didi/DidiContent'
+import SlideDidi from '../../components/slides-didi/SlideDidi'
 import SlideSecond from '../../components/slides-didi/SlideSecond'
 import MainLayout from "../../layout/MainLayout"
 
@@ -11,15 +13,18 @@ const Index = () => {
 			<title>Clientes</title>
 		</Head>
 
-		<div className="wrapper">
-			<SlideSecond
-				backgroundImg="car"
-				color="#1c580dAA"
-				mainTitle="TRABAJA CON NOSOTROS"
-				secondTitle="GAS NATURAL VEHICULAR "
-				img="/icon/aliance.svg"
-			/>,
-		</div>
+		<ClientMain
+			backgroundImg="/img/clientes/car.jpg"
+			sizeScreen
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={<DidiContent />}
+				/>
+			}
+		>
+		</ClientMain>
 
 		<br /><br />
 
@@ -27,15 +32,6 @@ const Index = () => {
 		<br /><br />
 
 		<MainFooter />
-
-		<style jsx>{`
-
-
-			.wrapper {
-				height: 80vh;
-			}
-		
-		`}</style>
 
 	</MainLayout>
 }

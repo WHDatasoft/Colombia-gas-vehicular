@@ -38,7 +38,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 		<style jsx>{`
 
 			.content {
-				background: url("/img/clientes/${background}.png") no-repeat;
+				background: url("/img/clientes/${background}.jpg") no-repeat;
 				background-position: center center;
 				background-size: 100% auto ;
 				margin: 0 1rem;

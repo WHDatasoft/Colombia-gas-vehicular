@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import PopUp from "../components/advertising/PopUp";
 import Hoja from "../components/Decorations/Hoja"
 import Header from "../components/Header/Header"
 import NavSocial from "../components/social/NavSocial";
@@ -53,6 +54,9 @@ const MainLayout = ({ children }) => {
 		{
 			hojasList.map(hoja => hoja)
 		}
+
+
+		<PopUp />
 
 
 		{children}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const SliderMain = ({ slideList, top, id }) => {
+const SliderMain = ({ slideList, top, id, sizeScreen }) => {
 
     const [img, setImg] = useState(0);
     const [direccion, setDireccion] = useState(true);
@@ -61,13 +61,24 @@ const SliderMain = ({ slideList, top, id }) => {
 
     return (
         <div className="content" id={id}>
-
-            <button className="left" onClick={onClickLeft}>
-                <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
-            </button>
-            <button className="right" onClick={onClickRight}>
-                <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
-            </button>
+            {
+                img === 0
+                    ?
+                    null
+                    :
+                    <button className="left" onClick={onClickLeft}>
+                        <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+                    </button>
+            }
+            {
+                img === slideList.length - 1
+                    ?
+                    null
+                    :
+                    <button className="right" onClick={onClickRight}>
+                        <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+                    </button>
+            }
 
             <ul onTouchEnd={onTouchEnd} onTouchStart={onTouchStart}>
 
@@ -90,23 +101,22 @@ const SliderMain = ({ slideList, top, id }) => {
             <style jsx>{`
 
                 .content {
-                    height: 40rem;
+                    height: ${sizeScreen ? 'calc(100vh - 8rem)' : '40rem'};
                     position: relative;
                     overflow: hidden;
                 }
 
                 .content > ul {
                     display: grid;
-                    height: 40rem;
                     width: ${slideList.length}00%;
                     grid-template-columns: repeat(${slideList.length}, 1fr);
                     transition: margin-left 1.5s ease;
+                    height: 100%;
                 }
 
                 .content > ul > li {
-                    min-height: 850px;
                     list-style: none;
-                    height: 30rem;
+                    height: 100%;
                     position: relative;
                     
                 }
@@ -147,9 +157,7 @@ const SliderMain = ({ slideList, top, id }) => {
 
                 @media screen and (max-width: 1070px) {
 
-                    .content, .content > ul > li {
-                        height: 70vh;
-                    }
+                   
 
                 }
 

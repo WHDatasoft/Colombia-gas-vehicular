@@ -59,10 +59,10 @@ const TitleDidi = () => {
 
 			.point {
 				display: inline-block;
+				margin: 0 1rem;
 				height: 1rem;
 				width: 1rem;
 				background-color: var(--orange);
-				margin: 0 1rem;
 				border-radius: 50%;
 				transform: translateY(-20%);
 			}
@@ -89,7 +89,6 @@ const TitleDidi = () => {
 				.container {
 					animation: none;
 				}
-
 
 				.first {
 					display: inline-block;

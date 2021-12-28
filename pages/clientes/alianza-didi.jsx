@@ -3,72 +3,150 @@ import Head from '../../components/Head/Head'
 import SliderMain from "../../components/Slider/SliderMain"
 import SlideDidi from "../../components/slides-didi/SlideDidi"
 import Icons from "../../components/Sections/Icons"
-import SlideSecond from "../../components/slides-didi/SlideSecond"
+import ClientMain from "../../components/Sections/ClientMain"
+
 import FormDidi from "../../components/Forms/FormDidi"
 import TitleDidi from "../../components/title/TitleDidi"
 import MainServices from "../../components/Sections/MainServices"
 import Row from "../../components/Decorations/Row"
+import DidiAside from "../../components/slides-didi/DidiAside"
+import DidiContent from "../../components/slides-didi/DidiContent"
 
 const AlianzaDidi = () => {
 
 	const slideServiteck = [
-		<SlideDidi />,
+
+		<ClientMain
+			backgroundImg="/img/clientes/phone.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={<DidiContent />}
+				/>
+			}
+		>
+		</ClientMain>,
 
 
-		<SlideSecond
-			backgroundImg="oil"
-			color="#1c580dAA"
-			mainTitle="Lubricantes y aditivos"
-			secondTitle="15% DE DESCUENTO"
-			img="/icon/servitek.svg"
+		<ClientMain
+			backgroundImg="/img/clientes/oil.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Lubricantes y aditivos"
+							secondTitle="15% DE DESCUENTO"
+							img="/icon/servitek.svg"
+						/>
+					}
+				/>
+
+			}
 		/>,
-		<SlideSecond
-			backgroundImg="disk"
-			color="#EF861CAA"
-			mainTitle="Mécanica general y frenos"
-			secondTitle="12% DE DESCUENTO"
-			img="/icon/servitek.svg"
+		<ClientMain
+			backgroundImg="/img/clientes/disk.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#EF861CAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Mécanica general y frenos"
+							secondTitle="12% DE DESCUENTO"
+							img="/icon/servitek.svg"
+						/>
+					}
+				/>
+			}
 		/>,
-		<SlideSecond
-			backgroundImg="car-aside"
-			color="#1c580dAA"
-			mainTitle="Compra del SOAT"
-			secondTitle="5% DE DESCUENTO"
-			img="/logo/logo-blanco.png"
+		<ClientMain
+			backgroundImg="/img/clientes/car-aside.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Compra del SOAT"
+							secondTitle="5% DE DESCUENTO"
+							img="/logo/logo-blanco.png"
+						/>
+					}
+				/>
+			}
 		/>
 	]
 
 	const slideColombiagas = [
 
-		<SlideSecond
-			backgroundImg="mecanic"
-			color="#EF861CAA"
-			mainTitle="Instalación de GNV"
-			secondTitle="10% DE DESCUENTO"
-			img="/logo/logo-blanco.png"
-			link="/servicios/instalacion-gnv"
+		<ClientMain
+			backgroundImg="/img/clientes/mecanic.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#EF861CAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Instalación de GNV"
+							secondTitle="10% DE DESCUENTO"
+							img="/logo/logo-blanco.png"
+							link="/servicios/instalacion-gnv"
+						/>
+					}
+				/>
+			}
 		/>,
-		<SlideSecond
-			backgroundImg="person"
-			color="#1c580dAA"
-			mainTitle="PROGRAMA DE SALUD"
-			secondTitle="GRATIS"
-			img="/logo/logo-blanco.png"
-			link="/beneficios/programa-de-salud"
+		<ClientMain
+			backgroundImg="/img/clientes/person.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="PROGRAMA DE SALUD"
+							secondTitle="GRATIS"
+							img="/logo/logo-blanco.png"
+							link="/beneficios/programa-de-salud"
+						/>
+					}
+				/>
+			}
 		/>,
-		<SlideSecond
-			backgroundImg="car-panel"
-			color="#EF861CAA"
-			mainTitle="Prueba hidrostática"
-			secondTitle="20% DE DESCUENTO"
-			img="/logo/logo-blanco.png"
+		<ClientMain
+			backgroundImg="/img/clientes/car-panel.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#EF861CAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Prueba hidrostática"
+							secondTitle="20% DE DESCUENTO"
+							img="/logo/logo-blanco.png"
+						/>
+					}
+				/>
+			}
 		/>,
-		<SlideSecond
-			backgroundImg="car-back"
-			color="#1c580dAA"
-			mainTitle="Análisis de gases"
-			secondTitle="20% DE DESCUENTO"
-			img="/logo/logo-blanco.png"
+		<ClientMain
+			backgroundImg="/img/clientes/car-back.jpg"
+			ContentAside={
+				<SlideDidi
+					color="#1c580dAA"
+					rowGap="3"
+					ContentAside={
+						<DidiAside
+							mainTitle="Análisis de gases"
+							secondTitle="20% DE DESCUENTO"
+							img="/logo/logo-blanco.png"
+						/>
+					}
+				/>
+			}
 		/>,
 
 	]
@@ -106,10 +184,10 @@ const AlianzaDidi = () => {
 
 		<div className="text">
 			<p>
-				Por estar registrado en DiDi Conductor, si instalas gas vehicular con nosotros podrás acceder a muy buenos beneficios los cuales podrás hacer efectivos en:
+				Por estar registrado en DiDi Conductor podrás acceder a muy buenos beneficios los cuales podrás hacer efectivos en:
 			</p>
 			<p>
-				La oficina privada DiDi Avenida Caracas #23-33 Sur (Servitek de Colombiagas Vehicular)
+				La oficina privada DiDi Avenida Caracas #23-33 Sur (Servitek)
 			</p>
 		</div>
 

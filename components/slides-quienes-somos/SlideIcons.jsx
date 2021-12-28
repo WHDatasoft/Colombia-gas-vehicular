@@ -1,6 +1,6 @@
 const SlideIcons = () => {
 	return <>
-		<div>
+		<div className="fondo">
 			<h2>OBJETIVOS CLAVES</h2>
 			<div className="icons">
 				<div>
@@ -20,6 +20,18 @@ const SlideIcons = () => {
 
 		<style jsx>{`
 
+			.fondo {
+				box-sizing: border-box;
+				height: calc(100%);
+				background-color: var(--blue-transparent);
+				color: white;
+				font-size: 2rem;
+				text-align: justify;
+				padding: 2rem;
+				display: grid;
+				place-items: center;
+				align-self: center;
+			}
 
 			.icon {
 				display: block;
@@ -33,8 +45,6 @@ const SlideIcons = () => {
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;
 				justify-items: center;
-				padding-bottom: 3%;
-				padding-top: 2rem;
 				width: 80vw;
 				
 			}
@@ -45,6 +55,7 @@ const SlideIcons = () => {
 				font-size: 2.5rem;
 				margin-bottom: 2rem;
 				padding: 0 1rem;
+				align-self: flex-end;
 			}
 
 			h4 {
@@ -72,13 +83,16 @@ const SlideIcons = () => {
 
 			@media screen and (max-width: 730px) {
 
+				.fondo {
+					background-color: unset;
+				}
+
 				.icons div:nth-child(3) {
 					grid-column: 1/3;
 				}
 
 				.icons {
 					grid-template-columns: 1fr 1fr;
-					padding-top: 1rem;
 					grid-row-gap: 1rem;
 				}
 
@@ -90,16 +104,18 @@ const SlideIcons = () => {
 					height: 8rem;
 				}
 
-				.icons div:nth-child(3) {
-					grid-column: 1/2;
+					h2 {
+					margin-bottom: 1rem;
 				}
 
-				.icons {
-					grid-template-columns: 1fr;
-					padding-top: 1rem;
-					grid-row-gap: 1rem;
-				}
+			}
 
+			@media screen and (max-width: 370px) {
+
+				.icon {
+					height: 6rem;
+				}
+				
 			}
 
 
