@@ -3,17 +3,10 @@ import { useEffect, useState } from "react"
 
 const Banner = () => {
 
-	const [isEnable, setIsEnable] = useState(false)
 	const [image, setImage] = useState('')
 
 	useEffect(() => {
-		const isSeen = sessionStorage.getItem('pop-up')
-		if (isSeen) {
-			setIsEnable(false)
-		} else {
-			setIsEnable(true)
-			getImg()
-		}
+		getImg()
 	}, [])
 
 	const getImg = async () => {
@@ -23,6 +16,7 @@ const Banner = () => {
 		const imgType = 'banner'
 		const URL_IMG = `/api/advertising?imgType=${imgType}&imgYear=${imgYear}&imgMonth=${imgMonth}&selected=true`
 		const response = await axios.get(URL_IMG)
+		console.log(response.data)
 		setImage(response?.data?.data?.Items[0]?.image?.S ? response.data.data.Items[0].image.S : '')
 	}
 
