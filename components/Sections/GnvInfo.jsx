@@ -15,7 +15,7 @@ const GnvInfo = () => {
 		<div className="transparent"></div>
 		<div className="info-wrapper">
 			<img src="/logo/logo-vanti.svg" alt="" className="logo-vanti" />
-			<img src="/img/servicios/InfografiaGNV.png" alt="" className="info" />
+			<img src="/img/servicios/InfografiaGNV.jpg" alt="" className="info" />
 		</div>
 
 		<style jsx>{`

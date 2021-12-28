@@ -19,7 +19,7 @@ const Index = () => {
 			}
 		/>,
 		<ClientMain
-			backgroundImg="/img/colombiagas/slide-segunda.png"
+			backgroundImg="/img/colombiagas/slide-segunda.jpg"
 			backgroundMini="/img/colombiagas/fachada-second.jpg"
 			sizeScreen
 			padding

@@ -2,7 +2,7 @@ const GnvComponent = () => {
 	return <section>
 
 		<picture>
-			<img src="/img/servicios/componentes.png" alt="" />
+			<img src="/img/servicios/componentes.jpg" alt="" />
 
 		</picture>
 

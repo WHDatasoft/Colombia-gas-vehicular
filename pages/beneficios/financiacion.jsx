@@ -15,7 +15,7 @@ const Index = () => {
 		</Head>
 
 		<BenefitBanner
-			background="financiacion.png"
+			background="financiacion.jpg"
 			icon="hand-money.svg"
 			title="FINANCIACIÓN"
 			subtitle=""

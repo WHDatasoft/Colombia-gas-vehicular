@@ -14,7 +14,7 @@ const Index = () => {
 		</Head>
 
 		<BenefitBanner
-			background="ambiental.png"
+			background="ambiental.jpg"
 			icon="hand-flower.svg"
 			title="BENEFICIOS"
 			titleComplement="MEDIO AMBIENTALES"

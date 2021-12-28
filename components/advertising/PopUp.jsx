@@ -21,7 +21,7 @@ const PopUp = () => {
 		const imgType = 'pop-up'
 		const URL_IMG = `/api/advertising?imgType=${imgType}&imgYear=${imgYear}&imgMonth=${imgMonth}&selected=true`
 		const response = await axios.get(URL_IMG)
-		setImage(response.data.data.Items[0].image.S)
+		setImage(response?.data?.data?.Items[0]?.image?.S ? response.data.data.Items[0].image.S : '')
 	}
 
 
