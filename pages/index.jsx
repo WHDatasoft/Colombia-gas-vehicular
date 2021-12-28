@@ -1,9 +1,9 @@
 import Head from '../components/Head/Head'
 import MainLayout from '../layout/MainLayout'
-import FormCol from '../components/Forms/FormCol';
-import { useEffect, useState } from 'react';
-import Video from '../components/Sections/Video';
-import MainFooter from '../components/Footer/MainFooter';
+import FormCol from '../components/Forms/FormCol'
+import Video from '../components/Sections/Video'
+import MainFooter from '../components/Footer/MainFooter'
+import Banner from '../components/advertising/Banner'
 
 
 const Index = () => {
@@ -15,6 +15,8 @@ const Index = () => {
 			<title>Colombia Gas Vehicular</title>
 			<meta name="description" content="Colombiagas Vehicular te brinda opciones de accesibilidad para ti y tu vehículo con beneficios unicos pensados en tu bienestar, ayúdanos a cuidar el medio ambiente, te esperamos..." />
 		</Head>
+
+		<Banner />
 
 		<Video
 			videoUrl="introduccion"

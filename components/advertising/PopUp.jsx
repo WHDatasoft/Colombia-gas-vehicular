@@ -3,15 +3,17 @@ import { useEffect, useState } from "react"
 
 const PopUp = () => {
 
-	const [isEnable, setIsEnable] = useState(true)
+	const [isEnable, setIsEnable] = useState(false)
 	const [image, setImage] = useState('')
 
 	useEffect(() => {
 		const isSeen = sessionStorage.getItem('pop-up')
 		if (isSeen) {
 			setIsEnable(false)
+		} else {
+			setIsEnable(true)
+			getImg()
 		}
-		getImg()
 	}, [])
 
 	const getImg = async () => {
