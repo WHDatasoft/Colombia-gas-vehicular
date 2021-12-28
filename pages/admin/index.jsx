@@ -67,7 +67,7 @@ const Index = () => {
 		const URL_API = `/api/advertising?imgYear=${imgYear}&imgMonth=${imgMonth}&imgType=${imgType}`
 		console.log('here')
 		const response = await axios.get(URL_API)
-		console.log(imgList)
+		console.log(response.data)
 		const imgList = response?.data?.data?.Items.map(img => ({
 			image: img.image.S,
 			imgType: img.imgType.S,
