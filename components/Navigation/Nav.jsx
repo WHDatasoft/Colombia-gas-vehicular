@@ -43,7 +43,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 		{
 			title: 'Beneficios', url: '/beneficios',
 			list: [
-				{ title: 'Programa de salud', url: '/beneficios/programa-de-salud' },
+				// { title: 'Programa de salud', url: '/beneficios/programa-de-salud' },
 				{ title: 'ahorro', url: '/beneficios/ahorro' },
 				{ title: 'combustible', url: '/beneficios/combustible' },
 				{ title: 'beneficios medio ambientales', url: '/beneficios/beneficios-medio-ambientales' },

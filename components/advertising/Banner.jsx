@@ -32,6 +32,12 @@ const Banner = () => {
 				margin-bottom: ${image ? '2rem' : '0'};
 			}
 
+			@media screen and (max-width: 700px) {
+				img {
+					width: 100%;
+				}
+			}
+
 		`}</style>
 	</article>
 }

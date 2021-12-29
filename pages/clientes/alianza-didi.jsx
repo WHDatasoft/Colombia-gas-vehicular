@@ -99,23 +99,23 @@ const AlianzaDidi = () => {
 				/>
 			}
 		/>,
-		<ClientMain
-			backgroundImg="/img/clientes/person.jpg"
-			ContentAside={
-				<SlideDidi
-					color="#1c580dAA"
-					rowGap="3"
-					ContentAside={
-						<DidiAside
-							mainTitle="PROGRAMA DE SALUD"
-							secondTitle="GRATIS"
-							img="/logo/logo-blanco.png"
-							link="/beneficios/programa-de-salud"
-						/>
-					}
-				/>
-			}
-		/>,
+		// <ClientMain
+		// 	backgroundImg="/img/clientes/person.jpg"
+		// 	ContentAside={
+		// 		<SlideDidi
+		// 			color="#1c580dAA"
+		// 			rowGap="3"
+		// 			ContentAside={
+		// 				<DidiAside
+		// 					mainTitle="PROGRAMA DE SALUD"
+		// 					secondTitle="GRATIS"
+		// 					img="/logo/logo-blanco.png"
+		// 					link="/beneficios/programa-de-salud"
+		// 				/>
+		// 			}
+		// 		/>
+		// 	}
+		// />,
 		<ClientMain
 			backgroundImg="/img/clientes/car-panel.jpg"
 			ContentAside={

@@ -326,8 +326,10 @@ const Index = () => {
 			}
 
 			option {
-				color: black;
-				padding: .5rem 1rem;
+				color: #666;
+				padding: 1rem;
+				border: none;
+				margin: 1rem;
 			}
 
 			button {
@@ -347,6 +349,10 @@ const Index = () => {
 				font-size: 2rem;
 				text-transform: uppercase;
 				margin: 2rem 0;
+			}
+
+			ul {
+				position: relative;
 			}
 
 			li {
