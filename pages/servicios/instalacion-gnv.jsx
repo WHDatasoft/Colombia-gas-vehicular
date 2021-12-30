@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import MainFooter from '../../components/Footer/MainFooter'
 import Head from '../../components/Head/Head'
 import Banner from '../../components/Sections/Banner'
@@ -5,24 +6,23 @@ import Description from '../../components/Sections/Description'
 import GnvInfo from '../../components/Sections/GnvInfo'
 import MainLayout from "../../layout/MainLayout"
 
-const Index = () => {
+import AWS from 'aws-sdk'
+const dynamoDB = new AWS.DynamoDB({ /* endpoint, */ apiVersion: '2012-08-10', region: 'us-east-1' });
+
+const Index = ({ text, url }) => {
+
+
 	return <MainLayout>
 		<Head>
 			<title>Instalación GNV</title>
 		</Head>
-		<Banner imgPerson="person-1.png" fondo="banner-fondo-claro.png" icon="servicio1.svg" text="Instalación de GNV">
+		<Banner fondo="banner-fondo-claro.png" icon="servicio1.svg" text="Instalación de GNV">
+			<img className="person" src={url} alt="" loading="eager" />
 			<div className="text-wrapper">
-				<p className="texto-1">
-					<span>Ya son más de 600.000 vehículos y más de 700 buses de</span>
-					<br />
-					<span> Transmilenio que se pasaron a Gas Natural</span>
-				</p>
-				<h1 className="texto-2">PÁSATE A GAS NATURAL VEHICULAR</h1>
-				<h2 className="texto-3">
-					<span>CONVERSIONES DESDE</span>
-					<br />
-					<span className="number">$ 500.000</span>
-				</h2>
+				<p className="texto-1">{text.text1}</p>
+				<h1 className="texto-2">{text.text2}</h1>
+				<h2 className="texto-3">{text.text3}</h2>
+				<h3 className="texto-4">{text.text4}</h3>
 			</div>
 		</Banner>
 
@@ -54,10 +54,14 @@ const Index = () => {
 		<style jsx>{`
 
 			.text-wrapper {
+				box-sizing: border-box;
 				font-size: 1rem;
+				width: 100%;
+				align-self: center;
+				padding: 1em;
 			}
 
-			.texto-1, .texto-2, .texto-3 {
+			.texto-1, .texto-2, .texto-3, .texto-4 {
 				text-align: center;
 			}
 		
@@ -80,8 +84,17 @@ const Index = () => {
 				font-size: 1em;
 			}
 
-			.number {
+			.texto-4 {
+				font-weight: 600;
+				color: var(--blue);
+				font-size: 1em;
 				font-size: 2.5em;
+			}
+
+			.person {
+				margin-top: 2rem;
+				height: 11rem;
+				align-self: flex-end;
 			}
 
 			.row {
@@ -111,16 +124,16 @@ const Index = () => {
 					margin: 1rem 0;
 				}
 
+				.person {
+					height: 8rem;
+				}
+
 			}
 
 			@media screen and (max-width: 440px) {
 
 				.text-wrapper {
 					font-size: .6rem;
-				}
-
-				.texto-2 {
-					margin: 1rem 0;
 				}
 
 			}
@@ -131,14 +144,48 @@ const Index = () => {
 					font-size: .55rem;
 				}
 
-				.texto-2 {
-					margin: 1rem 0;
-				}
-
 			}
 
 		`}</style>
 	</MainLayout>
+}
+
+export async function getStaticProps(context) {
+
+	try {
+
+
+		/* const API_URL = `${httpProtocol}://${context.req.headers.host}/api/banner?service=instalacion`
+		const response = await axios.get(API_URL) */
+
+		const data = await dynamoDB.scan({
+			TableName: 'banner',
+			FilterExpression: "servicio = :servicio",
+			ExpressionAttributeValues: {
+				":servicio": { S: 'instalacion' }
+			},
+		}).promise();
+
+		const text = {}
+		for (const key in data.Items[0]) {
+			if (key !== 'servicio' && key !== 'urlImg') {
+				console.log(key)
+				text[key] = data.Items[0][key].S
+			}
+		}
+		const url = data.Items[0].urlImg.S
+
+		return {
+			props: { text, url }, // will be passed to the page component as props
+		}
+	} catch (error) {
+
+		console.log(error)
+
+		return {
+			props: {}, // will be passed to the page component as props
+		}
+	}
 }
 
 export default Index

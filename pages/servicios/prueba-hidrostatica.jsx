@@ -9,17 +9,12 @@ const Index = () => {
 		<Head>
 			<title>Prueba Hidrostática</title>
 		</Head>
-		<Banner imgPerson="person-2.png" fondo="banner-fondo-oscuro.png" icon="servicio2.svg" text="Prueba Hodristática">
+		<Banner imgPerson="" fondo="banner-fondo-oscuro.png" icon="servicio2.svg" text="Prueba Hodristática">
+			<img className="person" src="/img/banner/person-2.png" alt="" loading="eager" />
 			<div className="text-wrapper">
-				<p className="texto-1">
-					<span>COLOMBIAGAS VEHICULAR TE HACE</span>
-					<br />
-					<span>LA PRUEBA HIDROSTÁTICA</span>
-				</p>
-				<h2 className="texto-3">
-					<span className="number">$ 250.000</span>
-				</h2>
-				<h1 className="texto-2">¡Pide tu cita ahora!</h1>
+				<p className="texto-1">COLOMBIAGAS VEHICULAR TE HACE LA PRUEBA HIDROSTÁTICA</p>
+				<h2 className="texto-2">$ 250.000</h2>
+				<h1 className="texto-3">¡Pide tu cita ahora!</h1>
 			</div>
 		</Banner>
 
@@ -39,6 +34,10 @@ const Index = () => {
 
 			.text-wrapper {
 				font-size: 1rem;
+				box-sizing: border-box;
+				width: 100%;
+				align-self: center;
+				padding: 1em;
 			}
 
 			.texto-1, .texto-2, .texto-3 {
@@ -52,19 +51,22 @@ const Index = () => {
 			}
 
 			.texto-2 {
+				margin: 2rem 0;
+				font-weight: 600;
+				color: white;
+				font-size: 2.5em;
+			}
+
+			.texto-3 {
 				font-weight: 600;
 				font-size: 1.5em;
 				color: var(--light-green);
 			}
 
-			.texto-3 {
-				margin: 2rem 0;
-				font-weight: 600;
-				color: white;
-			}
-
-			.number {
-				font-size: 2.5em;
+			.person {
+				margin-top: 2rem;
+				height: 11rem;
+				align-self: flex-end;
 			}
 
 			@media screen and (max-width: 625px) {
@@ -73,8 +75,20 @@ const Index = () => {
 					font-size: 0.7rem;
 				}
 
-				.texto-3 {
+				.texto-2 {
 					margin: 1rem 0;
+				}
+
+				.person {
+					height: 8em;
+				}
+
+			}
+
+			@media screen and (max-width: 360px) {
+
+				.text-wrapper {
+					font-size: 0.5rem;
 				}
 
 			}

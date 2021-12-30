@@ -10,16 +10,13 @@ const Index = () => {
 			<title>Mantenimiento</title>
 		</Head>
 
-		<Banner imgPerson="person-4.png" fondo="banner-fondo-oscuro.png" icon="servicio3.svg" text="mantenimiento" personSize={1.2}>
-			<br />
-			<p className="texto-1">
-				Colombiagas vehicular te ofrece respaldo y los equipos especializados para realizar el mantenimiento de su vehículo
-			</p>
-			<h2 className="texto-3">
-				<span className="number">$ 50.000</span>
-			</h2>
-			<h1 className="texto-2">¡Pide tu cita ahora!</h1>
-			<br />
+		<Banner imgPerson="" fondo="banner-fondo-oscuro.png" icon="servicio3.svg" text="mantenimiento">
+			<img className="person" src="/img/banner/person-4.png" alt="" loading="eager" />
+			<div className="text-wrapper">
+				<p className="texto-1">Colombiagas vehicular te ofrece respaldo y los equipos especializados para realizar el mantenimiento de su vehículo</p>
+				<h2 className="texto-2">$ 50.000</h2>
+				<h1 className="texto-3">¡Pide tu cita ahora!</h1>
+			</div>
 		</Banner>
 
 		<Description
@@ -34,9 +31,14 @@ const Index = () => {
 
 		<style jsx>{`
 
-			:global(:root) {
-				--size: 1;
+			.text-wrapper {
+				font-size: 1rem;
+				box-sizing: border-box;
+				width: 100%;
+				align-self: center;
+				padding: 1em;
 			}
+
 
 			.texto-1, .texto-2, .texto-3 {
 				text-align: center;
@@ -45,49 +47,56 @@ const Index = () => {
 			.texto-1 {
 				color: white;
 				font-weight: 600;
-				font-size: calc(1rem * var(--size));
+				font-size: 1em;
 			}
 
 			.texto-2 {
 				font-weight: 600;
-				font-size: calc(1.5rem * var(--size));
-				color: var(--light-green);
+				color: white;
+				font-size: 2.5em;
+				margin: 2rem 0;
 			}
 
 			.texto-3 {
-				margin: 2rem 0;
 				font-weight: 600;
-				color: white;
+				font-size: 1.5em;
+				color: var(--light-green);
 			}
 
-			.number {
-				font-size: calc(2.5rem * var(--size));
+			.person {
+				margin-top: 2rem;
+				height: 11rem;
+				align-self: flex-end;
 			}
 
 			@media screen and (max-width: 625px) {
 
-				:global(:root) {
-					--size: 0.7
+				.text-wrapper {
+					font-size: 0.7rem;
 				}
 
-				.texto-3 {
+				.texto-2 {
 					margin: 1rem 0;
+				}
+
+				.person {
+					height: 8em;
 				}
 
 			}
 
 			@media screen and (max-width: 380px) {
 
-				:global(:root) {
-					--size: 0.6
+				.text-wrapper {
+					font-size: 0.6rem;
 				}
 
 			}
 
 			@media screen and (max-width: 330px) {
 
-				:global(:root) {
-					--size: 0.5
+				.text-wrapper {
+					font-size: 0.5rem;
 				}
 
 			}

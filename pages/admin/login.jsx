@@ -8,7 +8,7 @@ import Auth from "@aws-amplify/auth";
 import { amplifyConfigAdmin, authConfigAdmin } from '../../cognito/infoAdminPool'
 
 // Functions
-import { signIn, onAppLoad } from '../../cognito/authFunctions'
+import { signIn, onAppLoadLogin } from '../../cognito/authFunctions'
 import { useEffect } from "react";
 
 // Aws configure
@@ -20,7 +20,7 @@ const Index = () => {
 	const router = useRouter()
 
 	useEffect(() => {
-		onAppLoad(router)
+		onAppLoadLogin(router)
 	}, [])
 
 	return <MainLayout className="container">

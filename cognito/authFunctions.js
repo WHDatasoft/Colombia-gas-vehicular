@@ -59,7 +59,7 @@ export const validateJWToken = async () => {
 
 export const closeSession = async (router) => {
 	localStorage.clear();
-	router.push('/iniciar-sesion')
+	router.push('/admin/login')
 }
 
 export const getUserId = async () => {
@@ -76,6 +76,15 @@ export const getUserId = async () => {
 }
 
 export const onAppLoad = async (router) => {
+	try {
+		const user = await Auth.currentAuthenticatedUser();
+	} catch (error) {
+		console.log(error)
+		router.push('/admin/login')
+	}
+}
+
+export const onAppLoadLogin = async (router) => {
 	try {
 		const user = await Auth.currentAuthenticatedUser();
 		console.log('user:', user)

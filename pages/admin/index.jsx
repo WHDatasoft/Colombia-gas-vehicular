@@ -1,7 +1,6 @@
-import MainLayout from "../../layout/MainLayout"
 import axios from 'axios'
 import { useEffect, useState } from "react"
-import { useRouter } from 'next/router'
+
 
 // AWS Config
 import AWS from 'aws-sdk'
@@ -16,7 +15,7 @@ import Auth from "@aws-amplify/auth";
 import { amplifyConfigAdmin, authConfigAdmin } from '../../cognito/infoAdminPool'
 
 // Functions
-import { onAppLoad } from '../../cognito/authFunctions'
+import AdminLayout from "../../layout/AdminLayout"
 
 // Aws configure
 Amplify.configure(amplifyConfigAdmin);
@@ -37,7 +36,7 @@ AWS.config.update({
 
 const Index = () => {
 
-	const router = useRouter()
+
 
 	const [selectedFile, setSelectedFile] = useState(null)
 	const [imgSelected, setImgSelected] = useState(false)
@@ -47,10 +46,6 @@ const Index = () => {
 		imgYear: new Date().getFullYear(),
 		imgType: 'pop-up'
 	})
-
-	useEffect(() => {
-		onAppLoad(router)
-	}, [])
 
 	useEffect(() => {
 		console.log('objeccallt')
@@ -182,7 +177,7 @@ const Index = () => {
 		setHreImgList(list => list.filter(imgCurrent => imgCurrent.image !== img.image))
 	}
 
-	return <MainLayout>
+	return <AdminLayout>
 
 		<form onSubmit={onSubmit}>
 			<div className="img-container">
@@ -380,7 +375,7 @@ const Index = () => {
 
 		
 		`}</style>
-	</MainLayout>
+	</AdminLayout>
 }
 
 export default Index

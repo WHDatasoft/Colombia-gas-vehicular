@@ -15,10 +15,8 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 		</div>
 
 		<img className="gnv" src="/img/banner/gnv.png" alt="" loading="eager" />
-		<img className="person" src={`/img/banner/${imgPerson}`} alt="" loading="eager" />
-		<div className="text">
-			{children}
-		</div>
+
+		{children}
 
 
 		<style jsx>{`
@@ -90,16 +88,6 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 
 			.gnv {
 				width: 17rem;
-				align-self: center;
-			}
-
-			.person {
-				margin-top: 2rem;
-				width: ${11 * (personSize ? personSize : 1)}rem;
-				align-self: flex-end;
-			}
-
-			.text {
 				align-self: center;
 			}
 

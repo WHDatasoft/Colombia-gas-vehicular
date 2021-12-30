@@ -90,17 +90,12 @@ const Index = () => {
 		<Head>
 			<title>Venta De Repuestos</title>
 		</Head>
-		<Banner imgPerson="person-5.png" fondo="banner-fondo-claro.png" icon="servicio5.svg" text="Venta de repuestos">
-			<p className="texto-1">
-				<span>Productos que cumplen los requerimientos de la resolusión</span>
-				<br />
-				<span>0957 del 2012 del Ministerio de comercio, industria y</span>
-				<br />
-				<span>turismo,  avalados y certificados por Icontec</span>
-			</p>
-			<h2 className="texto-3">
-				<span>PRECIOS ACCESIBLES A TU BOLSILLO </span>
-			</h2>
+		<Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio5.svg" text="Venta de repuestos">
+			<img className="person" src="/img/banner/person-5.png" alt="" loading="eager" />
+			<div className="text-wrapper">
+				<p className="texto-1">Productos que cumplen los requerimientos de la resolusión 0957 del 2012 del Ministerio de comercio, industria y turismo, avalados y certificados por Icontec</p>
+				<h2 className="texto-2">PRECIOS ACCESIBLES A TU BOLSILLO</h2>
+			</div>
 		</Banner>
 
 		<Description
@@ -133,8 +128,12 @@ const Index = () => {
 
 		<style jsx>{`
 
-			:global(:root) {
-				--size: 1
+			.text-wrapper {
+				font-size: 1rem;
+				box-sizing: border-box;
+				width: 100%;
+				align-self: center;
+				padding: 1em;
 			}
 
 			.texto-1, .texto-2, .texto-3 {
@@ -144,14 +143,14 @@ const Index = () => {
 			.texto-1 {
 				color: var(--blue);
 				font-weight: 400;
-				font-size: calc(1rem * var(--size));
+				font-size: 1.2em;
 			}
 
-			.texto-3 {
+			.texto-2 {
 				margin: 1.5rem 0;
 				font-weight: 600;
 				color: var(--light-green);
-				font-size: calc(1.2rem * var(--size));
+				font-size: 1.4em;
 			}
 
 			h1 {
@@ -184,15 +183,33 @@ const Index = () => {
 				text-align: center;
 			}
 
+			.person {
+				margin-top: 2rem;
+				height: 11rem;
+				align-self: flex-end;
+			}
+
 
 			@media screen and (max-width: 625px) {
 
-				:global(:root) {
-					--size: 0.7
+				.text-wrapper {
+					font-size: 0.7rem;
 				}
 
-				.texto-3 {
+				.texto-2 {
 					margin: 1rem 0;
+				}
+
+				.person {
+					height: 8em;
+				}
+
+			}
+
+			@media screen and (max-width: 360px) {
+
+				.text-wrapper {
+					font-size: 0.5rem;
 				}
 
 			}

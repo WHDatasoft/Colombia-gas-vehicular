@@ -9,16 +9,13 @@ const Index = () => {
 		<Head>
 			<title>Revisión Anual</title>
 		</Head>
-		<Banner imgPerson="person-3.png" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
-
-			<p className="texto-1">
-				Siempre con cuidado, prevenga cualquier daño mayor con la <span>revisión anual</span> de su vehículo
-			</p>
-
-			<h2 className="texto-3">
-				COLOLOMBIAGAS VEHICULAR  TE OFRECE EL MEJOR SERVICIO PARA TU REVISIÓN ANUAL
-			</h2>
-			<h1 className="texto-2">$75.000</h1>
+		<Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
+			<img className="person" src="/img/banner/person-3.png" alt="" loading="eager" />
+			<div className="text-wrapper">
+				<p className="texto-1">Siempre con cuidado, prevenga cualquier daño mayor con la revisión anual de su vehículo</p>
+				<h2 className="texto-2">COLOLOMBIAGAS VEHICULAR  TE OFRECE EL MEJOR SERVICIO PARA TU REVISIÓN ANUAL</h2>
+				<h1 className="texto-3">$75.000</h1>
+			</div>
 		</Banner>
 
 		<Description
@@ -37,8 +34,12 @@ const Index = () => {
 
 		<style jsx>{`
 
-			:global(:root) {
-				--size: 1
+			.text-wrapper {
+				font-size: 1rem;
+				box-sizing: border-box;
+				width: 100%;
+				align-self: center;
+				padding: 1em;
 			}
 
 			.texto-1, .texto-2, .texto-3 {
@@ -47,30 +48,21 @@ const Index = () => {
 		
 			.texto-1 {
 				color: var(--blue);
-				font-size: calc(1.5rem * var(--size));
+				font-size: 1.5em;
 				font-weight: 00;
 			}
 
-			span {
-				font-weight: 600;
-			}
-
 			.texto-2 {
-				font-weight: 600;
-				font-size: calc(3rem * var(--size));
-				color: var(--blue);
-			}
-
-			.texto-3 {
 				margin: 2rem 0;
 				font-weight: 600;
 				color: var(--light-green);
-				font-size: calc(1.5rem * var(--size));
+				font-size: 1.5em;
 			}
 
-			.law {
-				display: grid;
-				justify-items: center;
+			.texto-3 {
+				font-weight: 600;
+				font-size: 3em;
+				color: var(--blue);
 			}
 
 			a {
@@ -84,54 +76,69 @@ const Index = () => {
 				text-align: center;
 			}
 
+			.law {
+				display: grid;
+				justify-items: center;
+			}
+
+			.person {
+				margin-top: 2rem;
+				height: 11rem;
+				align-self: flex-end;
+			}
+
 			@media screen and (max-width: 1500px) {
 
-				:global(:root) {
-					--size: 0.9
+				.text-wrapper {
+					font-size: 0.9rem;
 				}
 
 			}
 
 			@media screen and (max-width: 1300px) {
 
-				:global(:root) {
-					--size: 0.8
+				.text-wrapper {
+					font-size: 0.8rem;
 				}
 
 			}
 
 			@media screen and (max-width: 625px) {
 
-				:global(:root) {
-					--size: 0.7
+				.text-wrapper {
+					font-size: 0.7rem;
 				}
 
-				.texto-3 {
+				.texto-2 {
 					margin: 1rem 0;
+				}
+
+				.person {
+					height: 8em;
 				}
 
 			}
 
 			@media screen and (max-width: 500px) {
 
-				:global(:root) {
-					--size: 0.6
+				.text-wrapper {
+					font-size: 0.6rem;
 				}
 
 			}
 
 			@media screen and (max-width: 440px) {
 
-				:global(:root) {
-					--size: 0.5
+				.text-wrapper {
+					font-size: 0.5rem;
 				}
 
 			}
 
 			@media screen and (max-width: 350px) {
 
-				:global(:root) {
-					--size: 0.4;
+				.text-wrapper {
+					font-size: 0.4rem;
 				}
 
 			}
