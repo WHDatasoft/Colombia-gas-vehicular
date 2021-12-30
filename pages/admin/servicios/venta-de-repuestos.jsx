@@ -23,8 +23,8 @@ const Repuestos = ({ text, url }) => {
 				<button onClick={() => updateImg(selectedFile, 'repuestos')}>Actulizar imagen</button>
 			</label>
 			<form onSubmit={e => updateText(e, textList, 'repuestos')} className="text-wrapper">
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList.text1} />
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList.text2} />
+				<textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList?.text1} />
+				<textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList?.text2} />
 
 				<button>Actualizar textos</button>
 			</form>

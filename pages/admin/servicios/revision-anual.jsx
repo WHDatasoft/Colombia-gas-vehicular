@@ -23,9 +23,9 @@ const Revision = ({ text, url }) => {
 				<button onClick={() => updateImg(selectedFile, 'revision')}>Actulizar imagen</button>
 			</label>
 			<form onSubmit={e => updateText(e, textList, 'revision')} className="text-wrapper">
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList.text1} />
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList.text2} />
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text3" className="texto-3" rows="1" value={textList.text3} />
+				<textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList?.text1} />
+				<textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList?.text2} />
+				<textarea onChange={e => onChange(e, textList, setTextList)} name="text3" className="texto-3" rows="1" value={textList?.text3} />
 
 				<button>Actualizar textos</button>
 			</form>
