@@ -3,13 +3,13 @@ import { useState } from 'react';
 import Swal from 'sweetalert2'
 
 
-const FormEmail = ({ didi }) => {
+const FormEmail = ({ didi, setIsEnable, advertising }) => {
 
 	const [data, setData] = useState({
 		name: '',
 		phone: '',
 		message: '',
-		from: didi ? 'DIDI' : 'Colombiagas',
+		from: didi ? 'DIDI' : advertising ? 'Publicidad Pop-Up' : 'Colombiagas',
 		check: false
 	});
 
@@ -38,6 +38,8 @@ const FormEmail = ({ didi }) => {
 				confirmButtonColor: 'var(--dark-green)',
 				color: 'var(--blue)'
 			})
+
+			setIsEnable(false)
 
 		} else {
 			Swal.fire({

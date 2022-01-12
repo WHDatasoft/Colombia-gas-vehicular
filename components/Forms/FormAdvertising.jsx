@@ -1,17 +1,19 @@
 import FormEmail from './FormEmail'
 
-const FormCol = () => {
+const FormAdvertising = ({ setIsEnable }) => {
 
 
 	return <div className="form-wrapper">
 
-		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-
-		<FormEmail advertising setIsEnable={() => { }} />
+		<FormEmail setIsEnable={setIsEnable} />
 
 		<style jsx>{`
 
 			.form-wrapper {
+				box-sizing: border-box;
+				padding: 3rem 4rem;
+				border-radius: .2rem;
+				background-color: var(--dark-green);
 				font-size: 1rem;
 				position: relative;
 				z-index: 1;
@@ -49,4 +51,4 @@ const FormCol = () => {
 	</div>
 }
 
-export default FormCol
+export default FormAdvertising

@@ -10,7 +10,7 @@ const FormDidi = () => {
 			<img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
 		</div>
 
-		<FormEmail didi />
+		<FormEmail didi advertising setIsEnable={() => { }} />
 
 		<style jsx>{`
 
