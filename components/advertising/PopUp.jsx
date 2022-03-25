@@ -1,6 +1,7 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import FormAdvertising from "../Forms/FormAdvertising"
+import Image from 'next/image'
 
 const PopUp = () => {
 
@@ -8,13 +9,14 @@ const PopUp = () => {
 	const [image, setImage] = useState('')
 	const [enableForm, setEnableForm] = useState(false)
 
+	const img = useRef('')
+
 	useEffect(() => {
 		const isSeen = sessionStorage.getItem('pop-up')
 		if (isSeen) {
 			setIsEnable(false)
 		} else {
 			setIsEnable(true)
-			getImg()
 		}
 	}, [])
 
@@ -22,12 +24,11 @@ const PopUp = () => {
 		const date = new Date()
 		const imgYear = date.getFullYear()
 		const imgMonth = date.getMonth() + 1
-		console.log(imgYear, imgMonth);
 		const imgType = 'pop-up'
 		const URL_IMG = `/api/advertising?imgType=${imgType}&imgYear=${imgYear}&imgMonth=${imgMonth}&selected=true`
 		const response = await axios.get(URL_IMG)
-		console.log(response?.data?.data?.Items[0]?.image?.S);
-		setImage(response?.data?.data?.Items[0]?.image?.S ? response.data.data.Items[0].image.S : '')
+		console.log(response?.data?.data?.Items[0]?.image?.S ? response.data.data.Items[0].image.S : '')
+		return await response?.data?.data?.Items[0]?.image?.S ? response.data.data.Items[0].image.S : ''
 	}
 
 
@@ -52,7 +53,16 @@ const PopUp = () => {
 						<FormAdvertising setIsEnable={setIsEnable} />
 						:
 						<>
-							<img src={image} alt="" />
+							<Image
+								/* loader={getImg} */
+								src="/img/back.jpg"
+								alt="promocion colombia gas vehicular"
+								height="100px"
+								width="100px"
+								layout="responsive"
+								placeholder="blur"
+								blurDataURL="/img/back.jpg"
+							/>
 							<button className="register" onClick={() => setEnableForm(true)}>Registrate</button>
 						</>
 				}
@@ -74,6 +84,7 @@ const PopUp = () => {
 
 				.advertising {
 					position: relative;
+					width: 70vmin;
 				}
 
 				.register {

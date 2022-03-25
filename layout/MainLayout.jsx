@@ -7,63 +7,63 @@ import Whatsapp from "../components/social/Whatsapp";
 
 const MainLayout = ({ children }) => {
 
-	const [hojasList, setHojasList] = useState([]);
-	const [isActive, setIsActive] = useState(true)
+    const [hojasList, setHojasList] = useState([]);
+    const [isActive, setIsActive] = useState(true)
 
-	useEffect(() => {
-		window.addEventListener("focus", function () {
-			setIsActive(true)
-		})
-		window.addEventListener("blur", function () {
-			setIsActive(false)
-		})
-	}, []);
+    useEffect(() => {
+        window.addEventListener("focus", function () {
+            setIsActive(true)
+        })
+        window.addEventListener("blur", function () {
+            setIsActive(false)
+        })
+    }, []);
 
-	useEffect(() => {
-		const count = 0
-		const docHeight = document.body.clientWidth
-		count++
-		setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
-		const timer = setInterval(() => {
-			setIsActive((active) => {
-				if (active) {
-					count++
-					if (count < 4) {
-						setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
-					} else {
-						setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/GNV.svg" />])
-						count = 0
-					}
-				}
-				return active
-			})
-		}, 4000);
+    useEffect(() => {
+        const count = 0
+        const docHeight = document.body.clientWidth
+        count++
+        setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
+        const timer = setInterval(() => {
+            setIsActive((active) => {
+                if (active) {
+                    count++
+                    if (count < 4) {
+                        setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/hoja.svg" />])
+                    } else {
+                        setHojasList(list => [...list, <Hoja key={docHeight * Math.random()} left={docHeight * Math.random()} img="/icon/GNV.svg" />])
+                        count = 0
+                    }
+                }
+                return active
+            })
+        }, 4000);
 
-		return () => {
-			clearInterval(timer)
-		}
+        return () => {
+            clearInterval(timer)
+        }
 
-	}, [])
-
-
-	return <div className="container">
-		<Header />
-		<Whatsapp />
-		<NavSocial />
-
-		{
-			hojasList.map(hoja => hoja)
-		}
+    }, [])
 
 
-		<PopUp />
+    return <div className="container">
+        <Header />
+        <Whatsapp />
+        <NavSocial />
+
+        {
+            hojasList.map(hoja => hoja)
+        }
 
 
-		{children}
-		{/* Light Mode */}
-		{/* background-color: #c1e1c0; */}
+        {/* <PopUp /> */}
 
-		<style jsx>{`
+
+        {children}
+        {/* Light Mode */}
+        {/* background-color: #c1e1c0; */}
+
+        <style jsx>{`
 
 			.container {
 				position: relative;
@@ -78,7 +78,7 @@ const MainLayout = ({ children }) => {
 
 
 		`}</style>
-	</div>
+    </div>
 }
 
 export default MainLayout

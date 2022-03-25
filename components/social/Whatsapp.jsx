@@ -2,19 +2,19 @@
 
 const Whatsapp = () => {
 
-	return <div className="wrapper">
+    return <div className="wrapper">
 
-		<div className="message">
-			<p>Chatea con nosotros</p>
-		</div>
-		<button>
-			<a href="https://wa.me/message/UPI3PA7IC3OLN1" target="_blank" rel="noopener noreferrer">
-				<img src="/icon/whatsapp.svg" alt="icono de contacto por whatsapp" />
-			</a>
+        <div className="message">
+            <p>Chatea con nosotros</p>
+        </div>
+        <button>
+            <a href="https://wa.me/message/UPI3PA7IC3OLN1" target="_blank" rel="noopener noreferrer">
+                <img src="/icon/whatsapp.svg" alt="icono de contacto por whatsapp" />
+            </a>
 
-		</button>
+        </button>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.wrapper {
 				position: fixed;
@@ -32,13 +32,16 @@ const Whatsapp = () => {
 			}
 
 			.message {
+                text-align: center;
 				position: absolute;
 				background-color: white;
 				border-radius: 1rem;
 				padding: .5rem 1rem;
 				top: -2rem;
 				width: 10rem;
-				animation: enter 2.5s forwards;
+				animation: enter 10s 1s forwards;
+                border: 1px solid var(--dark-blue);
+                right: -30rem;
 			}
 
 			@keyframes enter {
@@ -46,15 +49,15 @@ const Whatsapp = () => {
 					right: -30rem;
 				}
 				
-				30% {
+				10% {
 					right: 2rem;
 				}
 
-				40% {
+				15% {
 					right: -2rem;
 				}
 
-				70% {
+				20% {
 					right: 0;
 				}
 
@@ -93,7 +96,7 @@ const Whatsapp = () => {
 
 		`}</style>
 
-	</div>
+    </div>
 }
 
 export default Whatsapp

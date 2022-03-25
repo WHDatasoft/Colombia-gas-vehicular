@@ -1,37 +1,33 @@
 const TitleDidi = () => {
-	return <div className="container">
+    return <div className="container">
 
-		<h1>
-			<div className="word">
-				<span className="point first"></span>
-				<span>
-					ALIANZA DIDI
-				</span>
-			</div>
-			<div className="word">
-				<span className="point"></span>
-				<span>serviteck</span>
-			</div>
-			<div className="word">
-				<span className="point"></span>
-				<span className="colombiagas">Colombiagas Vehicular</span>
-			</div>
-		</h1>
+        <h1>
+            <div className="word">
+                <span className="point first"></span>
+                <span>
+                    ALIANZA DIDI
+                </span>
+            </div>
+            <div className="word">
+                <span className="point"></span>
+                <span className="colombiagas">Colombiagas Vehicular</span>
+            </div>
+        </h1>
 
-		<div className="title">
-			<span className="point first"></span>
-			<span>
-				ALIANZA DIDI
-			</span>
-			<span className="point"></span>
-			<span>serviteck</span>
-			<span className="point"></span>
-			<span>Colombiagas Vehicular</span>
+        <div className="title">
+            <span className="point first"></span>
+            <span>
+                ALIANZA DIDI
+            </span>
+            <span className="point"></span>
+            <span>serviteck</span>
+            <span className="point"></span>
+            <span>Colombiagas Vehicular</span>
 
-		</div >
+        </div >
 
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.container {
 				width: 200%;
@@ -108,7 +104,7 @@ const TitleDidi = () => {
 			
 
 		`}</style>
-	</div>
+    </div>
 }
 
 export default TitleDidi

@@ -1,47 +1,51 @@
 const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsapp, id, whatsappUrl }) => {
-	return <article>
-		<div className="content">
-			<header>
-				<img className="icon" src={`/icon/${icon}.svg`} alt="" />
-				<h3>Servicios</h3>
-			</header>
+    return <article>
+        <div className="content">
+            <header>
+                <img className="icon" src={`/icon/${icon}.svg`} alt="" />
+                <h3>Servicios</h3>
+            </header>
 
-			<section>
-				<ul>
-					{
-						serviceList.map(service => (
-							<li key={service}>
-								{service}
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</div>
+            <section>
+                <ul>
+                    {
+                        serviceList.map(service => (
+                            <li key={service}>
+                                {service}
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </div>
 
-		<footer>
+        {/* <footer>
 
-			<a className="whatsapp" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-				<img src={`/icon/${whatsapp}.svg`} alt="icono de contacto por whatsapp" />
-			</a>
+            <a className="whatsapp" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                <img src={`/icon/${whatsapp}.svg`} alt="icono de contacto por whatsapp" />
+            </a>
 
-			<a className="ver-mas" href={`#${id}`}>
-				<span>
-					Ver más
-				</span>
-				<svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
+            <a className="ver-mas" href={`#${id}`}>
+                <span>
+                    Ver más
+                </span>
+                <svg viewBox="0 0 89.39 47.12"><polyline points="0.81 1.49 44.62 23.39 88.72 1.34" /><polyline points="0.67 23.53 44.48 45.44 88.58 23.39" /></svg>
 
-			</a>
+            </a>
 
-		</footer>
+        </footer> */}
 
-		<style jsx>{`
+        <style jsx>{`
+
+            article {
+                width: 100%;
+            }
 
 			.content {
 				background: url("/img/clientes/${background}.jpg") no-repeat;
 				background-position: center center;
-				background-size: 100% auto ;
-				margin: 0 1rem;
+				background-size: 100% auto;
+				margin: 0 auto;
 				transition: background 2s;
 			}
 
@@ -130,41 +134,25 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 				animation: move-right 1s infinite alternate;
 			}
 
-			@media screen and (max-width: 1170px) {
+			@media screen and (max-width: 1200px) {
+                .content {
+                    background-size: auto 100%;
+                }
 
-				.content {
-					background-size: auto 100% ;
-				}
-
-				.content:hover {
-					background-size: auto 110%;
-				} 
-
+                .content:hover {
+                    background-size: auto 110%;
+                } 
 
 			}
 
 			@media screen and (max-width: 900px) {
-				
-				.content {
-					background-size: 100% auto ;
-				}
 
-				.content:hover {
-					background-size: 110% auto;
-				} 
 				
 			}
 
 
 			@media screen and (max-width: 600px) {
-				
-				.content {
-					background-size: auto 100% ;
-				}
 
-				.content:hover {
-					background-size: auto 110%;
-				} 
 
 				footer {
 					gap: 1rem;
@@ -174,7 +162,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 			}
 
 		`}</style>
-	</article>
+    </article>
 }
 
 export default ServicesClients

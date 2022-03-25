@@ -4,38 +4,43 @@ import FormCol from '../components/Forms/FormCol'
 import Video from '../components/Sections/Video'
 import MainFooter from '../components/Footer/MainFooter'
 import Banner from '../components/advertising/Banner'
+import Hero from '../components/Hero/Hero'
+import SliderMain from '../components/SliderMain/SliderMain'
 
 
 const Index = () => {
 
 
 
-	return <MainLayout>
-		<Head>
-			<title>Colombia Gas Vehicular</title>
-			<meta name="description" content="Colombiagas Vehicular te brinda opciones de accesibilidad para ti y tu vehículo con beneficios unicos pensados en tu bienestar, ayúdanos a cuidar el medio ambiente, te esperamos..." />
-		</Head>
+    return <MainLayout>
+        <Head>
+            <title>Colombia Gas Vehicular</title>
+            <meta name="description" content="Colombiagas Vehicular te brinda opciones de accesibilidad para ti y tu vehículo con beneficios unicos pensados en tu bienestar, ayúdanos a cuidar el medio ambiente, te esperamos..." />
+        </Head>
 
-		<Banner />
+        <Hero />
 
-		<Video
-			videoUrl="introduccion"
-			videoUrlResponsive="introduccion-responsive"
-			handlePlayButton
-			deleteFinish
-		/>
 
-		<img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
+        <Banner />
 
-		<FormCol />
+        <Video
+            videoUrl="introduccion"
+            videoUrlResponsive="introduccion-responsive"
+            handlePlayButton
+            deleteFinish
+        />
 
-		<br />
-		<br />
-		<br />
+        <img src="/icon/row.svg" alt="icono que indica que el usuario debe bajar" />
 
-		<MainFooter />
+        <FormCol />
 
-		<style jsx>{`
+        <br />
+        <br />
+        <br />
+
+        <MainFooter />
+
+        <style jsx>{`
     
 			img {
 				display: block;
@@ -55,7 +60,7 @@ const Index = () => {
 			}
 		
 		`}</style>
-	</MainLayout>
+    </MainLayout>
 }
 
 export default Index
