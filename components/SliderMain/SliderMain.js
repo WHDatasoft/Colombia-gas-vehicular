@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const SliderMain = () => {
     const [slide, setSlide] = useState(2);
 
-    /* useEffect(() => {
+    useEffect(() => {
         const time = setTimeout(() => {
             let direction = 'right'
             if (slide <= 0) {
@@ -22,7 +22,7 @@ const SliderMain = () => {
         return () => {
             clearTimeout(time);
         };
-    }, [slide]); */
+    }, [slide]);
 
     const selectSlide = (num) => {
         setSlide(num)
