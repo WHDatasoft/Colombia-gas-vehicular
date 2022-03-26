@@ -5,7 +5,7 @@ import Video from '../components/Sections/Video'
 import MainFooter from '../components/Footer/MainFooter'
 import Banner from '../components/advertising/Banner'
 import Hero from '../components/Hero/Hero'
-import SliderMain from '../components/SliderMain/SliderMain'
+/* import SliderMain from '../components/SliderMain/SliderMain' */
 
 
 const Index = () => {

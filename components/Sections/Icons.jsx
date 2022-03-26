@@ -1,22 +1,22 @@
 const Icons = () => {
-	return <section>
+    return <section>
 
-		<div className="content">
-			<img src="/logo/logo-blanco.png" alt="" className="logo" />
-		</div>
-		<div className="content">
-			<img src="/icon/didi.svg" alt="" className="didi" />
-		</div>
-		<div className="content">
+        <div className="content">
+            <img src="/logo/logo-blanco.png" alt="" className="logo" />
+        </div>
+        <div className="content">
+            <img src="/icon/didi.svg" alt="" className="didi" />
+        </div>
+        {/* <div className="content">
 			<img src="/icon/servitek.svg" alt="" className="servitek" />
-		</div>
+		</div> */}
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				font-size: 1rem;
 				display: grid;
-				grid-template-columns: auto auto auto;
+				grid-template-columns: auto auto;
 				place-items: center;
 				padding: 0 4rem;
 				margin-bottom: 4rem;
@@ -81,7 +81,7 @@ const Icons = () => {
 			}
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default Icons

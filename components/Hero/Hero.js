@@ -40,12 +40,12 @@ const Hero = () => {
                 position: absolute;
                 right: -15%;
                 height: 100%;
-                width: 120%;
-                background-image: url("/slider/background-left.png");
-                background-position-x: 20vw;
-                background-size: auto 100%;
+                width: 100%;
+                background-image: url("/slider/background-left.webp");
+                background-position-x: 10vw;
+                background-size: auto 110%;
                 background-repeat: no-repeat;
-                background-color: #F2F2F1;
+                background-color: #D4D4D6;
                 transform: skewX(15deg);
             }
 
@@ -59,34 +59,20 @@ const Hero = () => {
             img {
                 height: 6rem;
                 position: absolute;
-                right: 10%;
+                right: 12%;
                 top: 2rem;
             }
             
             @media screen and (max-width: 1400px) {
                 .image {
-                    background-position-x: 15vw;
+                    background-position-x: 5vw;
                 }
-
                 img {
                     height: 5rem;
                 }
             }
 
             @media screen and (max-width: 1250px) {
-                .image {
-                    background-position-x: 10vw;
-                }
-
-                img {
-                    height: 4.5rem;
-                }
-            }
-
-            @media screen and (max-width: 1250px) {
-                .image {
-                    background-position-x: 15vw;
-                }
 
                 .container {
                     height: calc(80vh - 10rem);
@@ -99,6 +85,10 @@ const Hero = () => {
 
             @media screen and (max-width: 1050px) {
 
+                .image {
+                    background-position-x: 5vw;
+                }
+
                 .container {
                     height: calc(70vh - 10rem);
                 }
@@ -110,6 +100,10 @@ const Hero = () => {
 
             @media screen and (max-width: 900px) {
 
+                .image {
+                    background-position-x: 10vw;
+                }
+
                 .container {
                     height: calc(60vh - 10rem);
                 }
@@ -120,6 +114,10 @@ const Hero = () => {
             }
 
             @media screen and (max-width: 750px) {
+
+                .image {
+                    background-position-x: 10vw;
+                }
 
                 .container {
                     height: calc(50vh - 10rem);
@@ -140,7 +138,7 @@ const Hero = () => {
 
             @media screen and (max-width: 450px) {
                 .image {
-                    background-position-x: 20vw;
+                    background-position-x: 10vw;
                 }
 
                 .container {
@@ -154,11 +152,11 @@ const Hero = () => {
 
             @media screen and (max-width: 400px) {
                 .image {
-                    background-position-x: 20vw;
+                    background-position-x: 10vw;
                 }
 
                 .container {
-                    height: calc(30vh - 10rem);
+                    height: calc(35vh - 10rem);
                 }
 
                 img {

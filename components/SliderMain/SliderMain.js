@@ -36,21 +36,17 @@ const SliderMain = () => {
 
     const toLeft = () => {
         setSlide(currentSlide => {
-            if (currentSlide > 0) {
-                console.log(currentSlide)
-                return currentSlide - 1
-            }
-
-            return currentSlide
+            return currentSlide > 0
+                ? currentSlide - 1
+                : currentSlide
         })
     }
 
     const toRight = () => {
         setSlide(currentSlide => {
-            if (currentSlide < 3) {
-                return currentSlide + 1
-            }
-            return currentSlide
+            return currentSlide < 3
+                ? currentSlide + 1
+                : currentSlide
         })
     }
 
@@ -187,19 +183,19 @@ const SliderMain = () => {
                 }
 
                 .slide-1 {
-                    background-image: url("/slider/slide-1.png");
+                    background-image: url("/slider/slide-1.webp");
                 }
 
                 .slide-2 {
-                    background-image: url("/slider/slide-2.png");
+                    background-image: url("/slider/slide-2.webp");
                 }
 
                 .slide-3 {
-                    background-image: url("/slider/slide-3.png");
+                    background-image: url("/slider/slide-3.webp");
                 }
 
                 .slide-4 {
-                    background-image: url("/slider/slide-4.png");
+                    background-image: url("/slider/slide-4.webp");
                 }
 
                 button:hover {
@@ -362,7 +358,7 @@ const SliderMain = () => {
             @media screen and (max-width: 400px) {
 
                 .content, .content > ul, .content > ul > li, .slide {
-                    height: calc(30vh - 10rem);
+                    height: calc(35vh - 10rem);
                 }
 
                 h3 {
@@ -378,9 +374,6 @@ const SliderMain = () => {
 
             @media screen and (max-width: 350px) {
 
-                .content, .content > ul, .content > ul > li, .slide {
-                    height: calc(30vh - 10rem);
-                }
 
                 h3 {
                     font-size: 0.7rem;
