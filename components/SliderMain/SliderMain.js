@@ -112,6 +112,7 @@ const SliderMain = () => {
                 .content {
                     width: 100%;
                     height: calc(90vh - 10rem);
+                    min-height: 200px;
                     position: relative;
                     transform: skewX(15deg) translateX(-15%);
                     background-size: cover;
@@ -150,6 +151,7 @@ const SliderMain = () => {
                 .content > ul {
                     display: grid;
                     height: calc(90vh - 10rem);
+                    min-height: 200px;
                     width: 400%;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
                     transition: margin-left 1.5s ease;
@@ -158,6 +160,7 @@ const SliderMain = () => {
                 .content > ul > li {
                     list-style: none;
                     height: calc(90vh - 10rem);
+                    min-height: 200px;
                 }
 
                 button {
@@ -176,6 +179,7 @@ const SliderMain = () => {
                 .slide {
                     position: relative;
                     height: calc(90vh - 10rem);
+                    min-height: 200px;
                     width: 100%;
                     background-size: cover ;
                     background-position-x: right;

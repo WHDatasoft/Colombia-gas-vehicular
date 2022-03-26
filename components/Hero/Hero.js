@@ -22,6 +22,7 @@ const Hero = () => {
                 display: grid;
                 grid-template-columns: 2fr 1.5fr;
                 height: calc(90vh - 10rem);
+                min-height: 200px;
                 gap: .5rem;
                 width: 140%;
                 transform: translateX(-15%);
@@ -86,7 +87,7 @@ const Hero = () => {
             @media screen and (max-width: 1050px) {
 
                 .image {
-                    background-position-x: 5vw;
+                    background-position-x: 0vw;
                 }
 
                 .container {
@@ -101,7 +102,7 @@ const Hero = () => {
             @media screen and (max-width: 900px) {
 
                 .image {
-                    background-position-x: 10vw;
+                    background-position-x: 5vw;
                 }
 
                 .container {
@@ -116,7 +117,7 @@ const Hero = () => {
             @media screen and (max-width: 750px) {
 
                 .image {
-                    background-position-x: 10vw;
+                    background-position-x: 5vw;
                 }
 
                 .container {
@@ -138,7 +139,7 @@ const Hero = () => {
 
             @media screen and (max-width: 450px) {
                 .image {
-                    background-position-x: 10vw;
+                    background-position-x: -5vw;
                 }
 
                 .container {
@@ -151,9 +152,6 @@ const Hero = () => {
             }
 
             @media screen and (max-width: 400px) {
-                .image {
-                    background-position-x: 10vw;
-                }
 
                 .container {
                     height: calc(35vh - 10rem);
