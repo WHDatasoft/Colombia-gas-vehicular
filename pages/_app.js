@@ -1,8 +1,13 @@
 import '../styles/globals.css'
 import Script from 'next/script'
 import { useEffect } from 'react'
-import * as fbq from '../lib/fpixel'
 import { useRouter } from 'next/router'
+
+// facebook pixel
+import * as fbq from '../lib/fpixel'
+
+// google analitics
+import * as ga from '../lib/ga'
 
 
 function MyApp({ Component, pageProps }) {
@@ -10,14 +15,17 @@ function MyApp({ Component, pageProps }) {
     const router = useRouter()
 
     useEffect(() => {
+
         // This pageview only triggers the first time (it's important for Pixel to have real information)
         fbq.pageview()
 
-        const handleRouteChange = () => {
-            fbq.pageview()
+        const handleRouteChange = (url) => {
+            fbq.pageview(url)
+            ga.pageview(url)
         }
 
         router.events.on('routeChangeComplete', handleRouteChange)
+
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange)
         }
