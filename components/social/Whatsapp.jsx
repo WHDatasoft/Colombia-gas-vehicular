@@ -28,7 +28,9 @@ const Whatsapp = () => {
 			}
 
 			img {
-				height: 9rem;
+				height: 7rem;
+                padding: 1.5rem;
+                box-sizing: border-box;
 			}
 
 			.message {

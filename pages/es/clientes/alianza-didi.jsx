@@ -1,17 +1,17 @@
-import MainLayout from "../../layout/MainLayout"
-import Head from '../../components/Head/Head'
-import SliderMain from "../../components/Slider/SliderMain"
-import SlideDidi from "../../components/slides-didi/SlideDidi"
-import Icons from "../../components/Sections/Icons"
-import ClientMain from "../../components/Sections/ClientMain"
+import MainLayout from "../../../layout/MainLayout"
+import Head from '../../../components/Head/Head'
+import SliderMain from "../../../components/Slider/SliderMain"
+import SlideDidi from "../../../components/slides-didi/SlideDidi"
+import Icons from "../../../components/Sections/Icons"
+import ClientMain from "../../../components/Sections/ClientMain"
 
-import FormDidi from "../../components/Forms/FormDidi"
-import TitleDidi from "../../components/title/TitleDidi"
-import MainServices from "../../components/Sections/MainServices"
-import Row from "../../components/Decorations/Row"
-import DidiAside from "../../components/slides-didi/DidiAside"
-import DidiContent from "../../components/slides-didi/DidiContent"
-import MainFooter from "../../components/Footer/MainFooter"
+import FormDidi from "../../../components/Forms/FormDidi"
+import TitleDidi from "../../../components/title/TitleDidi"
+import MainServices from "../../../components/Sections/MainServices"
+import Row from "../../../components/Decorations/Row"
+import DidiAside from "../../../components/slides-didi/DidiAside"
+import DidiContent from "../../../components/slides-didi/DidiContent"
+import MainFooter from "../../../components/Footer/MainFooter"
 
 const AlianzaDidi = () => {
 

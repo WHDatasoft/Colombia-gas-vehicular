@@ -1,68 +1,69 @@
 const Schedule = () => {
-	return <section className="container">
+    return <section className="container">
 
-		<div className="schedule-wrapper">
-			<h2>Horario de atención</h2>
-			<div className="schedule">
-				<ul className="size">
-					<li>D</li>
-					<li>L</li>
-					<li>M</li>
-					<li>W</li>
-					<li>J</li>
-					<li>V</li>
-					<li>S</li>
-				</ul>
-				<ul>
-					<li className="close">cerrado</li>
-					<li>7:30 am</li>
-					<li>7:30 am</li>
-					<li>7:30 am</li>
-					<li>7:30 am</li>
-					<li>7:30 am</li>
-					<li>8:00 am</li>
-				</ul>
-				<ul>
-					<li className="close">cerrado</li>
-					<li>12:30 am</li>
-					<li>12:30 am</li>
-					<li>12:30 am</li>
-					<li>12:30 am</li>
-					<li>12:30 am</li>
-					<li></li>
-				</ul>
-				<ul>
-					<li className="close">cerrado</li>
-					<li className="close">cerrado</li>
-					<li className="close">cerrado</li>
-					<li className="close">cerrado</li>
-					<li className="close">cerrado</li>
-					<li className="close">cerrado</li>
-					<li>1:00 pm</li>
-				</ul>
-				<ul>
-					<li className="close">cerrado</li>
-					<li>1:30 pm</li>
-					<li>1:30 pm</li>
-					<li>1:30 pm</li>
-					<li>1:30 pm</li>
-					<li>1:30 pm</li>
-					<li className="close">cerrado</li>
-				</ul>
-				<ul>
-					<li className="close">cerrado</li>
-					<li>5:00 pm</li>
-					<li>5:00 pm</li>
-					<li>5:00 pm</li>
-					<li>5:00 pm</li>
-					<li>5:00 pm</li>
-					<li className="close">cerrado</li>
-				</ul>
-			</div>
-		</div>
+        <div className="schedule-wrapper">
+            <h2>Horario de atención</h2>
+            <br />
+            <div className="schedule">
+                <ul className="size">
+                    <li>D</li>
+                    <li>L</li>
+                    <li>M</li>
+                    <li>W</li>
+                    <li>J</li>
+                    <li>V</li>
+                    <li>S</li>
+                </ul>
+                <ul>
+                    <li className="close">cerrado</li>
+                    <li>7:30 am</li>
+                    <li>7:30 am</li>
+                    <li>7:30 am</li>
+                    <li>7:30 am</li>
+                    <li>7:30 am</li>
+                    <li>8:00 am</li>
+                </ul>
+                <ul>
+                    <li className="close">cerrado</li>
+                    <li>12:30 am</li>
+                    <li>12:30 am</li>
+                    <li>12:30 am</li>
+                    <li>12:30 am</li>
+                    <li>12:30 am</li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li className="close">cerrado</li>
+                    <li className="close">cerrado</li>
+                    <li className="close">cerrado</li>
+                    <li className="close">cerrado</li>
+                    <li className="close">cerrado</li>
+                    <li className="close">cerrado</li>
+                    <li>1:00 pm</li>
+                </ul>
+                <ul>
+                    <li className="close">cerrado</li>
+                    <li>1:30 pm</li>
+                    <li>1:30 pm</li>
+                    <li>1:30 pm</li>
+                    <li>1:30 pm</li>
+                    <li>1:30 pm</li>
+                    <li className="close">cerrado</li>
+                </ul>
+                <ul>
+                    <li className="close">cerrado</li>
+                    <li>5:00 pm</li>
+                    <li>5:00 pm</li>
+                    <li>5:00 pm</li>
+                    <li>5:00 pm</li>
+                    <li>5:00 pm</li>
+                    <li className="close">cerrado</li>
+                </ul>
+            </div>
+        </div>
 
 
-		<style jsx>{`
+        <style jsx>{`
 
 			:global(:root) {
 				--size: 1
@@ -71,15 +72,13 @@ const Schedule = () => {
 			section {
 				position: relative;
 				z-index: 1;
-				background-color: var(--blue-opacity);
 				border-top-left-radius: 50%;
 				border-bottom-left-radius: 50%;
-				border: 1px solid white;
 				border-right: none;
 				display: grid;
 				align-items: center;
 				padding:  calc(7rem * var(--size)) calc(2rem * var(--size)) calc(7rem * var(--size)) calc(5rem * var(--size));
-				justify-self: flex-end;
+				justify-self: center;
 			}
 
 			h2 {
@@ -148,7 +147,7 @@ const Schedule = () => {
 			}
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default Schedule

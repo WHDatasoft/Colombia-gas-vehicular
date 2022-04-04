@@ -1,38 +1,38 @@
-import MainFooter from '../../components/Footer/MainFooter'
-import Head from '../../components/Head/Head'
-import Banner from '../../components/Sections/Banner'
-import Description from '../../components/Sections/Description'
-import MainLayout from "../../layout/MainLayout"
+import MainFooter from '../../../components/Footer/MainFooter'
+import Head from '../../../components/Head/Head'
+import Banner from '../../../components/Sections/Banner'
+import Description from '../../../components/Sections/Description'
+import MainLayout from "../../../layout/MainLayout"
 
 const Index = () => {
-	return <MainLayout>
-		<Head>
-			<title>Revisión Anual</title>
-		</Head>
-		<Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
-			<img className="person" src="/img/banner/person-3.png" alt="" loading="eager" />
-			<div className="text-wrapper">
-				<p className="texto-1">Siempre con cuidado, prevenga cualquier daño mayor con la revisión anual de su vehículo</p>
-				<h2 className="texto-2">COLOLOMBIAGAS VEHICULAR  TE OFRECE EL MEJOR SERVICIO PARA TU REVISIÓN ANUAL</h2>
-				<h1 className="texto-3">$75.000</h1>
-			</div>
-		</Banner>
+    return <MainLayout>
+        <Head>
+            <title>Revisión Anual</title>
+        </Head>
+        <Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
+            <img className="person" src="/img/banner/person-3.png" alt="" loading="eager" />
+            <div className="text-wrapper">
+                <p className="texto-1">Siempre con cuidado, prevenga cualquier daño mayor con la revisión anual de su vehículo</p>
+                <h2 className="texto-2">COLOLOMBIAGAS VEHICULAR  TE OFRECE EL MEJOR SERVICIO PARA TU REVISIÓN ANUAL</h2>
+                <h1 className="texto-3">$75.000</h1>
+            </div>
+        </Banner>
 
-		<Description
-			title="Revisión Anual"
-			textList={[
-				"Se hacen pruebas de hermeticidad, escapes y funcionamiento, para garantizar el cumplimiento de las condiciones técnicas y de seguridad exigidas."
-			]}
-		>
-		</Description>
+        <Description
+            title="Revisión Anual"
+            textList={[
+                "Se hacen pruebas de hermeticidad, escapes y funcionamiento, para garantizar el cumplimiento de las condiciones técnicas y de seguridad exigidas."
+            ]}
+        >
+        </Description>
 
-		<div className="law">
-			<a href="/download/ley0957-2012.pdf" download>CONSULTAR LEY 0957 del 2012</a>
-		</div>
+        <div className="law">
+            <a href="/download/ley0957-2012.pdf" download>CONSULTAR LEY 0957 del 2012</a>
+        </div>
 
-		<MainFooter />
+        <MainFooter />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.text-wrapper {
 				font-size: 1rem;
@@ -145,7 +145,7 @@ const Index = () => {
 
 		
 		`}</style>
-	</MainLayout>
+    </MainLayout>
 }
 
 export default Index

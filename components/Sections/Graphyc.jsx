@@ -1,41 +1,41 @@
 import TitleRight from "../title/TitleRight"
 
 const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
-	const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q']
-	return <article>
+    const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q']
+    return <article>
 
-		<TitleRight
-			title={title}
-		/>
+        <TitleRight
+            title={title}
+        />
 
-		<div className="wrapper-section">
-			<h3>{subtitle}</h3>
-			<section>
-				<video src={`/video/${video}.mp4`} autoPlay loop></video>
-				<ul className="main-list">
-					{
-						mainList.map((text, index) => (
-							<li key={text}>
-								<p>
-									<span>{alphabet[index]}</span>
-									{text}
-								</p>
-							</li>
-						))
-					}
-				</ul>
-				<div className="line"></div>
-				<ul className="second-list">
-					{
-						secondList.map(text => (
-							<li key={text}>{text}</li>
-						))
-					}
-				</ul>
-			</section>
-		</div>
+        <div className="wrapper-section">
+            <h2>{subtitle}</h2>
+            <section>
+                <video src={`/video/${video}.mp4`} autoPlay loop></video>
+                <ul className="main-list">
+                    {
+                        mainList.map((text, index) => (
+                            <li key={text}>
+                                <p>
+                                    <span>{alphabet[index]}</span>
+                                    {text}
+                                </p>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <div className="line"></div>
+                <ul className="second-list">
+                    {
+                        secondList.map(text => (
+                            <li key={text}>{text}</li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </div>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.title {
 				display: grid;
@@ -77,7 +77,7 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 				padding: 2rem;
 			}
 
-			h3 {
+			h2 {
 				text-align: center;
 				color: var(--blue);
 				font-weight: 800;
@@ -207,7 +207,7 @@ const Graphyc = ({ title, subtitle, mainList, secondList, video }) => {
 			}
 
 		`}</style>
-	</article>
+    </article>
 }
 
 export default Graphyc

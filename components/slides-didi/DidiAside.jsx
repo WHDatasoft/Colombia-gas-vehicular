@@ -1,28 +1,28 @@
 import ServiceLink from "../link/ServiceLink"
 
 const DidiAside = ({ mainTitle, secondTitle, link, img, posImg }) => {
-	return <>
+    return <>
 
-		<h3>{mainTitle}</h3>
-		<h2>{secondTitle}</h2>
-		<img src={img} alt="" className="final" />
-		{
-			link
-				?
-				<ServiceLink
-					url={link}
-				/>
-				:
-				''
-		}
+        <h3>{mainTitle}</h3>
+        <h4>{secondTitle}</h4>
+        <img src={img} alt="" className="final" />
+        {
+            link
+                ?
+                <ServiceLink
+                    url={link}
+                />
+                :
+                ''
+        }
 
-		<style jsx>{`
+        <style jsx>{`
 
 			:global(:root) {
 				--scale: 1
 			}
 
-			h2, h3 {
+			h4, h3 {
 				text-align: center;
 			}
 
@@ -32,7 +32,7 @@ const DidiAside = ({ mainTitle, secondTitle, link, img, posImg }) => {
 				font-weight: 600;
 			}
 
-			h2 {
+			h4 {
 				box-sizing: border-box;
 				color: var(--light-green);
 				background-color: white;
@@ -77,14 +77,14 @@ const DidiAside = ({ mainTitle, secondTitle, link, img, posImg }) => {
 
 
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.container {
 				
 			}
 
 		`}</style>
-	</>
+    </>
 }
 
 export default DidiAside

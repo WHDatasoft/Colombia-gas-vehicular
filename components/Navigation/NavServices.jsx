@@ -1,53 +1,53 @@
 import Link from 'next/link'
 
 const NavServices = () => {
-	return <nav className="container">
+    return <nav className="container">
 
-		<ul>
-			<li>
-				<Link href="/servicios/instalacion-gnv">
-					<a>
-						<img src="/icon/servicio1.svg" alt="" />
-						<span>Instalación de GNV</span>
-					</a>
-				</Link>
-			</li>
+        <ul>
+            <li>
+                <Link href="/es/servicios/instalacion-gnv">
+                    <a>
+                        <img src="/icon/servicio1.svg" alt="" />
+                        <span>Instalación de GNV</span>
+                    </a>
+                </Link>
+            </li>
 
-			<li>
-				<Link href="/servicios/mantenimiento">
-					<a>
-						<img src="/icon/servicio3.svg" alt="" />
-						<span>Mantenimiento</span>
-					</a>
-				</Link>
-			</li>
-			<li>
-				<Link href="/servicios/revision-anual">
-					<a>
-						<img src="/icon/servicio4.svg" alt="" />
-						<span>Revisión anual</span>
-					</a>
-				</Link>
-			</li>
-			<li>
-				<Link href="/servicios/prueba-hidrostatica">
-					<a>
-						<img src="/icon/servicio2.svg" alt="" />
-						<span>Prueba Hidrostática</span>
-					</a>
-				</Link>
-			</li>
-			<li>
-				<Link href="/servicios/venta-de-repuestos">
-					<a>
-						<img src="/icon/servicio5.svg" alt="" />
-						<span>Venta de repuestos</span>
-					</a>
-				</Link>
-			</li>
-		</ul>
+            <li>
+                <Link href="/es/servicios/mantenimiento">
+                    <a>
+                        <img src="/icon/servicio3.svg" alt="" />
+                        <span>Mantenimiento</span>
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/es/servicios/revision-anual">
+                    <a>
+                        <img src="/icon/servicio4.svg" alt="" />
+                        <span>Revisión anual</span>
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/es/servicios/prueba-hidrostatica">
+                    <a>
+                        <img src="/icon/servicio2.svg" alt="" />
+                        <span>Prueba Hidrostática</span>
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/es/servicios/venta-de-repuestos">
+                    <a>
+                        <img src="/icon/servicio5.svg" alt="" />
+                        <span>Venta de repuestos</span>
+                    </a>
+                </Link>
+            </li>
+        </ul>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.container {
 				
@@ -134,7 +134,7 @@ const NavServices = () => {
 			}
 
 		`}</style>
-	</nav>
+    </nav>
 }
 
 export default NavServices

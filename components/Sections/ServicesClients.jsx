@@ -3,7 +3,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
         <div className="content">
             <header>
                 <img className="icon" src={`/icon/${icon}.svg`} alt="" />
-                <h3>Servicios</h3>
+                <h2>Servicios</h2>
             </header>
 
             <section>
@@ -59,7 +59,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
 				padding: 2rem 0;
 			}
 
-			h3 {
+			h2 {
 				color: white;
 				font-size: 2rem;
 			}

@@ -1,25 +1,25 @@
 import Link from 'next/link'
 
 const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
-	return <main>
+    return <main>
 
-		<div className="back">
-			<Link href="/servicios">
-				<a>
-					<div className="icon">
-						<img src={`/icon/${icon}`} alt="" />
-						<p>{text}</p>
-					</div>
-				</a>
-			</Link>
-		</div>
+        <div className="back">
+            <Link href="/es/servicios">
+                <a>
+                    <div className="icon">
+                        <img src={`/icon/${icon}`} alt="" />
+                        <p>{text}</p>
+                    </div>
+                </a>
+            </Link>
+        </div>
 
-		<img className="gnv" src="/img/banner/gnv.png" alt="" loading="eager" />
+        <img className="gnv" src="/img/banner/gnv.png" alt="" loading="eager" />
 
-		{children}
+        {children}
 
 
-		<style jsx>{`
+        <style jsx>{`
 
 			main {
 				position: relative;
@@ -210,7 +210,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
 			}
 
 		`}</style>
-	</main>
+    </main>
 }
 
 export default Banner

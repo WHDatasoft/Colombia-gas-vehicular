@@ -1,10 +1,10 @@
-import Head from '../components/Head/Head'
-import MainLayout from '../layout/MainLayout'
-import FormCol from '../components/Forms/FormCol'
-import Video from '../components/Sections/Video'
-import MainFooter from '../components/Footer/MainFooter'
-import Banner from '../components/advertising/Banner'
-import Hero from '../components/Hero/Hero'
+import Head from '../../components/Head/Head'
+import MainLayout from '../../layout/MainLayout'
+import FormCol from '../../components/Forms/FormCol'
+import Video from '../../components/Sections/Video'
+import MainFooter from '../../components/Footer/MainFooter'
+import Banner from '../../components/advertising/Banner'
+import Hero from '../../components/Hero/Hero'
 /* import SliderMain from '../components/SliderMain/SliderMain' */
 
 

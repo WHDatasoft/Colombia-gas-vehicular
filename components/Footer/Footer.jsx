@@ -1,36 +1,36 @@
 const Footer = () => {
-	return <footer>
-		<div className="image"></div>
-		<div className="content">
-			<p className="phone">
-				<a href="tel:+573134229281">313 422 9281</a>
-				{' '}
-				-
-				{' '}
-				<a href="tel:+573232230714">323 223 0740</a>
-			</p>
-			<br />
-			<p className="direcction">CRA 51 # 71 c 27 Bogotá, D.C Colombia</p>
-			<br />
+    return <footer>
+        <div className="image"></div>
+        <div className="content">
+            <p className="phone">
+                <a href="tel:+573134229281">313 422 9281</a>
+                {' '}
+                -
+                {' '}
+                <a href="tel:+573232230714">323 223 0740</a>
+            </p>
+            <br />
+            <p className="direcction">CRA 51 # 71 c 27 Bogotá, D.C Colombia</p>
+            <br />
 
-			<ul className="email">
-				<li>
-					<h5>Gerencia</h5>
-					<a href="mailto:gerencia@colombiagasvehicular.co">gerencia@colombiagasvehicular.co</a>
-				</li>
-				<li>
-					<h5>Servicio al cliente</h5>
-					<a href="mailto:servicioalcliente@colombiagasvehicular.co">servicioalcliente@colombiagasvehicular.co</a>
-				</li>
-				<li>
-					<h5>Marketing</h5>
-					<a href="mailto:marketing@colombiagasvehicular.co">marketing@colombiagasvehicular.co</a>
-				</li>
-			</ul>
-		</div>
-		<br />
+            <ul className="email">
+                <li>
+                    <h3>Gerencia</h3>
+                    <a href="mailto:gerencia@colombiagasvehicular.co">gerencia@colombiagasvehicular.co</a>
+                </li>
+                <li>
+                    <h3>Servicio al cliente</h3>
+                    <a href="mailto:servicioalcliente@colombiagasvehicular.co">servicioalcliente@colombiagasvehicular.co</a>
+                </li>
+                <li>
+                    <h3>Marketing</h3>
+                    <a href="mailto:marketing@colombiagasvehicular.co">marketing@colombiagasvehicular.co</a>
+                </li>
+            </ul>
+        </div>
+        <br />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			footer {
 				position: relative;
@@ -57,7 +57,7 @@ const Footer = () => {
 				margin-bottom: 1.5rem;
 			}
 
-			h5 {
+			h3 {
 				color: white;
 				font-weight: 600;
 				margin-bottom: .5rem;
@@ -110,7 +110,7 @@ const Footer = () => {
 			}
 
 		`}</style>
-	</footer>
+    </footer>
 }
 
 export default Footer

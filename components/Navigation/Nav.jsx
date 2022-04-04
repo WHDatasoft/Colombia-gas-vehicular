@@ -4,156 +4,156 @@ import { useEffect, useState } from 'react'
 
 const Nav = ({ setEnableNav, enableNav }) => {
 
-	const router = useRouter()
+    const router = useRouter()
 
-	const [linkSelected, setLinkSelected] = useState('')
-	const [submenu, setSubmenu] = useState(false)
-	const [submenuActive, setSubmenuActive] = useState('');
+    const [linkSelected, setLinkSelected] = useState('')
+    const [submenu, setSubmenu] = useState(false)
+    const [submenuActive, setSubmenuActive] = useState('');
 
 
 
-	useEffect(() => {
-		setLinkSelected(router.asPath)
-	}, [])
+    useEffect(() => {
+        setLinkSelected(router.asPath)
+    }, [])
 
-	const close = () => {
-		setEnableNav(false)
-		setSubmenu(false)
-		setSubmenuActive('')
-	}
+    const close = () => {
+        setEnableNav(false)
+        setSubmenu(false)
+        setSubmenuActive('')
+    }
 
-	const goBack = () => {
-		setSubmenu(false)
-		setSubmenuActive('')
-	}
+    const goBack = () => {
+        setSubmenu(false)
+        setSubmenuActive('')
+    }
 
-	const linkList = [
-		{ title: 'Inicio', url: '/' },
-		{ title: '¿Quiénes somos?', url: '/quienes-somos' },
-		{
-			title: 'Servicios', url: '/servicios',
-			list: [
-				{ title: 'instalación GNV', url: '/servicios/instalacion-gnv' },
-				{ title: 'Mantenimiento', url: '/servicios/mantenimiento' },
-				{ title: 'Revisión anual', url: '/servicios/revision-anual' },
-				{ title: 'Prueba hidrostática', url: '/servicios/prueba-hidrostatica' },
-				{ title: 'venta de repuestos', url: '/servicios/venta-de-repuestos' },
-			]
-		},
-		{
-			title: 'Beneficios', url: '/beneficios',
-			list: [
-				// { title: 'Programa de salud', url: '/beneficios/programa-de-salud' },
-				{ title: 'ahorro', url: '/beneficios/ahorro' },
-				{ title: 'combustible', url: '/beneficios/combustible' },
-				{ title: 'beneficios medio ambientales', url: '/beneficios/beneficios-medio-ambientales' },
-				{ title: 'financianción', url: '/beneficios/financiacion' },
-			]
+    const linkList = [
+        { title: 'Inicio', url: '/es/' },
+        { title: '¿Quiénes somos?', url: '/es/quienes-somos' },
+        {
+            title: 'Servicios', url: '/es/servicios',
+            list: [
+                { title: 'instalación GNV', url: '/es/servicios/instalacion-gnv' },
+                { title: 'Mantenimiento', url: '/es/servicios/mantenimiento' },
+                { title: 'Revisión anual', url: '/es/servicios/revision-anual' },
+                { title: 'Prueba hidrostática', url: '/es/servicios/prueba-hidrostatica' },
+                { title: 'venta de repuestos', url: '/es/servicios/venta-de-repuestos' },
+            ]
+        },
+        {
+            title: 'Beneficios', url: '/es/beneficios',
+            list: [
+                // { title: 'Programa de salud', url: '/beneficios/programa-de-salud' },
+                { title: 'ahorro', url: '/es/beneficios/ahorro' },
+                { title: 'combustible', url: '/es/beneficios/combustible' },
+                { title: 'beneficios medio ambientales', url: '/es/beneficios/beneficios-medio-ambientales' },
+                { title: 'financianción', url: '/es/beneficios/financiacion' },
+            ]
 
-		},
-		{
-			title: 'Clientes', url: '/clientes',
-			list: [
-				{ title: 'Alianza DIDI', url: '/clientes/alianza-didi' }
-			]
-		},
-		{ title: 'Debes saber', url: '/debes-saber' },
-		{ title: 'Contáctenos', url: '/contactenos' },
-	]
+        },
+        {
+            title: 'Clientes', url: '/es/clientes',
+            list: [
+                { title: 'Alianza DIDI', url: '/es/clientes/alianza-didi' }
+            ]
+        },
+        { title: 'Debes saber', url: '/es/debes-saber' },
+        { title: 'Contáctenos', url: '/es/contactenos' },
+    ]
 
-	return <div className="wrapper">
-		<div className="background-nav" onClick={close}></div>
-		<nav>
+    return <div className="wrapper">
+        <div className="background-nav" onClick={close}></div>
+        <nav>
 
-			<button className="close" onClick={close}>
-				<svg viewBox="0 0 352 512">
-					<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
-				</svg>
-			</button>
-			{
-				submenu
-					?
-					<button className="return" onClick={goBack}>
-						<svg viewBox="0 0 448 512">
-							<path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-						</svg>
-					</button>
-					:
-					''
-			}
+            <button className="close" onClick={close}>
+                <svg viewBox="0 0 352 512">
+                    <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                </svg>
+            </button>
+            {
+                submenu
+                    ?
+                    <button className="return" onClick={goBack}>
+                        <svg viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+                        </svg>
+                    </button>
+                    :
+                    ''
+            }
 
-			<ul className="main-link-list">
-				{
-					linkList.map(mainLink => (
-						<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
-							<>
-								{
-									submenu
-										?
-										''
-										:
-										<>
-											{
-												(mainLink.title === 'Servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
-													?
-													<button className="handle-submenu" onClick={() => {
-														setSubmenu(true)
-														setSubmenuActive(mainLink.title)
-													}}>{mainLink.title}</button>
-													:
-													<Link href={mainLink.url}>
-														<a>
-															<span>
-																{mainLink.title}
-															</span>
-														</a>
-													</Link>
+            <ul className="main-link-list">
+                {
+                    linkList.map(mainLink => (
+                        <li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+                            <>
+                                {
+                                    submenu
+                                        ?
+                                        ''
+                                        :
+                                        <>
+                                            {
+                                                (mainLink.title === 'Servicios' && enableNav) || (mainLink.title === 'Beneficios' && enableNav) || (mainLink.title === 'Clientes' && enableNav)
+                                                    ?
+                                                    <button className="handle-submenu" onClick={() => {
+                                                        setSubmenu(true)
+                                                        setSubmenuActive(mainLink.title)
+                                                    }}>{mainLink.title}</button>
+                                                    :
+                                                    <Link href={mainLink.url}>
+                                                        <a>
+                                                            <span>
+                                                                {mainLink.title}
+                                                            </span>
+                                                        </a>
+                                                    </Link>
 
-											}
-										</>
-								}
-							</>
-							{
-								mainLink.list
-									?
+                                            }
+                                        </>
+                                }
+                            </>
+                            {
+                                mainLink.list
+                                    ?
 
-									<ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
-										{
-											enableNav
-												?
-												<li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
-													<Link href={mainLink.url}>
-														<a>{mainLink.title}</a>
-													</Link>
-												</li>
-												:
-												''
-										}
-										{
+                                    <ul className={submenuActive === mainLink.title ? 'second-link-list-responsive' : 'second-link-list'}>
+                                        {
+                                            enableNav
+                                                ?
+                                                <li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+                                                    <Link href={mainLink.url}>
+                                                        <a>{mainLink.title}</a>
+                                                    </Link>
+                                                </li>
+                                                :
+                                                ''
+                                        }
+                                        {
 
-											mainLink.list.map(secondLink => (
+                                            mainLink.list.map(secondLink => (
 
-												<li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
-													<Link href={secondLink.url}>
-														<a>{secondLink.title}</a>
-													</Link>
-												</li>
+                                                <li key={secondLink.title} className={`second-link ${router.asPath === secondLink.url ? 'selected-second' : ''}`} >
+                                                    <Link href={secondLink.url}>
+                                                        <a>{secondLink.title}</a>
+                                                    </Link>
+                                                </li>
 
-											))
-										}
-									</ul>
-									:
-									null
-							}
-						</li>
-					))
-				}
+                                            ))
+                                        }
+                                    </ul>
+                                    :
+                                    null
+                            }
+                        </li>
+                    ))
+                }
 
-			</ul>
+            </ul>
 
-		</nav>
+        </nav>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.background-nav {
 				display: none;
@@ -345,7 +345,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
 
 		`}</style>
-	</div>
+    </div>
 }
 
 export default Nav

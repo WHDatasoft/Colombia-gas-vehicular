@@ -1,19 +1,19 @@
 const DidiContent = () => {
-	return <>
+    return <>
 
-		<div className="title">
-			<h2>
-				<span className="big-text">Conoce los descuentos</span>
-				<span className="small-text">que tenemos preparados para ti</span>
-			</h2>
-		</div>
-		<img src="/icon/servitek.svg" alt="" className="final" />
+        <div className="title">
+            <h3>
+                <span className="big-text">Conoce los descuentos</span>
+                <span className="small-text">que tenemos preparados para ti</span>
+            </h3>
+        </div>
+        <img src="/icon/servitek.svg" alt="" className="final" />
 
 
 
-		<style jsx>{`
+        <style jsx>{`
 
-			h2 {
+			h3 {
 				color: white;
 				display: grid;
 				justify-items: center;
@@ -63,7 +63,7 @@ const DidiContent = () => {
 			
 
 		`}</style>
-	</>
+    </>
 }
 
 export default DidiContent
