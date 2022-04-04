@@ -63,9 +63,9 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
     }
 
     return <form onSubmit={onSubmit}>
-        <h1>!CONUNÍCATE CON NOSOTROS</h1>
-        <p>Cuidamos tu vehiculo, protejemos el medio ambiente juntos.</p>
-        <p>Colomgiagas Vehicular te ofrece diferentes alternativas para mantenerte en contacto con nostros</p>
+        <h1>¡CONUNÍCATE CON NOSOTROS!</h1>
+        <p>Cuidamos tu vehiculo y protejamos el medio ambiente juntos.</p>
+        <p className="bolder">Colombiagas Vehicular te ofrece diferentes alternativas para mantenerte en contacto con nostros</p>
         <input onChange={onChange} type="text" placeholder="Nombre" name="name" />
         <input onChange={onChange} type="text" placeholder="Celular" name="phone" />
         <textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
@@ -96,6 +96,10 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
                 text-align: center;
                 width: 25rem;
                 margin: auto;
+            }
+
+            .bolder {
+                font-weight: 600;
             }
 
 			button, input, textarea {
