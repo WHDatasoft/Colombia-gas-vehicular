@@ -2,17 +2,17 @@ import Link from 'next/link'
 import NavAdmin from '../Navigation/NavAdmin'
 
 const HeaderAdmin = () => {
-	return <header className="container">
+    return <header className="container">
 
-		<Link href="/">
-			<a>
-				<img src="/logo/main-logo.png" alt="logo colombiagas vehicular" />
-			</a>
-		</Link>
+        <Link href="/">
+            <a>
+                <img src="/logo/main-logo.webp" alt="logo colombiagas vehicular" />
+            </a>
+        </Link>
 
-		<NavAdmin />
+        <NavAdmin />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			header {
 				box-sizing: border-box;
@@ -34,7 +34,7 @@ const HeaderAdmin = () => {
 			}
 
 		`}</style>
-	</header>
+    </header>
 }
 
 export default HeaderAdmin

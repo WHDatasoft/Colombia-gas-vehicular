@@ -1,44 +1,44 @@
 const Gas = ({ cilindro, metros, reemplazo, rango, cilindroNum, carNum }) => {
-	return <section>
-		<div className="table-wrapper">
-			<table>
-				<tr>
-					<th>
-						<h5>GAS</h5>
-					</th>
-					<th>
-						<h5>EN METROS</h5>
-					</th>
-					<th>
-						<h5>EN GALONES</h5>
-					</th>
-				</tr>
-				<tr>
-					<td>
-						<p>{cilindro} Litros</p>
-					</td>
-					<td>
-						<p>{metros} m³</p>
-					</td>
-					<td>
-						<p>{reemplazo} galones</p>
-					</td>
-				</tr>
-			</table>
-			<p className="result">VEHÍCULOS CON CILINDRAJE DE <span className="range">{rango}</span></p>
-		</div>
+    return <section>
+        <div className="table-wrapper">
+            <table>
+                <tr>
+                    <th>
+                        <h5>GAS</h5>
+                    </th>
+                    <th>
+                        <h5>EN METROS</h5>
+                    </th>
+                    <th>
+                        <h5>EN GALONES</h5>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>{cilindro} Litros</p>
+                    </td>
+                    <td>
+                        <p>{metros} m³</p>
+                    </td>
+                    <td>
+                        <p>{reemplazo} galones</p>
+                    </td>
+                </tr>
+            </table>
+            <p className="result">VEHÍCULOS CON CILINDRAJE DE <span className="range">{rango}</span></p>
+        </div>
 
-		<article className="figure-wrapper">
-			<div className="gas-wrapper">
-				<img src={`/img/beneficios/ahorro/${cilindroNum}.svg`} alt="" className="gas-img" />
-			</div>
-			<div className="car-wrapper">
-				<img src={`/img/beneficios/ahorro/${carNum}.png`} alt="" className="car-img" />
-			</div>
+        <article className="figure-wrapper">
+            <div className="gas-wrapper">
+                <img src={`/img/beneficios/ahorro/${cilindroNum}.svg`} alt="" className="gas-img" />
+            </div>
+            <div className="car-wrapper">
+                <img src={`/img/beneficios/ahorro/${carNum}.webp`} alt="" className="car-img" />
+            </div>
 
-		</article>
+        </article>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				font-size: 1rem;
@@ -198,7 +198,7 @@ const Gas = ({ cilindro, metros, reemplazo, rango, cilindroNum, carNum }) => {
 			}
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default Gas

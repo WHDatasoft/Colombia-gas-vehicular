@@ -1,23 +1,23 @@
 const ServiceImg = ({ img, title, paragraph }) => {
-	return <section>
+    return <section>
 
-		<img src={`/img/beneficios/${img}`} alt="" />
-		{
-			title
-				?
-				<h3>{title}</h3>
-				:
-				''
-		}
-		{
-			paragraph
-				?
-				<p>{paragraph}</p>
-				:
-				''
-		}
+        <img src={`/img/beneficios/${img}`} alt="" />
+        {
+            title
+                ?
+                <h3>{title}</h3>
+                :
+                ''
+        }
+        {
+            paragraph
+                ?
+                <p>{paragraph}</p>
+                :
+                ''
+        }
 
-		<style jsx>{`
+        <style jsx>{`
 
 			:global(:root) {
 				--height: 13rem;
@@ -36,7 +36,7 @@ const ServiceImg = ({ img, title, paragraph }) => {
 
 			h3, p {
 				height: var(--height);
-				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat right;
+				background: white url('/img/banner/banner-fondo-oscuro.webp') no-repeat right;
 				background-size: cover;
 				text-align: center;
 				align-self: center;
@@ -87,7 +87,7 @@ const ServiceImg = ({ img, title, paragraph }) => {
 
 		
 		`}</style>
-	</section>
+    </section>
 }
 
 export default ServiceImg

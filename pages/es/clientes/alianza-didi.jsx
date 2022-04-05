@@ -18,7 +18,7 @@ const AlianzaDidi = () => {
     /* const slideServiteck = [
 
         <ClientMain
-            backgroundImg="/img/clientes/phone.jpg"
+            backgroundImg="/img/clientes/phone.webp"
             ContentAside={
                 <SlideDidi
                     color="#1c580dAA"
@@ -31,7 +31,7 @@ const AlianzaDidi = () => {
 
 
         <ClientMain
-            backgroundImg="/img/clientes/oil.jpg"
+            backgroundImg="/img/clientes/oil.webp"
             ContentAside={
                 <SlideDidi
                     color="#1c580dAA"
@@ -48,7 +48,7 @@ const AlianzaDidi = () => {
             }
         />,
         <ClientMain
-            backgroundImg="/img/clientes/disk.jpg"
+            backgroundImg="/img/clientes/disk.webp"
             ContentAside={
                 <SlideDidi
                     color="#EF861CAA"
@@ -64,7 +64,7 @@ const AlianzaDidi = () => {
             }
         />,
         <ClientMain
-            backgroundImg="/img/clientes/car-aside.jpg"
+            backgroundImg="/img/clientes/car-aside.webp"
             ContentAside={
                 <SlideDidi
                     color="#1c580dAA"
@@ -73,7 +73,7 @@ const AlianzaDidi = () => {
                         <DidiAside
                             mainTitle="Compra del SOAT"
                             secondTitle="5% DE DESCUENTO"
-                            img="/logo/logo-blanco.png"
+                            img="/logo/logo-blanco.webp"
                         />
                     }
                 />
@@ -84,7 +84,7 @@ const AlianzaDidi = () => {
     const slideColombiagas = [
 
         <ClientMain
-            backgroundImg="/img/clientes/mecanic.jpg"
+            backgroundImg="/img/clientes/mecanic.webp"
             ContentAside={
                 <SlideDidi
                     color="#EF861CAA"
@@ -93,7 +93,7 @@ const AlianzaDidi = () => {
                         <DidiAside
                             mainTitle="Instalación de GNV"
                             secondTitle="10% DE DESCUENTO"
-                            img="/logo/logo-blanco.png"
+                            img="/logo/logo-blanco.webp"
                             link="/servicios/instalacion-gnv"
                         />
                     }
@@ -101,7 +101,7 @@ const AlianzaDidi = () => {
             }
         />,
         // <ClientMain
-        // 	backgroundImg="/img/clientes/person.jpg"
+        // 	backgroundImg="/img/clientes/person.webp"
         // 	ContentAside={
         // 		<SlideDidi
         // 			color="#1c580dAA"
@@ -110,7 +110,7 @@ const AlianzaDidi = () => {
         // 				<DidiAside
         // 					mainTitle="PROGRAMA DE SALUD"
         // 					secondTitle="GRATIS"
-        // 					img="/logo/logo-blanco.png"
+        // 					img="/logo/logo-blanco.webp"
         // 					link="/beneficios/programa-de-salud"
         // 				/>
         // 			}
@@ -118,7 +118,7 @@ const AlianzaDidi = () => {
         // 	}
         // />,
         <ClientMain
-            backgroundImg="/img/clientes/car-panel.jpg"
+            backgroundImg="/img/clientes/car-panel.webp"
             ContentAside={
                 <SlideDidi
                     color="#EF861CAA"
@@ -127,14 +127,14 @@ const AlianzaDidi = () => {
                         <DidiAside
                             mainTitle="Prueba hidrostática"
                             secondTitle="20% DE DESCUENTO"
-                            img="/logo/logo-blanco.png"
+                            img="/logo/logo-blanco.webp"
                         />
                     }
                 />
             }
         />,
         <ClientMain
-            backgroundImg="/img/clientes/car-back.jpg"
+            backgroundImg="/img/clientes/car-back.webp"
             ContentAside={
                 <SlideDidi
                     color="#1c580dAA"
@@ -143,7 +143,7 @@ const AlianzaDidi = () => {
                         <DidiAside
                             mainTitle="Análisis de gases"
                             secondTitle="20% DE DESCUENTO"
-                            img="/logo/logo-blanco.png"
+                            img="/logo/logo-blanco.webp"
                         />
                     }
                 />

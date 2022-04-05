@@ -14,7 +14,7 @@ const Banner = ({ children, imgPerson, fondo, icon, text, personSize }) => {
             </Link>
         </div>
 
-        <img className="gnv" src="/img/banner/gnv.png" alt="" loading="eager" />
+        <img className="gnv" src="/img/banner/gnv.webp" alt="" loading="eager" />
 
         {children}
 

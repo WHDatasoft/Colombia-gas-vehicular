@@ -1,19 +1,19 @@
 const Services = ({ title, text }) => {
-	return <section>
-		{
-			title
-				?
-				<h3>{title}</h3>
-				:
-				''
-		}
-		<p>{text}</p>
+    return <section>
+        {
+            title
+                ?
+                <h3>{title}</h3>
+                :
+                ''
+        }
+        <p>{text}</p>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				position: relative;
-				background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat right;
+				background: white url('/img/banner/banner-fondo-oscuro.webp') no-repeat right;
 				background-size: cover;
 				text-align: center;
 				color: white;
@@ -44,7 +44,7 @@ const Services = ({ title, text }) => {
 			@media screen and (max-width: 730px) {
 
 				section {
-					background: white url('/img/banner/banner-fondo-oscuro.png') no-repeat center;
+					background: white url('/img/banner/banner-fondo-oscuro.webp') no-repeat center;
 				}
 
 				p, h3 {
@@ -60,7 +60,7 @@ const Services = ({ title, text }) => {
 
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default Services

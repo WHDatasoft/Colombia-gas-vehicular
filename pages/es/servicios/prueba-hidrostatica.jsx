@@ -9,8 +9,8 @@ const Index = () => {
         <Head>
             <title>Prueba Hidrostática</title>
         </Head>
-        <Banner imgPerson="" fondo="banner-fondo-oscuro.png" icon="servicio2.svg" text="Prueba Hodristática">
-            <img className="person" src="/img/banner/person-2.png" alt="" loading="eager" />
+        <Banner imgPerson="" fondo="banner-fondo-oscuro.webp" icon="servicio2.svg" text="Prueba Hodristática">
+            <img className="person" src="/img/banner/person-2.webp" alt="" loading="eager" />
             <div className="text-wrapper">
                 <p className="texto-1">COLOMBIAGAS VEHICULAR TE HACE LA PRUEBA HIDROSTÁTICA</p>
                 <h2 className="texto-2">$ 250.000</h2>

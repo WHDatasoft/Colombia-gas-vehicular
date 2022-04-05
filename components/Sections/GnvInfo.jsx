@@ -1,24 +1,24 @@
 const GnvInfo = () => {
-	return <section>
+    return <section>
 
-		<header>
-			<div className="wrapper">
-				<div className="title">
-					<span className="number">8</span>
-					<h2>
-						<span className="space">----</span> pasos para <br /> <span className="space">--</span> instalar
-					</h2>
-				</div>
-				<img src="/icon/GNV-blue.svg" alt="" className="gnv" />
-			</div>
-		</header>
-		<div className="transparent"></div>
-		<div className="info-wrapper">
-			<img src="/logo/logo-vanti.svg" alt="" className="logo-vanti" />
-			<img src="/img/servicios/InfografiaGNV.jpg" alt="" className="info" />
-		</div>
+        <header>
+            <div className="wrapper">
+                <div className="title">
+                    <span className="number">8</span>
+                    <h2>
+                        <span className="space">----</span> pasos para <br /> <span className="space">--</span> instalar
+                    </h2>
+                </div>
+                <img src="/icon/GNV-blue.svg" alt="" className="gnv" />
+            </div>
+        </header>
+        <div className="transparent"></div>
+        <div className="info-wrapper">
+            <img src="/logo/logo-vanti.svg" alt="" className="logo-vanti" />
+            <img src="/img/servicios/InfografiaGNV.webp" alt="" className="info" />
+        </div>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				font-size: 1rem;
@@ -136,7 +136,7 @@ const GnvInfo = () => {
 
 		`}</style>
 
-	</section>
+    </section>
 }
 
 export default GnvInfo

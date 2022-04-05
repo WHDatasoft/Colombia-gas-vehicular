@@ -9,8 +9,8 @@ const Index = () => {
         <Head>
             <title>Revisión Anual</title>
         </Head>
-        <Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
-            <img className="person" src="/img/banner/person-3.png" alt="" loading="eager" />
+        <Banner imgPerson="" fondo="banner-fondo-claro.webp" icon="servicio4.svg" text="Revisions Anual">
+            <img className="person" src="/img/banner/person-3.webp" alt="" loading="eager" />
             <div className="text-wrapper">
                 <p className="texto-1">Siempre con cuidado, prevenga cualquier daño mayor con la revisión anual de su vehículo</p>
                 <h2 className="texto-2">COLOLOMBIAGAS VEHICULAR  TE OFRECE EL MEJOR SERVICIO PARA TU REVISIÓN ANUAL</h2>

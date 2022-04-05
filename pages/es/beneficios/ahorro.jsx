@@ -14,7 +14,7 @@ const Index = () => {
         </Head>
 
         <BenefitBanner
-            background="ahorro.jpg"
+            background="ahorro.webp"
             icon="car-hand-check.svg"
             title="AHORRO"
             subtitle="Ahorra hasta el 50%"

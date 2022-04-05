@@ -2,178 +2,178 @@ import Slider from "../Slider/Slider"
 import ArticleBussines from "./ArticleBussines"
 
 const contentSlider = [
-	<ArticleBussines
-		img="envia.jpg"
-		bussinesName="Envía"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 400 Chevrolet N300',
-		]}
-	/>,
-	<ArticleBussines
-		img="servientrega.jpg"
-		bussinesName="Servientrega Sector"
-		characterList={[
-			'Carga liviana y paqueteo',
-			'Cantidad: 100 Fiat Ducato',
-			'(Dedicados), 15 RAM 1.000'
-		]}
-	/>,
-	<ArticleBussines
-		img="ramo.jpg"
-		bussinesName="Productos Ramo"
-		characterList={[
-			'Sector: Distribución de',
-			'Alimentos en paquete',
-			'Cantidad: 50 Nissan NP300 y 70 Changan'
-		]}
-	/>,
-	<ArticleBussines
-		img="472.jpg"
-		bussinesName="4-72"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 42 RAM 700'
-		]}
-	/>,
-	<ArticleBussines
-		img="ultima.jpg"
-		bussinesName="Silec"
-		characterList={[
-			'Sector: Telecomunicaciones',
-			'Cantidad: 130 Nissan',
-			'NP300'
-		]}
-	/>,
-	<ArticleBussines
-		img="envia.jpg"
-		bussinesName="Envía"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 400 Chevrolet N300',
-		]}
-	/>,
-	<ArticleBussines
-		img="servientrega.jpg"
-		bussinesName="Servientrega Sector"
-		characterList={[
-			'Carga liviana y paqueteo',
-			'Cantidad: 100 Fiat Ducato',
-			'(Dedicados), 15 RAM 1.000'
-		]}
-	/>,
-	<ArticleBussines
-		img="ramo.jpg"
-		bussinesName="Productos Ramo"
-		characterList={[
-			'Sector: Distribución de',
-			'Alimentos en paquete',
-			'Cantidad: 50 Nissan NP300 y 70 Changan'
-		]}
-	/>,
-	<ArticleBussines
-		img="472.jpg"
-		bussinesName="4-72"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 42 RAM 700'
-		]}
-	/>,
-	<ArticleBussines
-		img="ultima.jpg"
-		bussinesName="Silec"
-		characterList={[
-			'Sector: Telecomunicaciones',
-			'Cantidad: 130 Nissan',
-			'NP300'
-		]}
-	/>,
-	<ArticleBussines
-		img="envia.jpg"
-		bussinesName="Envía"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 400 Chevrolet N300',
-		]}
-	/>,
-	<ArticleBussines
-		img="servientrega.jpg"
-		bussinesName="Servientrega Sector"
-		characterList={[
-			'Carga liviana y paqueteo',
-			'Cantidad: 100 Fiat Ducato',
-			'(Dedicados), 15 RAM 1.000'
-		]}
-	/>,
-	<ArticleBussines
-		img="ramo.jpg"
-		bussinesName="Productos Ramo"
-		characterList={[
-			'Sector: Distribución de',
-			'Alimentos en paquete',
-			'Cantidad: 50 Nissan NP300 y 70 Changan'
-		]}
-	/>,
-	<ArticleBussines
-		img="472.jpg"
-		bussinesName="4-72"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 42 RAM 700'
-		]}
-	/>,
-	<ArticleBussines
-		img="ultima.jpg"
-		bussinesName="Silec"
-		characterList={[
-			'Sector: Telecomunicaciones',
-			'Cantidad: 130 Nissan',
-			'NP300'
-		]}
-	/>,
-	<ArticleBussines
-		img="envia.jpg"
-		bussinesName="Envía"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 400 Chevrolet N300',
-		]}
-	/>,
-	<ArticleBussines
-		img="servientrega.jpg"
-		bussinesName="Servientrega Sector"
-		characterList={[
-			'Carga liviana y paqueteo',
-			'Cantidad: 100 Fiat Ducato',
-			'(Dedicados), 15 RAM 1.000'
-		]}
-	/>,
-	<ArticleBussines
-		img="ramo.jpg"
-		bussinesName="Productos Ramo"
-		characterList={[
-			'Sector: Distribución de',
-			'Alimentos en paquete',
-			'Cantidad: 50 Nissan NP300 y 70 Changan'
-		]}
-	/>,
-	<ArticleBussines
-		img="472.jpg"
-		bussinesName="4-72"
-		characterList={[
-			'Sector: Carga liviana y paqueteo',
-			'Cantidad: 42 RAM 700'
-		]}
-	/>,
-	<ArticleBussines
-		img="ultima.jpg"
-		bussinesName="Silec"
-		characterList={[
-			'Sector: Telecomunicaciones',
-			'Cantidad: 130 Nissan',
-			'NP300'
-		]}
-	/>,
+    <ArticleBussines
+        img="envia.webp"
+        bussinesName="Envía"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 400 Chevrolet N300',
+        ]}
+    />,
+    <ArticleBussines
+        img="servientrega.webp"
+        bussinesName="Servientrega Sector"
+        characterList={[
+            'Carga liviana y paqueteo',
+            'Cantidad: 100 Fiat Ducato',
+            '(Dedicados), 15 RAM 1.000'
+        ]}
+    />,
+    <ArticleBussines
+        img="ramo.webp"
+        bussinesName="Productos Ramo"
+        characterList={[
+            'Sector: Distribución de',
+            'Alimentos en paquete',
+            'Cantidad: 50 Nissan NP300 y 70 Changan'
+        ]}
+    />,
+    <ArticleBussines
+        img="472.webp"
+        bussinesName="4-72"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 42 RAM 700'
+        ]}
+    />,
+    <ArticleBussines
+        img="ultima.webp"
+        bussinesName="Silec"
+        characterList={[
+            'Sector: Telecomunicaciones',
+            'Cantidad: 130 Nissan',
+            'NP300'
+        ]}
+    />,
+    <ArticleBussines
+        img="envia.webp"
+        bussinesName="Envía"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 400 Chevrolet N300',
+        ]}
+    />,
+    <ArticleBussines
+        img="servientrega.webp"
+        bussinesName="Servientrega Sector"
+        characterList={[
+            'Carga liviana y paqueteo',
+            'Cantidad: 100 Fiat Ducato',
+            '(Dedicados), 15 RAM 1.000'
+        ]}
+    />,
+    <ArticleBussines
+        img="ramo.webp"
+        bussinesName="Productos Ramo"
+        characterList={[
+            'Sector: Distribución de',
+            'Alimentos en paquete',
+            'Cantidad: 50 Nissan NP300 y 70 Changan'
+        ]}
+    />,
+    <ArticleBussines
+        img="472.webp"
+        bussinesName="4-72"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 42 RAM 700'
+        ]}
+    />,
+    <ArticleBussines
+        img="ultima.webp"
+        bussinesName="Silec"
+        characterList={[
+            'Sector: Telecomunicaciones',
+            'Cantidad: 130 Nissan',
+            'NP300'
+        ]}
+    />,
+    <ArticleBussines
+        img="envia.webp"
+        bussinesName="Envía"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 400 Chevrolet N300',
+        ]}
+    />,
+    <ArticleBussines
+        img="servientrega.webp"
+        bussinesName="Servientrega Sector"
+        characterList={[
+            'Carga liviana y paqueteo',
+            'Cantidad: 100 Fiat Ducato',
+            '(Dedicados), 15 RAM 1.000'
+        ]}
+    />,
+    <ArticleBussines
+        img="ramo.webp"
+        bussinesName="Productos Ramo"
+        characterList={[
+            'Sector: Distribución de',
+            'Alimentos en paquete',
+            'Cantidad: 50 Nissan NP300 y 70 Changan'
+        ]}
+    />,
+    <ArticleBussines
+        img="472.webp"
+        bussinesName="4-72"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 42 RAM 700'
+        ]}
+    />,
+    <ArticleBussines
+        img="ultima.webp"
+        bussinesName="Silec"
+        characterList={[
+            'Sector: Telecomunicaciones',
+            'Cantidad: 130 Nissan',
+            'NP300'
+        ]}
+    />,
+    <ArticleBussines
+        img="envia.webp"
+        bussinesName="Envía"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 400 Chevrolet N300',
+        ]}
+    />,
+    <ArticleBussines
+        img="servientrega.webp"
+        bussinesName="Servientrega Sector"
+        characterList={[
+            'Carga liviana y paqueteo',
+            'Cantidad: 100 Fiat Ducato',
+            '(Dedicados), 15 RAM 1.000'
+        ]}
+    />,
+    <ArticleBussines
+        img="ramo.webp"
+        bussinesName="Productos Ramo"
+        characterList={[
+            'Sector: Distribución de',
+            'Alimentos en paquete',
+            'Cantidad: 50 Nissan NP300 y 70 Changan'
+        ]}
+    />,
+    <ArticleBussines
+        img="472.webp"
+        bussinesName="4-72"
+        characterList={[
+            'Sector: Carga liviana y paqueteo',
+            'Cantidad: 42 RAM 700'
+        ]}
+    />,
+    <ArticleBussines
+        img="ultima.webp"
+        bussinesName="Silec"
+        characterList={[
+            'Sector: Telecomunicaciones',
+            'Cantidad: 130 Nissan',
+            'NP300'
+        ]}
+    />,
 
 ]
 
@@ -181,14 +181,14 @@ const contentSlider = [
 const SuccessStories = () => {
 
 
-	return <section>
+    return <section>
 
-		<h1>CASOS DE ÉXITO</h1>
+        <h1>CASOS DE ÉXITO</h1>
 
-		<Slider contentSlider={contentSlider} id="empresas" />
+        <Slider contentSlider={contentSlider} id="empresas" />
 
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				position: relative;
@@ -215,7 +215,7 @@ const SuccessStories = () => {
 			}
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default SuccessStories

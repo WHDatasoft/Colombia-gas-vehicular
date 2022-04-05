@@ -2,7 +2,7 @@ const Icons = () => {
     return <section>
 
         <div className="content">
-            <img src="/logo/logo-blanco.png" alt="" className="logo" />
+            <img src="/logo/logo-blanco.webp" alt="" className="logo" />
         </div>
         <div className="content">
             <img src="/icon/didi.svg" alt="" className="didi" />

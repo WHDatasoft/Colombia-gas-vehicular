@@ -7,31 +7,31 @@ import { getFromDb, onChange, onChangeImg, updateImg, updateText } from "../../.
 
 const Revision = ({ text, url }) => {
 
-	const [textList, setTextList] = useState(text)
+    const [textList, setTextList] = useState(text)
 
-	const [urlImg, setUrlImg] = useState(url)
+    const [urlImg, setUrlImg] = useState(url)
 
-	const [selectedFile, setSelectedFile] = useState(null)
+    const [selectedFile, setSelectedFile] = useState(null)
 
-	return <AdminLayout>
+    return <AdminLayout>
 
-		<Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio4.svg" text="Revisions Anual">
-			<label>
-				<img className="person" src={urlImg} alt="" loading="eager" />
-				<input onChange={e => onChangeImg(e, setSelectedFile, setUrlImg)} type="file" className="hidden" accept='image/*' />
+        <Banner imgPerson="" fondo="banner-fondo-claro.webp" icon="servicio4.svg" text="Revisions Anual">
+            <label>
+                <img className="person" src={urlImg} alt="" loading="eager" />
+                <input onChange={e => onChangeImg(e, setSelectedFile, setUrlImg)} type="file" className="hidden" accept='image/*' />
 
-				<button onClick={() => updateImg(selectedFile, 'revision')}>Actulizar imagen</button>
-			</label>
-			<form onSubmit={e => updateText(e, textList, 'revision')} className="text-wrapper">
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList?.text1} />
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList?.text2} />
-				<textarea onChange={e => onChange(e, textList, setTextList)} name="text3" className="texto-3" rows="1" value={textList?.text3} />
+                <button onClick={() => updateImg(selectedFile, 'revision')}>Actulizar imagen</button>
+            </label>
+            <form onSubmit={e => updateText(e, textList, 'revision')} className="text-wrapper">
+                <textarea onChange={e => onChange(e, textList, setTextList)} name="text1" className="texto-1" value={textList?.text1} />
+                <textarea onChange={e => onChange(e, textList, setTextList)} name="text2" className="texto-2" rows="1" value={textList?.text2} />
+                <textarea onChange={e => onChange(e, textList, setTextList)} name="text3" className="texto-3" rows="1" value={textList?.text3} />
 
-				<button>Actualizar textos</button>
-			</form>
-		</Banner>
+                <button>Actualizar textos</button>
+            </form>
+        </Banner>
 
-		<style jsx>{`
+        <style jsx>{`
 			
 			.text-wrapper {
 				position: relative;
@@ -136,11 +136,11 @@ const Revision = ({ text, url }) => {
 			}
 		
 		`}</style>
-	</AdminLayout>
+    </AdminLayout>
 }
 
 export async function getStaticProps(context) {
-	return await getFromDb('revision')
+    return await getFromDb('revision')
 }
 
 export default Revision

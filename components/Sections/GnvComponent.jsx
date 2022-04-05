@@ -1,29 +1,29 @@
 const GnvComponent = () => {
-	return <section>
+    return <section>
 
-		<picture>
-			<img src="/img/servicios/componentes.jpg" alt="" />
+        <picture>
+            <img src="/img/servicios/componentes.webp" alt="" />
 
-		</picture>
+        </picture>
 
 
 
-		<ul>
-			<li>1. Cilindro.</li>
-			<li>2. Proteccion de Cilindro.</li>
-			<li>3. Válvula decilindro.</li>
-			<li>4. Tubería.</li>
-			<li>5. Válvula de llenado.</li>
-			<li>6. Manómetro.</li>
-			<li>7. Regulador.</li>
-			<li>8. Filtro de gas.</li>
-			<li>9. Sensor MAP.</li>
-			<li>10. Inyectores de gas.</li>
-			<li>11. Computadora.</li>
-			<li>12. Llave conmutadora</li>
-		</ul>
+        <ul>
+            <li>1. Cilindro.</li>
+            <li>2. Proteccion de Cilindro.</li>
+            <li>3. Válvula decilindro.</li>
+            <li>4. Tubería.</li>
+            <li>5. Válvula de llenado.</li>
+            <li>6. Manómetro.</li>
+            <li>7. Regulador.</li>
+            <li>8. Filtro de gas.</li>
+            <li>9. Sensor MAP.</li>
+            <li>10. Inyectores de gas.</li>
+            <li>11. Computadora.</li>
+            <li>12. Llave conmutadora</li>
+        </ul>
 
-		<style jsx>{`
+        <style jsx>{`
 
 			section {
 				background-color: white;
@@ -144,7 +144,7 @@ const GnvComponent = () => {
 			}
 
 		`}</style>
-	</section>
+    </section>
 }
 
 export default GnvComponent

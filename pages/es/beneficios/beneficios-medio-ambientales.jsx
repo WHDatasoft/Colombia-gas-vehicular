@@ -14,7 +14,7 @@ const Index = () => {
         </Head>
 
         <BenefitBanner
-            background="ambiental.jpg"
+            background="ambiental.webp"
             icon="hand-flower.svg"
             title="BENEFICIOS"
             titleComplement="MEDIO AMBIENTALES"
@@ -26,16 +26,16 @@ const Index = () => {
         />
 
         <ServiceImg
-            img="ambiental/vanti-station.png"
+            img="ambiental/vanti-station.webp"
             paragraph="El GNV reduce la emisión de gases contaminantes a la atmosfera (CO2) hasta en un 40%."
         />
 
         <ServiceImg
-            img="ambiental/car-mecanic.png"
+            img="ambiental/car-mecanic.webp"
             paragraph="Disminuye el efecto del calentamiento global y mejora la calidad del aire de la ciudad porque se disminuye la emisión de gases contaminantes como: monóxido de carbono, material particulado, óxido de nitrógeno y dióxido de carbono, respecto a los emitidos con gasolina y demás combustibles."
         />
         <ServiceImg
-            img="ambiental/city.png"
+            img="ambiental/city.webp"
             paragraph="Cuidar el aire, hay una reducción de las enfermedades respiratorias."
         />
 

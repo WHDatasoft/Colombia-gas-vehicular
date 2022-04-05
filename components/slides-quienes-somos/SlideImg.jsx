@@ -1,9 +1,9 @@
 const SlideImg = () => {
-	return <>
+    return <>
 
-		<img src="/img/colombiagas/primera.jpg" alt="" loading="eager" />
+        <img src="/img/colombiagas/primera.webp" alt="" loading="eager" />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			img {
 				width: 100%;
@@ -12,7 +12,7 @@ const SlideImg = () => {
 			}
 
 		`}</style>
-	</>
+    </>
 }
 
 export default SlideImg

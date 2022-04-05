@@ -21,7 +21,7 @@ const Index = () => {
         <Hero />
 
 
-        <Banner />
+        {/* <Banner /> */}
 
         <Video
             videoUrl="introduccion"

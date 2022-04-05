@@ -14,74 +14,74 @@ const Index = () => {
     const contentSlider = [
         <ArticleBussines
             type
-            img="computadora.jpg"
+            img="computadora.webp"
             bussinesName="Computadora a gas 4 cilindros"
 
         />,
         <ArticleBussines
             type
-            img="capuchon-pico-de-carga-1.jpg"
+            img="capuchon-pico-de-carga-1.webp"
             bussinesName="Válvula de cilindro"
 
         />,
         <ArticleBussines
             type
-            img="regulador.jpg"
+            img="regulador.webp"
             bussinesName="Regulador de 3ra generación"
 
         />,
         <ArticleBussines
             type
-            img="emulador-inyextores-4-cilindros.jpg"
+            img="emulador-inyextores-4-cilindros.webp"
             bussinesName="Emulador inyectores 4 cilindros"
 
         />,
         <ArticleBussines
             type
-            img="riel-de-inyectores.jpg"
+            img="riel-de-inyectores.webp"
             bussinesName="Riel de inyectores 4 cilindros."
 
         />,
         <ArticleBussines
             type
-            img="tubería.jpg"
+            img="tubería.webp"
             bussinesName="Tubería"
 
         />,
         <ArticleBussines
             type
-            img="manometro.jpg"
+            img="manometro.webp"
             bussinesName="Manómetro"
 
         />,
         <ArticleBussines
             type
-            img="llave.jpg"
+            img="llave.webp"
             bussinesName="Llave conmutadora"
 
         />,
         <ArticleBussines
             type
-            img="sensor-y-emulador-de-nivel-de-asolina.jpg"
+            img="sensor-y-emulador-de-nivel-de-asolina.webp"
             bussinesName="Llave conmutadora de 3RA generación"
 
         />,
         <ArticleBussines
             type
-            img="filtro-de-gas.jpg"
+            img="filtro-de-gas.webp"
             bussinesName="Filtro de gas"
 
         />,
 
         <ArticleBussines
             type
-            img="cableado.jpg"
+            img="cableado.webp"
             bussinesName="Cableado eléctrico 5ta generación"
 
         />,
         <ArticleBussines
             type
-            img="hace-parte-del-kit.jpg"
+            img="hace-parte-del-kit.webp"
             bussinesName="Cableado eléctrico de llave conmutadora"
 
         />,
@@ -90,8 +90,8 @@ const Index = () => {
         <Head>
             <title>Venta De Repuestos</title>
         </Head>
-        <Banner imgPerson="" fondo="banner-fondo-claro.png" icon="servicio5.svg" text="Venta de repuestos">
-            <img className="person" src="/img/banner/person-5.png" alt="" loading="eager" />
+        <Banner imgPerson="" fondo="banner-fondo-claro.webp" icon="servicio5.svg" text="Venta de repuestos">
+            <img className="person" src="/img/banner/person-5.webp" alt="" loading="eager" />
             <div className="text-wrapper">
                 <p className="texto-1">Productos que cumplen los requerimientos de la resolusión 0957 del 2012 del Ministerio de comercio, industria y turismo, avalados y certificados por Icontec</p>
                 <h2 className="texto-2">PRECIOS ACCESIBLES A TU BOLSILLO</h2>

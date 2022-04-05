@@ -14,7 +14,7 @@ const Index = () => {
         </Head>
 
         <ClientMain
-            backgroundImg="/img/clientes/car.jpg"
+            backgroundImg="/img/clientes/car.webp"
             sizeScreen
             ContentAside={
                 <SlideDidi

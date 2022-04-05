@@ -10,8 +10,8 @@ const Index = () => {
 
     const slideList = [
         <ClientMain
-            backgroundImg="/img/colombiagas/primera.jpg"
-            backgroundMini="/img/colombiagas/fachada-main.jpg"
+            backgroundImg="/img/colombiagas/primera.webp"
+            backgroundMini="/img/colombiagas/fachada-main.webp"
             sizeScreen
             padding
             ContentAside={
@@ -19,8 +19,8 @@ const Index = () => {
             }
         />,
         <ClientMain
-            backgroundImg="/img/colombiagas/slide-segunda.jpg"
-            backgroundMini="/img/colombiagas/fachada-second.jpg"
+            backgroundImg="/img/colombiagas/slide-segunda.webp"
+            backgroundMini="/img/colombiagas/fachada-second.webp"
             sizeScreen
             padding
             ContentAside={
@@ -35,8 +35,8 @@ const Index = () => {
         </Head>
 
         {/* <SliderDoble
-			mainImg="/img/colombiagas/fachada-main.jpg"
-			secondImg="/img/colombiagas/fachada-second.jpg"
+			mainImg="/img/colombiagas/fachada-main.webp"
+			secondImg="/img/colombiagas/fachada-second.webp"
 
 			slideList={slideList}
 		/> */}

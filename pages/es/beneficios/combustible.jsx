@@ -13,7 +13,7 @@ const Index = () => {
         </Head>
 
         <BenefitBanner
-            background="combustible.jpg"
+            background="combustible.webp"
             icon="car-fuel.svg"
             title="COMBUSTIBLE"
             titleComplement="Ahorra hasta el 50%"
@@ -27,22 +27,22 @@ const Index = () => {
 
         <ServiceImg
             title="Plataforma para verificar consumos"
-            img="combustible/primera.jpg"
+            img="combustible/primera.webp"
         />
 
         <ServiceImg
             title="Chip de control"
-            img="combustible/segunda.jpg"
+            img="combustible/segunda.webp"
         />
 
         <ServiceImg
             title="Registro de Kilómetraje en el suministro"
-            img="combustible/tercera.jpg"
+            img="combustible/tercera.webp"
         />
 
         <ServiceImg
             title="El gas no es manipulable por los conductores"
-            img="combustible/cuarta.jpg"
+            img="combustible/cuarta.webp"
         />
 
         <MainFooter />

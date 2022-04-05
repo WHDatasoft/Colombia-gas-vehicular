@@ -16,13 +16,13 @@ const Index = ({ text, url }) => {
         <Head>
             <title>Instalación GNV</title>
         </Head>
-        <Banner fondo="banner-fondo-claro.png" icon="servicio1.svg" text="Instalación de GNV">
+        <Banner fondo="banner-fondo-claro.webp" icon="servicio1.svg" text="Instalación de GNV">
             <img className="person" src={url} alt="" loading="eager" />
             <div className="text-wrapper">
-                <p className="texto-1">{text.text1}</p>
-                <h1 className="texto-2">{text.text2}</h1>
-                <h2 className="texto-3">{text.text3}</h2>
-                <h3 className="texto-4">{text.text4}</h3>
+                <p className="texto-1">{text?.text1 ? text.text1 : ''}</p>
+                <h1 className="texto-2">{text?.text2 ? text.text2 : ''}</h1>
+                <h2 className="texto-3">{text?.text3 ? text.text3 : ''}</h2>
+                <h3 className="texto-4">{text?.text4 ? text.text4 : ''}</h3>
             </div>
         </Banner>
 
