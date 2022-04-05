@@ -64,7 +64,7 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
 
     return <form onSubmit={onSubmit}>
         <h1>¡CONUNÍCATE CON NOSOTROS!</h1>
-        <p>Cuidamos tu vehiculo y protejamos el medio ambiente juntos.</p>
+        <p>Cuidamos tu vehículo y protejamos el medio ambiente juntos.</p>
         <p className="bolder">Colombiagas Vehicular te ofrece diferentes alternativas para mantenerte en contacto con nostros</p>
         <input onChange={onChange} type="text" placeholder="Nombre" name="name" />
         <input onChange={onChange} type="text" placeholder="Celular" name="phone" />
