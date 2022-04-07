@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
             <Html lang="es-co">
                 <Head>
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-                    <link rel="alternate" href="https://www.colombiagasvehicular.co/es/" hreflang="es-co" />
+                    <link rel="alternate" href="https://www.colombiagasvehicular.co/es/" hrefLang="es-co" />
                     <meta httpEquiv="content-language" content="es-co" />
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script

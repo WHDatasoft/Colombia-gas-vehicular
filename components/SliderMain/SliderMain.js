@@ -82,12 +82,12 @@ const SliderMain = () => {
             <ul>
                 <li>
                     <div className="slide slide-1">
-                        <h3>CONVERSIONES <br /> DESDE <br /> $500</h3>
+                        <h3>LA FUERZA<br />INVISIBLE QUE<br />MUEVE EL<br />PAÍS</h3>
                     </div>
                 </li>
                 <li>
                     <div className="slide slide-2">
-                        <h3>CONVERSIONES <br /> DESDE <br /> $500</h3>
+                        <h3>CONVERSIONES <br /> DESDE <br /> $500.000</h3>
                     </div>
                 </li>
                 <li>
