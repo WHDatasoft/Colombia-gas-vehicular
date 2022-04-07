@@ -42,7 +42,7 @@ const ServicesClients = ({ background, icon, serviceList, color, reverse, whatsa
             }
 
 			.content {
-				background: url("/img/clientes/${background}.jpg") no-repeat;
+				background: url("/img/clientes/${background}.webp") no-repeat;
 				background-position: center center;
 				background-size: 100% auto;
 				margin: 0 auto;

@@ -3,16 +3,16 @@ import FormEmail from './FormEmail';
 
 const FormDidi = () => {
 
-	return <div className="form-wrapper" >
+    return <div className="form-wrapper" >
 
-		<div className="icon">
-			<img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-			<img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
-		</div>
+        <div className="icon">
+            <img className="cabeza" src="/icon/cabeza-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+            <img className="manubrio" src="/icon/manubrio-didi.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+        </div>
 
-		<FormEmail didi advertising setIsEnable={() => { }} />
+        <FormEmail didi advertising setIsEnable={() => { }} />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.form-wrapper {
 				font-size: 1rem;
@@ -21,7 +21,7 @@ const FormDidi = () => {
 				display: grid;
 				justify-items: center;
 				align-items: center;
-				background-color: #CEE7D3;
+				background-color: var(--blue-transparent);
 				padding: 2rem; 
 			}
 
@@ -62,7 +62,7 @@ const FormDidi = () => {
 
 
 		`}</style>
-	</div>
+    </div>
 }
 
 export default FormDidi

@@ -8,7 +8,7 @@ const FormCol = () => {
 
         <AsideForm />
 
-        <FormEmail advertising setIsEnable={() => { }} />
+        <FormEmail setIsEnable={() => { }} />
 
         <style jsx>{`
 

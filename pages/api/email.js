@@ -8,7 +8,7 @@ const handler = async (req, res) => {
 
     if (req.method = 'POST') {
 
-        const { name, phone, message, from } = req.body
+        const { name, phone, email, from } = req.body
 
         const params = {
             Destination: {
@@ -26,7 +26,7 @@ const handler = async (req, res) => {
                         Data: `<ul>
 							<li>Nombre: ${name}</li>
 							<li>Telefono: ${phone}</li>
-							<li>${from === 'Colombiagas' ? 'Correo' : 'Mensaje'}: ${message}</li>
+							<li>'Correo': ${email}</li>
 						</ul>`,
                     }
                 }

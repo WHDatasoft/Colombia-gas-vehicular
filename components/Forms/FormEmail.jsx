@@ -3,13 +3,13 @@ import { useState } from 'react';
 import Swal from 'sweetalert2'
 
 
-const FormEmail = ({ didi, setIsEnable, advertising }) => {
+const FormEmail = ({ didi, setIsEnable }) => {
 
     const [data, setData] = useState({
         name: '',
         phone: '',
-        message: '',
-        from: didi ? 'DIDI' : advertising ? 'Publicidad Pop-Up' : 'Colombiagas',
+        email: '',
+        from: didi ? 'DIDI' : 'Colombiagas',
         check: false
     });
 
@@ -21,7 +21,7 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
             const { name, phone, message, from } = data
             const URL = '/api/email'
             try {
-                const response = await axios.post(URL, { name, phone, message, from })
+                const response = await axios.post(URL, { name, phone, email, from })
                 console.log(response.data)
             } catch (error) {
                 console.log(error)
