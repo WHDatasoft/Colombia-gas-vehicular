@@ -66,24 +66,23 @@ const Schedule = () => {
         <style jsx>{`
 
 			:global(:root) {
-				--size: 1
+				--size: 1.5
 			}
 
 			section {
 				position: relative;
 				z-index: 1;
-				border-top-left-radius: 50%;
-				border-bottom-left-radius: 50%;
 				border-right: none;
 				display: grid;
 				align-items: center;
-				padding:  calc(7rem * var(--size)) calc(2rem * var(--size)) calc(7rem * var(--size)) calc(5rem * var(--size));
+				padding:  2rem;
+                box-sizing: border-box;
 				justify-self: center;
 			}
 
 			h2 {
 				text-align: center;
-				font-size: calc(2.5rem * var(--size));
+				font-size: calc(1.5rem * var(--size));
 				color: var(--light-orange);
 				margin-bottom: calc(0.5rem * var(--size));
 			}
@@ -111,9 +110,9 @@ const Schedule = () => {
 				font-size: calc(2rem * var(--size));
 			}
 
-			@media screen and (max-width: 650px) {
+			@media screen and (max-width: 920px) {
 				:global(:root) {
-					--size: 0.9;
+					--size: 1.3;
 				}
 
 				section {
@@ -125,23 +124,49 @@ const Schedule = () => {
 					display: grid;
 					align-items: center;
 					justify-items: center;
-					padding:  2em 0;
 					justify-self: center;
 					width: 100%;
 				}
 			}
 
-			@media screen and (max-width: 460px) {
+            @media screen and (max-width: 740px) {
+				:global(:root) {
+					--size: 1.1;
+				}
+			}
+
+            @media screen and (max-width: 670px) {
+				:global(:root) {
+					--size: 0.9;
+				}
+			}
+
+			@media screen and (max-width: 580px) {
 				:global(:root) {
 					--size: 0.8;
 				}
 			}
 
-			@media screen and (max-width: 400px) {
+			@media screen and (max-width: 490px) {
 				
 				:global(:root) {
 					--size: 0.65;
 				}
+
+                section {
+                    padding: .5rem;
+                }
+			}
+
+            @media screen and (max-width: 380px) {
+				
+				:global(:root) {
+					--size: 0.55;
+				}
+
+                section {
+                    padding: .5rem;
+                }
 				
 
 			}

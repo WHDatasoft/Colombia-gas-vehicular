@@ -63,58 +63,70 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
     }
 
     return <form onSubmit={onSubmit}>
-        <h1>¡CONUNÍCATE CON NOSOTROS!</h1>
-        <p>Cuidamos tu vehículo y protejamos el medio ambiente juntos.</p>
-        <p className="bolder">Colombiagas Vehicular te ofrece diferentes alternativas para mantenerte en contacto con nostros</p>
-        <input onChange={onChange} type="text" placeholder="Nombre" name="name" />
-        <input onChange={onChange} type="text" placeholder="Celular" name="phone" />
-        <textarea onChange={onChange} name="message" placeholder="Dejanos tu mensaje..."></textarea>
+        <h2>Cuidemos el medio ambiente juntos.</h2>
+        <p >Colombiagas Vehicular te ofrece diferentes alternativas para la conversión de tu vehículo a Gas Natural</p>
+        <label>
+            <span>Nombre</span>
+            <input onChange={onChange} type="text" name="name" />
+        </label>
+        <label>
+            <span>Teléfono</ span>
+            <input onChange={onChange} type="number" name="phone" />
+        </label>
+        <label>
+            <span>Correo electrónico</span>
+            <input onChange={onChange} type="email" name="email" />
+        </label>
         <div className="terminos">
             <input type="checkbox" onChange={onClick} name="check" />
-            <p>Acepto Terminos y condiciones.</p>
+            <p className="left">Acepto Terminos y condiciones.</p>
         </div>
         <a href="/download/terminos-y-condiciones-colombia-gas-vehicular.pdf" download>Leer terminos y condiciones</a>
-        <button>Enviar</button>
+        <button>Contactar</button>
 
         <style jsx>{`
 
 			form {
 				font-size: 1rem;
 				display: inline-grid;
-				grid-row-gap: 1.5em;
+				grid-row-gap: .5em;
                 margin-bottom: 2rem;
+                padding: 2rem;
+                max-width: 30rem;
+                border: 1px solid white;
+                
 			}
 
-			h1 {
+			h2 {
 				${didi ? 'color: var(--orange);' : 'color: white;'}
-				font-size: 1.5em;
+				font-size: 1.3em;
 				text-align: center;
+                margin-bottom: 1rem;
 			}
 
             p {
                 color: white;
-                text-align: center;
-                width: 25rem;
                 margin: auto;
-            }
-
-            .bolder {
-                font-weight: 600;
+                text-align: justify;
+                line-height: 1.5rem;
             }
 
 			button, input, textarea {
 				padding: .8em;
 			}
 
+            label {
+                display: grid;
+            }
+
 			input {
 				${didi ? 'border: 1px solid var(--orange)' : ''}
 			}
 
-			textarea {
-				${didi ? 'border: 1px solid var(--orange);' : ''}
-				font-size: 1rem;
-				height: 6rem;
-			}
+            span {
+                color: white;
+                margin: 1rem;
+            }
 
 			button {
 				${didi ? 'background-color: var(--orange);' : ''}
@@ -126,21 +138,34 @@ const FormEmail = ({ didi, setIsEnable, advertising }) => {
 			a {
 				color: var(--light-orange);
 				text-decoration: underline;
-				height: 100%;
-				display: grid;
+				display: block;
 				place-items: center;
-				padding: .1rem .5rem;
+				padding: 0 1rem;
+                margin-bottom: 1rem;
 			}
 
 			.terminos {
+                margin-top: 1rem;
 				text-align: center;
 				display: grid;
-				grid-template-columns: auto 1fr;
-				align-items: center;
+				grid-template-columns: auto auto;
+                align-items: center;
+                justify-content: flex-start;
 				color: ${didi ? 'var(--orange);' : 'white'};
-				padding: 0 1rem;
-				box-sizing: border-box;
+                padding-left: 1rem;
 			}
+
+            .left {
+                margin-left: 1rem;
+            }
+
+             @media screen and (max-width: 1100px) {
+				form {
+					grid-row: 1/2;
+				}
+			}
+
+            
 
 			@media screen and (max-width: 360px) {
 				form {

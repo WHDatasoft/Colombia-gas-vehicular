@@ -1,15 +1,16 @@
+import AsideForm from '../Sections/AsideForm'
 import FormEmail from './FormEmail'
 
 const FormCol = () => {
 
 
-	return <div className="form-wrapper">
+    return <div className="form-wrapper">
 
-		<img src="/icon/phone.svg" alt="icono de una mano agarrando un celular" loading="eager" />
+        <AsideForm />
 
-		<FormEmail advertising setIsEnable={() => { }} />
+        <FormEmail advertising setIsEnable={() => { }} />
 
-		<style jsx>{`
+        <style jsx>{`
 
 			.form-wrapper {
 				font-size: 1rem;
@@ -18,6 +19,8 @@ const FormCol = () => {
 				display: grid;
 				justify-items: center;
 				align-items: center;
+                grid-template-columns: auto auto;
+                
 			}
 
 			img {
@@ -38,15 +41,20 @@ const FormCol = () => {
 				}
 			}
 
-			@media screen and (max-width: 360px) {
+            @media screen and (max-width: 1100px) {
 				.form-wrapper {
-					font-size: .8rem;
+					grid-template-columns: auto;
+                    grid-gap: 2rem;
 				}
+			}
+
+			@media screen and (max-width: 360px) {
+				
 			}
 
 
 		`}</style>
-	</div>
+    </div>
 }
 
 export default FormCol
