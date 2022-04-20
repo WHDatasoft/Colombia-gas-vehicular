@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react';
 import Swal from 'sweetalert2'
+import { useForm } from "react-hook-form";
 
 
 const FormEmail = ({ didi, setIsEnable }) => {
@@ -13,75 +14,67 @@ const FormEmail = ({ didi, setIsEnable }) => {
         check: false
     });
 
-    const onSubmit = async e => {
-        e.preventDefault();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    
 
-        if (data.check) {
+    const onSubmit = async data => {
 
-            const { name, phone, message, from } = data
-            const URL = '/api/email'
-            try {
-                const response = await axios.post(URL, { name, phone, email, from })
-                console.log(response.data)
-            } catch (error) {
-                console.log(error)
-            }
-
-            const form = document.getElementsByTagName('form')[0]
-            form.reset()
-
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                text: 'Mensaje enviado correctamente, pronto nos comunicaremos contigo',
-                showConfirmButton: true,
-                confirmButtonColor: 'var(--dark-green)',
-                color: 'var(--blue)'
-            })
-
-            setIsEnable(false)
-
-        } else {
-            Swal.fire({
-                position: 'bottom-end',
-                icon: 'error',
-                text: 'Debes aceptar los terminos y condiciones',
-                showConfirmButton: false,
-                timer: 2500,
-                color: 'var(--blue)'
-            })
+        const URL = '/api/email'
+        try {
+            const response = await axios.post(URL, { ...data, from: 'Colombiagas' })
+            console.log(response.data)
+        } catch (error) {
+            console.log(error)
         }
 
+        const form = document.getElementsByTagName('form')[0]
+        form.reset()
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            text: 'Mensaje enviado correctamente, pronto nos comunicaremos contigo',
+            showConfirmButton: true,
+            confirmButtonColor: 'var(--dark-green)',
+            color: 'var(--blue)'
+        })
+
+        setIsEnable(false)
+
     }
 
-    const onChange = e => {
-        setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
-    }
+    // const onChange = e => {
+    //     setData(Object.assign({}, data, { [e.target.name]: e.target.value }))
+    // }
 
-    const onClick = e => {
-        setData(Object.assign({}, data, { [e.target.name]: !data.check }))
-    }
+    // const onClick = e => {
+    //     setData(Object.assign({}, data, { [e.target.name]: !data.check }))
+    // }
 
-    return <form onSubmit={onSubmit}>
+    return <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Cuidemos el medio ambiente juntos.</h2>
         <p >Colombiagas Vehicular te ofrece diferentes alternativas para la conversión de tu vehículo a Gas Natural</p>
         <label>
-            <span>Nombre</span>
-            <input onChange={onChange} type="text" name="name" />
+            <h4>Nombre</h4>
+            <input {...register("name", { required: true })} type="text" />
+            {errors.name && <span>El nombre es requerido</span>}
         </label>
         <label>
-            <span>Teléfono</ span>
-            <input onChange={onChange} type="number" name="phone" />
+            <h4>Teléfono</ h4>
+            <input {...register("phone", { required: true })} type="number" />
+            {errors.phone && <span>El número de teléfono es requerido</span>}
         </label>
         <label>
-            <span>Correo electrónico</span>
-            <input onChange={onChange} type="email" name="email" />
+            <h4>Correo electrónico</h4>
+            <input {...register("email", { required: true })} type="email" />
+            {errors.email && <span>El correo es requeriod</span>}
         </label>
         <div className="terminos">
-            <input type="checkbox" onChange={onClick} name="check" />
+            <input type="checkbox" {...register("check", { required: true })} />
             <p className="left">Acepto Terminos y condiciones.</p>
+            {errors.check && <span>Es necesario aceptar terminos y condiciones</span>}
+            <a href="/download/terminos-y-condiciones-colombia-gas-vehicular.pdf" download>Leer terminos y condiciones</a>
         </div>
-        <a href="/download/terminos-y-condiciones-colombia-gas-vehicular.pdf" download>Leer terminos y condiciones</a>
         <button>Contactar</button>
 
         <style jsx>{`
@@ -89,7 +82,7 @@ const FormEmail = ({ didi, setIsEnable }) => {
 			form {
 				font-size: 1rem;
 				display: inline-grid;
-				grid-row-gap: .5em;
+				grid-row-gap: .6em;
                 margin-bottom: 2rem;
                 padding: 2rem;
                 max-width: 30rem;
@@ -117,6 +110,7 @@ const FormEmail = ({ didi, setIsEnable }) => {
 
             label {
                 display: grid;
+                position: relative;
             }
 
 			input {
@@ -124,6 +118,16 @@ const FormEmail = ({ didi, setIsEnable }) => {
 			}
 
             span {
+                position: absolute;
+                font-size: .8rem;
+                bottom: -1.2rem;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                color: #e67c8c;
+            }
+
+            h4 {
                 color: white;
                 margin: 1rem;
             }
@@ -136,15 +140,17 @@ const FormEmail = ({ didi, setIsEnable }) => {
 			}
 
 			a {
+                grid-column: 1/3;
 				color: var(--light-orange);
 				text-decoration: underline;
 				display: block;
 				place-items: center;
 				padding: 0 1rem;
-                margin-bottom: 1rem;
 			}
 
 			.terminos {
+                margin-bottom: 1.5rem;
+                position: relative;
                 margin-top: 1rem;
 				text-align: center;
 				display: grid;
@@ -156,7 +162,7 @@ const FormEmail = ({ didi, setIsEnable }) => {
 			}
 
             .left {
-                margin-left: 1rem;
+                margin-left: .5rem;
             }
 
              @media screen and (max-width: 1100px) {

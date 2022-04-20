@@ -58,7 +58,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
             ]
         },
         { title: 'Debes saber', url: '/es/debes-saber' },
-        { title: 'Contáctenos', url: '/es/contactenos' },
+        { title: 'Contáctanos', url: '/es/contactanos' },
     ]
 
     return <div className="wrapper">
@@ -84,8 +84,10 @@ const Nav = ({ setEnableNav, enableNav }) => {
 
             <ul className="main-link-list">
                 {
-                    linkList.map(mainLink => (
-                        <li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/' + router.asPath.split('/')[1] === mainLink.url ? 'selected-first' : ''}`} >
+                    linkList.map(mainLink => {
+						// console.log(linkSelected, ' - ', mainLink.url, ' - ', router.asPath.split('/'))
+						return (
+                        <li key={mainLink.title} className={`main-link ${linkSelected === mainLink.url || '/es/' + router.asPath.split('/')[2] === mainLink.url ? 'selected-first' : ''}`} >
                             <>
                                 {
                                     submenu
@@ -146,7 +148,7 @@ const Nav = ({ setEnableNav, enableNav }) => {
                                     null
                             }
                         </li>
-                    ))
+                    )})
                 }
 
             </ul>
@@ -219,11 +221,6 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				text-transform: capitalize;
 			}
 
-			.selected-first {
-				background: var(--orange);
-				color: white
-			}
-
 			.selected-second {
 				background-color: var(--light-orange)
 			}
@@ -238,6 +235,11 @@ const Nav = ({ setEnableNav, enableNav }) => {
 				display: none;
 			}
 
+			.selected-first {
+				background: var(--orange);
+				color: white
+			}
+			
 			@media screen and (max-width: 1080px) {
 
 				.background-nav {

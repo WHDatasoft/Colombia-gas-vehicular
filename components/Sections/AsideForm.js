@@ -5,27 +5,19 @@ const AsideForm = () => {
         <p>Para nostros es muy importante poder ofrecerte información especializada y personalizada.</p>
         <ul>
             <li>
-                <svg viewBox="0 0 351.92 343.51">
-                    <path d="M24,235.8H160v87.7c0,17.8,21.5,26.7,34.1,14.1L346.3,185.4a19.37,19.37,0,0,0,0-27.3L194.1,5.9C181.5-6.7,160,2.2,160,20v87.8H24a23.94,23.94,0,0,0-24,24v80A23.94,23.94,0,0,0,24,235.8Z" />
-                </svg>
-                Sabias que hay masrcas de vehículos que vienen cero kilómetros a gas natural.
+                <img src="/icon/hoja.svg" alt="" />
+                Sabias que hay marcas de vehículos que vienen cero kilómetros a gas natural.
             </li>
             <li>
-                <svg viewBox="0 0 351.92 343.51">
-                    <path d="M24,235.8H160v87.7c0,17.8,21.5,26.7,34.1,14.1L346.3,185.4a19.37,19.37,0,0,0,0-27.3L194.1,5.9C181.5-6.7,160,2.2,160,20v87.8H24a23.94,23.94,0,0,0-24,24v80A23.94,23.94,0,0,0,24,235.8Z" />
-                </svg>
+                <img src="/icon/hoja.svg" alt="" />
                 Reduce tus gastos y aumenta tus ganancias.
             </li>
             <li>
-                <svg viewBox="0 0 351.92 343.51">
-                    <path d="M24,235.8H160v87.7c0,17.8,21.5,26.7,34.1,14.1L346.3,185.4a19.37,19.37,0,0,0,0-27.3L194.1,5.9C181.5-6.7,160,2.2,160,20v87.8H24a23.94,23.94,0,0,0-24,24v80A23.94,23.94,0,0,0,24,235.8Z" />
-                </svg>
-                Disminuye el 99,9% de las emiciones de mateial particulado.
+                <img src="/icon/hoja.svg" alt="" />
+                Disminuye el 99,9% de las emisiones de mateial particulado.
             </li>
             <li>
-                <svg viewBox="0 0 351.92 343.51">
-                    <path d="M24,235.8H160v87.7c0,17.8,21.5,26.7,34.1,14.1L346.3,185.4a19.37,19.37,0,0,0,0-27.3L194.1,5.9C181.5-6.7,160,2.2,160,20v87.8H24a23.94,23.94,0,0,0-24,24v80A23.94,23.94,0,0,0,24,235.8Z" />
-                </svg>
+                <img src="/icon/hoja.svg" alt="" />
                 Convierte tu vehículo a gas natural vehicular y ahorra hasta un 50% respecto a la gasolina corriente.
             </li>
         </ul>
@@ -65,7 +57,7 @@ const AsideForm = () => {
                 padding-left: 3rem;
             }
 
-            svg {
+            img {
                 position: absolute;
                 left: 0;
                 top: 50%;

@@ -9,6 +9,7 @@ const handler = async (req, res) => {
     if (req.method = 'POST') {
 
         const { name, phone, email, from } = req.body
+        console.log(req.body)
 
         const params = {
             Destination: {
