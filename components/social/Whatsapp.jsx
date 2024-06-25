@@ -11,7 +11,7 @@ const Whatsapp = () => {
             <a href="https://wa.me/573134304711">
                 <img src="/icon/whatsapp.svg" alt="icono de contacto por whatsapp" />
             </a>
-
+        @@ -101,4 +101,4 @@ const Whatsapp = () => {
         </button>
 
         <style jsx>{`
